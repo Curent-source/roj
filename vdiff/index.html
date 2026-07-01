@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1976d2">
+    <link rel="stylesheet" href="vdiffjs/vdiff.bundle.css">
+    <link rel="stylesheet" href="vdiffjs-wrapper.css">
+    <link rel="stylesheet" href="vdiff-modern.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Material+Icons&display=swap">
+    <title>vdiff.js / vdiff.js editor - JavaScript-based visual differencing tool</title>
+    <script src="vdiffjs/vdiff.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/spin.js@2.3.2/spin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/spin.js@2.3.2/jquery.spin.min.js"></script>
+  </head>
+  <body class="vdiff-modern">
+    <header class="vdiff-modern__appbar">
+      <div class="vdiff-modern__appbar-left">
+        <span class="material-icons vdiff-modern__appbar-icon">compare</span>
+        <h1 class="vdiff-modern__title">vdiff.js</h1>
+        <span class="vdiff-modern__subtitle" data-ja="画像比較ツール" data-en="Visual differencing">画像比較ツール</span>
+      </div>
+      <div class="vdiff-modern__appbar-right">
+        <button id="vdiff-modern-lang" class="vdiff-modern__icon-btn" title="言語切替 / Language" type="button">
+          <span class="material-icons">translate</span>
+        </button>
+        <button id="vdiff-modern-theme" class="vdiff-modern__icon-btn" title="テーマ切替 / Theme" type="button">
+          <span class="material-icons">dark_mode</span>
+        </button>
+        <button id="vdiff-modern-fullscreen" class="vdiff-modern__icon-btn" title="全画面 / Fullscreen" type="button">
+          <span class="material-icons">fullscreen</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="vdiff-modern__main">
+      <div id="vdiffjs_wrapper" class="vdiff-modern__wrapper"></div>
+    </main>
+
+    <script src="vdiffjs-wrapper.js"></script>
+    <script>
+      // Pre-resize IIIF Image API URLs in img1/img2 *down* to viewport pixels.
+      // Only rewrite when the existing IIIF size segment specifies a larger image
+      // than needed — if the URL already requests something at-or-below viewport,
+      // leave it alone (don't bloat the download).
+      (function rewriteIiifSize() {
+        var url = new URL(location.href);
+        var maxW = Math.round(window.innerWidth);
+        var maxH = Math.round(window.innerHeight);
+        var sizeSeg = '!' + maxW + ',' + maxH;
+        var qualityRe = /^(default|color|gray|bitonal)\.(jpg|jpeg|png|tif|tiff|gif|webp)$/i;
+        var rotationRe = /^!?\d+(\.\d+)?$/;
+
+        // Decide if `existing` (the IIIF size segment) is already at-or-below viewport.
+        // Returns true to keep the URL as-is, false to replace with sizeSeg.
+        function fitsViewport(existing) {
+          // full/max are unbounded → always downsize
+          if (existing === 'full' || existing === 'max') return false;
+          // pct:n — natural size unknown without the info.json → don't touch (assume intentional)
+          if (/^pct:/.test(existing)) return true;
+          // Strip leading "!" for the !w,h fit-within form (same numeric limit applies)
+          var s = existing.replace(/^!/, '');
+          // forms: w,h | w, | ,h
+          var m = s.match(/^(\d+)?,(\d+)?$/);
+          if (!m) return true; // unrecognized — don't touch
+          // Unspecified side counts as "OK" (we can't know its pixel size from URL).
+          // We only downsize when an EXPLICITLY specified dimension exceeds viewport.
+          var w = m[1] ? parseInt(m[1], 10) : 0;
+          var h = m[2] ? parseInt(m[2], 10) : 0;
+          return w <= maxW && h <= maxH;
+        }
+
+        var changed = false;
+        ['img1', 'img2'].forEach(function(key) {
+          var v = url.searchParams.get(key);
+          if (!v) return;
+          var parts = v.split('/');
+          if (parts.length < 5) return;
+          if (!qualityRe.test(parts[parts.length - 1])) return;
+          if (!rotationRe.test(parts[parts.length - 2])) return;
+          var existing = parts[parts.length - 3];
+          if (existing === sizeSeg) return;
+          if (fitsViewport(existing)) return;
+          parts[parts.length - 3] = sizeSeg;
+          url.searchParams.set(key, parts.join('/'));
+          changed = true;
+        });
+        if (changed) history.replaceState(null, document.title, url.toString());
+      })();
+      (function() {
+        VDiffWrapper({
+          id: 'vdiffjs_wrapper'
+        });
+      })();
+    </script>
+    <script src="vdiff-modern.js"></script>
+    <script src="opencv/opencv-4.5.1.js" async></script>
+  </body>
+</html>

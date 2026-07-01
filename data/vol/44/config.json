@@ -1,0 +1,8 @@
+{
+    "direction": "vertical",
+    "imageMap": "https://genji.lib.u-tokyo.ac.jp/data/vol/44/curation.json",
+    "returnLabel": "デジタル源氏物語",
+    "returnUrl": "https://genji.lib.u-tokyo.ac.jp",
+    "urlMain": "https://genji.lib.u-tokyo.ac.jp/data/tei/koui/44.xml",
+    "urlSub": "https://genji.lib.u-tokyo.ac.jp/data/tei/yosano/46.xml"
+}

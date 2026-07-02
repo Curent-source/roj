@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Power BI Guidance - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/azure-cloud/power-bi-guidance.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="Power BI Guidance - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/azure-cloud/power-bi-guidance.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="Power BI Guidance" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/azure-cloud/power-bi-guidance.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#power-bi-guidance"><span>Power BI Guidance</span></a>
+    <ul>
+      <li>
+        <a href="#prerequisites-and-approvals"><span>Prerequisites and approvals</span></a>
+        <ul>
+          <li>
+            <a href="#data-classification"><span>Data classification</span></a>
+          </li>
+          <li>
+            <a href="#data-privacy"><span>Data privacy</span></a>
+          </li>
+          <li>
+            <a href="#information-assurance"><span>Information assurance</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#request-process"><span>Request process</span></a>
+        <ul>
+          <li>
+            <a href="#required-information"><span>Required information</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#governance-and-support"><span>Governance and support</span></a>
+        <ul>
+          <li>
+            <a href="#support-model"><span>Support model</span></a>
+          </li>
+          <li>
+            <a href="#recharge-policy"><span>Recharge policy</span></a>
+          </li>
+          <li>
+            <a href="#security-and-compliance"><span>Security and compliance</span></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="power-bi-guidance">Power BI Guidance</h1>
+<p>This guide explains how to get Microsoft Power BI workspaces and Power BI Pro licences in the Cabinet Office Digital M365 tenant (codigitalcloud.onmicrosoft.com).</p>
+<p>This environment is separate from the primary Cabinet Office O365 tenant, managed by ICS through the Falcon Programme.</p>
+<h2 id="prerequisites-and-approvals"><strong>Prerequisites and approvals</strong></h2>
+<p>Before you request a workspace or licence, you must define your data requirements and get approval from central teams.</p>
+<h3 id="data-classification"><strong>Data classification</strong></h3>
+<p>You must understand the data you will process. You can only use the Power BI platform for data classified up to OFFICIAL, including OFFICIAL-SENSITIVE.</p>
+<h3 id="data-privacy"><strong>Data privacy</strong></h3>
+<p>The Data Protection Impact Assessment (DPIA) team must review all use cases. You need to complete the DPIA process to identify and mitigate privacy risks.</p>
+<p>Review <a href="https://intranet.cabinetoffice.gov.uk/it-data-and-security/cabinet-office-digital-data-hub/data-hub-how-do-i-complete/how-and-when-do-i-complete-a-dpia/">DPIA guidance and start your assessment</a></p>
+<p><strong>Information management</strong></p>
+<p>You must consult the Digital Knowledge and Information Management (DKIM) team to ensure you comply with records management and information lifecycle policies.</p>
+<p>Review the <a href="https://intranet.cabinetoffice.gov.uk/it-data-and-security/how-to-manage-information-and-records/policy-and-guidance/">Information Management Policy and Guidance</a>.</p>
+<p>Consult the DKIM team about your data requirements and use of Power BI.</p>
+<h3 id="information-assurance"><strong>Information assurance</strong></h3>
+<p>For complex cases, you might need to discuss your requirements with the Information Assurance Team. <a href="https://intranet.cabinetoffice.gov.uk/managing-people-and-services/buying-goods-and-services/information-assurance-process-for-cabinet-office/">Read more about the information assurance process</a>.</p>
+<h2 id="request-process"><strong>Request process</strong></h2>
+<p>Once the DPIA and DKIM teams approve your use case, you can submit a request through the One Stop Shop (OSS).</p>
+<p>Use the <a href="https://digital-one-stop-shop.cabinetoffice.gov.uk/a/catalog/request-items/193">Power BI Access &amp; Workspace Request</a> form.</p>
+<h3 id="required-information"><strong>Required information</strong></h3>
+<p>Include copies or references to your approvals. You must answer the following questions in your request:</p>
+
+<ul>
+<li>what name you want for the workspace<br></li>
+<li>the names and email addresses of users who need access<br></li>
+<li>if the dashboard will connect to live data sources like Azure SQL or Data Lake, or if you will upload content manually<br></li>
+<li>how many users will view the dashboard<br></li>
+<li>where the users are located, such as within the Cabinet Office, cross-government, or public<br></li>
+<li>the specific classification of the data<br></li>
+<li>confirmation that the DPIA is complete</li>
+</ul>
+<h2 id="governance-and-support"><strong>Governance and support</strong></h2>
+<h3 id="support-model"><strong>Support model</strong></h3>
+<p>Cabinet Office Digital only provides platform support.</p>
+<p>We support:</p>
+
+<ul>
+<li>account provisioning<br></li>
+<li>licence assignment<br></li>
+<li>workspace creation<br></li>
+<li>some cases of underlying Azure connectivity</li>
+</ul>
+<p>We do not support:</p>
+
+<ul>
+<li>dashboard design<br></li>
+<li>DAX formula troubleshooting<br></li>
+<li>data modelling<br></li>
+<li>report building</li>
+</ul>
+<p>Service teams must handle their own Power BI development, content management and support.</p>
+<h3 id="recharge-policy"><strong>Recharge policy</strong></h3>
+<p>We fully recharge Power BI Pro licences and capacity costs to the requesting service team or business unit.</p>
+<p>We will confirm costs after reviewing your user count and data volume. You must provide a valid cost centre for monthly recharging.</p>
+<p>The recharge includes:</p>
+
+<ul>
+<li>the total cost of your licences<br></li>
+<li>costs related to provisioning your workspace and platform<br></li>
+<li>a 5% licensing fee</li>
+</ul>
+<p>See more about the Azure Hosting Recharge Policy <a href="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/recharge-policies/azure-recharge-policy.html#recharge-model">here</a></p>
+<h3 id="security-and-compliance"><strong>Security and compliance</strong></h3>
+<p>All Power BI activity is subject to central audit.</p>
+<p>Activity and access logs go into the central security pipeline for protective monitoring.</p>
+<p>Access follows the principle of least privilege. You must provide justification to get elevated permissions for workspace administration.</p>
+<p>For any technical queries regarding the Power BI platform setup, please contact the Platform Engineering Team via the <a href="https://digital-one-stop-shop.cabinetoffice.gov.uk/support/catalog/items/193">One Stop Shop</a>.</p>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2027-05-14">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 14 May 2026.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/cloud/azure-cloud/power-bi-guidance.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27Power+BI+Guidance%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fcloud%2Fazure-cloud%2Fpower-bi-guidance.html%29&amp;labels=bug&amp;title=Re%3A+%27Power+BI+Guidance%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

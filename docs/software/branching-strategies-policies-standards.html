@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Branching Strategies, Policies and Standards - Cabinet Office Digital Handbook</title>
+
+    <link href="../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/software/branching-strategies-policies-standards.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="Branching Strategies, Policies and Standards - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/software/branching-strategies-policies-standards.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="Branching Strategies, Policies and Standards" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/software/branching-strategies-policies-standards.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#branching-strategies-policies-and-standards"><span>Branching Strategies, Policies and Standards</span></a>
+    <ul>
+      <li>
+        <a href="#branching-strategy"><span>Branching strategy</span></a>
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <a href="#core-principles"><span>Core principles</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#branches"><span>Branches</span></a>
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <a href="#the-main-branch"><span>The main branch</span></a>
+              </li>
+              <li>
+                <a href="#feature-branches"><span>Feature branches</span></a>
+              </li>
+              <li>
+                <a href="#naming-feature-branches"><span>Naming feature branches</span></a>
+              </li>
+              <li>
+                <a href="#using-feature-flags"><span>Using feature flags</span></a>
+              </li>
+              <li>
+                <a href="#release-branches"><span>Release branches</span></a>
+              </li>
+              <li>
+                <a href="#naming-release-branches"><span>Naming release branches</span></a>
+              </li>
+              <li>
+                <a href="#workflow-for-release-branches"><span>Workflow for release branches</span></a>
+              </li>
+              <li>
+                <a href="#deployment-branches"><span>Deployment branches</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#commits-and-pull-requests"><span>Commits and pull requests</span></a>
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <a href="#writing-commit-messages"><span>Writing commit messages</span></a>
+              </li>
+              <li>
+                <a href="#commit-message-structure"><span>Commit message structure</span></a>
+              </li>
+              <li>
+                <a href="#using-pull-requests-prs"><span>Using pull requests (PRs)</span></a>
+              </li>
+              <li>
+                <a href="#pr-author-responsibilities"><span>PR author responsibilities</span></a>
+              </li>
+              <li>
+                <a href="#pr-reviewer-responsibilities"><span>PR reviewer responsibilities</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#branch-policies-and-protection"><span>Branch policies and protection</span></a>
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <a href="#configuring-branch-protection-rules"><span>Configuring branch protection rules</span></a>
+              </li>
+              <li>
+                <a href="#using-a-codeowners-file"><span>Using a CODEOWNERS file</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#release-and-deployment-strategy"><span>Release and deployment strategy</span></a>
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <a href="#tagging-releases"><span>Tagging releases</span></a>
+              </li>
+              <li>
+                <a href="#adhering-to-semantic-versioning-semver"><span>Adhering to Semantic Versioning (SemVer)</span></a>
+              </li>
+              <li>
+                <a href="#writing-release-notes-and-changelogs"><span>Writing release notes and changelogs</span></a>
+              </li>
+              <li>
+                <a href="#release-notes-structure-and-style"><span>Release notes structure and style</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#secure-development-practices"><span>Secure development practices</span></a>
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <a href="#using-github-actions-securely"><span>Using GitHub Actions securely</span></a>
+              </li>
+              <li>
+                <a href="#secure-merging-practices"><span>Secure merging practices</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#repository-documentation-and-management"><span>Repository documentation and management</span></a>
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <a href="#readme-files"><span>README files</span></a>
+              </li>
+              <li>
+                <a href="#licensing"><span>Licensing</span></a>
+              </li>
+              <li>
+                <a href="#general-repository-settings"><span>General repository settings</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#repository-documentation-and-management-general-repository-settings"><span>General repository settings</span></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="branching-strategies-policies-and-standards">Branching Strategies, Policies and Standards</h1>
+<h2 id="branching-strategy">Branching strategy</h2>
+<p>A disciplined branching strategy is essential for effective version control. This guide sets out the required principles you must follow.</p>
+<h4 id="core-principles"><strong>Core principles</strong></h4>
+<p>You must follow these branching principles at all times:</p>
+
+<ul>
+<li>Use short-lived feature branches for all new features and bug fixes.<br></li>
+<li>Merge feature branches into the <code>main</code> branch using pull requests.<br></li>
+<li>Keep the <code>main</code> branch high quality and up to date at all times.</li>
+</ul>
+<p>These principles prevent code conflicts and create a consistent workflow.</p>
+<h2 id="branches">Branches</h2>
+<p>This section details the types of branches you will use and the rules for managing them.</p>
+<h4 id="the-main-branch"><strong>The main branch</strong></h4>
+<p>The <code>main</code> branch is the standard default branch for all repositories. The code in the <code>main</code> branch must always pass tests, build cleanly, and be kept current. This ensures that all new feature branches start from a known, stable version of the code.</p>
+<p>You must not push changes directly to the <code>main</code> branch. All changes must be merged through a pull request.</p>
+<h4 id="feature-branches"><strong>Feature branches</strong></h4>
+<p>You must develop all new features and bug fixes in <code>feature branches</code> (also known as topic branches). This isolates work in progress from the completed work in the <code>main</code> branch. Branches are inexpensive, so you should create a new one even for small fixes.</p>
+<h4 id="naming-feature-branches"><strong>Naming feature branches</strong></h4>
+<p>You must use a consistent naming convention for feature branches to identify the work being done. The required format links the branch to a ticket in the issue tracking system (like JIRA or Azure DevOps).</p>
+<p>The format is <code>ticketID-ticketTitle</code>.</p>
+
+<ul>
+<li><code>ticketID</code>: The unique identifier from the issue tracker.<br></li>
+<li><code>ticketTitle</code>: A short, descriptive summary from the ticket title. You must replace any spaces in the title with hyphens (-).</li>
+</ul>
+<p>For example, for a ticket with ID <code>COPE-1333</code> and title &ldquo;Deploy AFT version of AWS requests app into staging&rdquo;, the branch name must be:</p>
+<p><code>COPE-1333-deploy-aft-version-of-aws-requests-app-into-staging</code></p>
+<h4 id="using-feature-flags"><strong>Using feature flags</strong></h4>
+<p>For features that take a long time to develop, use <code>feature flags</code>. This allows you to merge incomplete code into the <code>main</code> branch but keep it hidden from users until it is ready.</p>
+<h4 id="release-branches"><strong>Release branches</strong></h4>
+<p>Use <code>release branches</code> to coordinate and stabilise changes for a new release. Create a release branch from the <code>main</code> branch when you are close to a release, such as the end of a sprint.</p>
+<h4 id="naming-release-branches"><strong>Naming release branches</strong></h4>
+<p>Give the branch a clear name that associates it with the release. For example: <code>release/20</code>.</p>
+<h4 id="workflow-for-release-branches"><strong>Workflow for release branches</strong></h4>
+
+<ul>
+<li>Create the release branch from <code>main</code>.<br></li>
+<li>Fix any bugs on new branches created from the release branch.<br></li>
+<li>Merge these bug-fix branches back into the release branch using a pull request.<br></li>
+<li>Crucially, you must port any fixes made in the release branch back to the <code>main</code> branch in a separate pull request. This prevents regression in future development.</li>
+</ul>
+<h4 id="deployment-branches"><strong>Deployment branches</strong></h4>
+<p>You can manage deployments to different environments, like performance testing, in the same way you manage releases.</p>
+<p>Create branches with a clear naming convention, such as <code>deploy/performance-test</code>, and treat them like release branches. Any bug fixes made in a deployment branch must be cherry-picked back to the <code>main</code> branch.</p>
+<p>This does not apply if you are using continuous deployment.</p>
+<h2 id="commits-and-pull-requests">Commits and pull requests</h2>
+<p>This section explains the standards for creating commits and managing pull requests.</p>
+<h4 id="writing-commit-messages"><strong>Writing commit messages</strong></h4>
+<p>Well-written commit messages are crucial for communication and understanding the history of a project. Each commit should be <code>atomic</code>, meaning it is a self-contained, singular, logical change.</p>
+<p>A commit message must briefly summarise the &lsquo;what&rsquo; but should focus on explaining the &lsquo;why&rsquo; - the rationale for the change.</p>
+<h4 id="commit-message-structure"><strong>Commit message structure</strong></h4>
+<p>You must structure your commit messages as follows:</p>
+
+<ul>
+<li>A one-line summary of 50 characters maximum. Use the imperative mood (for example, &lsquo;<em>Add function to calculate totals</em>&rsquo; not &lsquo;<em>Added function</em>&rsquo;). Do not end with a full stop.<br></li>
+<li>A blank line.<br></li>
+<li>A more detailed explanation, wrapped at 72 characters, explaining the reason for the change.</li>
+</ul>
+<p>You can link to an issue tracker, but this does not replace the need for a good commit message.</p>
+<h4 id="using-pull-requests-prs"><strong>Using pull requests (PRs)</strong></h4>
+<p>You must use pull requests to merge feature branches into the <code>main</code> branch. PRs are essential for peer review, improving code quality, and notifying stakeholders of changes.</p>
+<p>You should break large pieces of work into smaller, more manageable PRs.</p>
+<h4 id="pr-author-responsibilities"><strong>PR author responsibilities</strong></h4>
+<p>As the author of a PR, you are responsible for:</p>
+
+<ul>
+<li>Ensuring your PR is reviewed and merged.<br></li>
+<li>Providing a clear title and detailed description so reviewers can understand the changes.<br></li>
+<li>Referencing any related issues.<br></li>
+<li>Including a link to a built or staged version of the changes so others can easily test them.<br></li>
+<li>Addressing all blocking comments from reviewers.</li>
+</ul>
+<h4 id="pr-reviewer-responsibilities"><strong>PR reviewer responsibilities</strong></h4>
+<p>Your team should agree on expectations for reviewers and share review responsibilities across the team. Research shows that <code>two reviewers</code> is an optimal number.</p>
+<p>When reviewing a PR, you should:</p>
+
+<ul>
+<li>Assess the purpose, scope, and technical approach.<br></li>
+<li>Check for adherence to programming style guides, consistency, and readability.<br></li>
+<li>Review library changes for backward compatibility and correct versioning.<br></li>
+<li>Examine third-party dependencies for reliability and necessity.<br></li>
+<li>Ensure tests provide adequate coverage, including for error cases.<br></li>
+<li>Consider the impact on deployment and documentation.<br></li>
+<li>Deliver feedback constructively, explaining your rationale and providing examples.</li>
+</ul>
+<h2 id="branch-policies-and-protection">Branch policies and protection</h2>
+<p>Branch policies protect important branches like <code>main</code> and enforce your team&rsquo;s standards for code quality and change management. A protected branch cannot be deleted, and all changes must go through a pull request.</p>
+<h4 id="configuring-branch-protection-rules"><strong>Configuring branch protection rules</strong></h4>
+<p>Project Administrators should set branch protection rules for <code>main</code> and any <code>release/*</code> branches. These are configured in <code>Repository Settings &gt; Branches &gt; Add rule</code>.</p>
+<p>You must enable the following rules:</p>
+
+<ul>
+<li><strong>Require a pull request before merging</strong>: Ensures all changes are reviewed.<br></li>
+<li><strong>Require approvals</strong>: Set the number of required approving reviews (at least one is recommended).<br></li>
+<li><strong>Require status checks to pass before merging</strong>: Mandates that all CI tests (builds, security scans) succeed.<br></li>
+<li><strong>Require branches to be up to date before merging</strong>: Ensures the PR is tested against the latest version of the target branch.<br></li>
+<li><strong>Require conversation resolution before merging</strong>: Ensures all review comments are addressed.<br></li>
+<li><strong>Do not allow force pushes</strong>: Protects the branch history from being rewritten.<br></li>
+<li><strong>Do not allow deletions</strong>: Prevents accidental deletion of critical branches.</li>
+</ul>
+<p>You may also consider enabling:</p>
+
+<ul>
+<li><strong>Require signed commits</strong>: Verifies the author of a commit using GPG keys.<br></li>
+<li><strong>Require linear history</strong>: Prevents merge commits by encouraging squash or rebase merges for a cleaner history.<br></li>
+<li><strong>Include administrators</strong>: Applies these rules to repository administrators.</li>
+</ul>
+<h4 id="using-a-codeowners-file"><strong>Using a CODEOWNERS file</strong></h4>
+<p>For more specific control over reviews, you can use a <code>CODEOWNERS</code> file. This file defines which individuals or teams are responsible for code in certain parts of the repository. When a PR modifies code with a designated owner, that person or team is automatically requested to review it.</p>
+<p>You can enforce this by enabling &ldquo;Require review from Code Owners&rdquo; in the branch protection rules. This is especially useful for critical paths, such as the <code>.github/workflows/</code> folder, to ensure any changes to CI/CD workflows are reviewed by the responsible team.</p>
+<h2 id="release-and-deployment-strategy">Release and deployment strategy</h2>
+<p>A clear strategy for releases and deployments makes the process routine, predictable, and low-risk.</p>
+<h4 id="tagging-releases"><strong>Tagging releases</strong></h4>
+<p>You must use tags to mark significant points in the repository&rsquo;s history, especially releases. When you create a <code>GitHub Release</code>, it automatically generates a Git tag. This provides several benefits:</p>
+
+<ul>
+<li><strong>Semantic Versioning</strong>: The tag must follow semantic versioning (for example, <code>v1.0.0</code>).<br></li>
+<li><strong>Automated Release Notes</strong>: Tags allow for the automatic generation of release notes by comparing the commit history between two tags.<br></li>
+<li><strong>Traceability</strong>: Applying the tag version to build artifacts and container images creates a clear link between your source code, the release, and your deployed assets.</li>
+</ul>
+<h4 id="adhering-to-semantic-versioning-semver"><strong>Adhering to Semantic Versioning (SemVer)</strong></h4>
+<p>If a project is open source or its changes impact third parties, it must use a version number compatible with Semantic Versioning (<code>MAJOR.MINOR.PATCH</code>).</p>
+
+<ul>
+<li><code>MAJOR</code> version for incompatible API changes.<br></li>
+<li><code>MINOR</code> version for new functionality that is backward-compatible.<br></li>
+<li><code>PATCH</code> version for backward-compatible bug fixes.</li>
+</ul>
+<h4 id="writing-release-notes-and-changelogs"><strong>Writing release notes and changelogs</strong></h4>
+<p>If your changes will affect third parties (such as users of an API or library), you must publish <code>release notes</code>. For internal services, they are a valuable way to track changes.</p>
+<p>You must also provide a <code>changelog</code> if the changes impact third parties. This is a human-readable, chronological record of all significant changes for each version.</p>
+<h4 id="release-notes-structure-and-style"><strong>Release notes structure and style</strong></h4>
+<p>Organise release notes with clear headings: <code>Breaking changes</code>, <code>New features</code>, <code>Deprecated features</code>, and <code>Bug fixes</code>.</p>
+<p>Write in a clear, concise style. Use the active voice and address users directly (‘You can now…’). Avoid team-centric language (‘We have fixed…’).</p>
+<h2 id="secure-development-practices">Secure development practices</h2>
+<p>This section details the required practices for securing your CI/CD pipeline and repository.</p>
+<h4 id="using-github-actions-securely"><strong>Using GitHub Actions securely</strong></h4>
+<p>When using GitHub Actions for CI/CD, you must follow these security principles:</p>
+
+<ul>
+<li><strong>Principle of Least Privilege</strong>: Workflows and the <code>GITHUB_TOKEN</code> should only have the minimum permissions necessary. Default to read-only and escalate permissions only for specific jobs where needed.<br></li>
+<li><strong>Secure Secret Management</strong>: Use GitHub Environments to scope secrets to specific deployment targets (like staging or production). For cloud authentication (for example, with AWS IAM), use OpenID Connect (OIDC) to request short-lived tokens instead of using long-lived credentials.<br></li>
+<li><strong>Third-Party Actions Policy</strong>: You must pin all third-party actions to a full commit SHA, not a mutable tag (like <code>v2.1.0</code>). Only use third-party actions that are verified and actively maintained. Enforce this through organisation settings.<br></li>
+<li><strong>Protect Workflow Files</strong>: Use a <code>CODEOWNERS</code> file to require reviews for any changes to files in the <code>.github/workflows/</code> folder.</li>
+</ul>
+<h4 id="secure-merging-practices"><strong>Secure merging practices</strong></h4>
+<p>When updating your feature branch with the latest changes from <code>main</code>, you should use <code>git merge</code> instead of <code>git rebase</code>. Merging preserves your original commit history, whereas rebasing rewrites it, which can cause problems for collaborators on a shared branch.</p>
+<p>You can achieve a clean, linear history on the <code>main</code> branch by using a squash merge when completing a pull request. This combines all of your feature branch&rsquo;s commits into a single commit on <code>main</code>.</p>
+<p>You must <strong>never use <code>git push -f</code></strong> (force push) on shared branches. If you absolutely have to rewrite history on a personal branch that has not been shared, use <code>git push --force-with-lease</code>, as it is a safer command that will not overwrite others&rsquo; work.</p>
+<h2 id="repository-documentation-and-management">Repository documentation and management</h2>
+<p>Clear documentation is essential for any project.</p>
+<h4 id="readme-files"><strong>README files</strong></h4>
+<p>Every repository must have a <code>README</code> file. It is the main entry point for anyone interacting with your project. The <code>README</code> should help users understand what the project does, how to use it, and how to contribute.</p>
+
+<ul>
+<li><strong>Language</strong>: Write in plain English. Assume the reader has no prior knowledge of the project.<br></li>
+<li><strong>Structure</strong>: For GDS / CO projects, READMEs should follow the alphagov template for consistency.<br></li>
+<li><strong>Testing</strong>: You must test all instructions in the <code>README</code> before publishing to ensure they are accurate.</li>
+</ul>
+<h4 id="licensing"><strong>Licensing</strong></h4>
+<p>All public repositories must include a <code>LICENCE</code> file (or <code>LICENCE.md</code>).</p>
+
+<ul>
+<li><strong>Code</strong>: Use the MIT License.<br></li>
+<li><strong>Documentation</strong>: Use the Open Government Licence (OGL).<br></li>
+<li><strong>Copyright</strong>: The copyright is Crown Copyright. Include the notice: <code>Copyright (c) YEAR Crown Copyright (Government Digital Service)</code>.</li>
+</ul>
+<h4 id="general-repository-settings"><strong>General repository settings</strong></h4>
+
+<ul>
+<li><strong>Backups</strong>: Consider backing up repositories to an alternative location, such as AWS CodeCommit.<br></li>
+<li><strong>Archiving</strong>: If an application is no longer in production, you should archive its repository. You must update the <code>README</code> to explain why and link to any new application that replaces it.<br></li>
+<li><strong>Access</strong>: Regularly review collaborator and team access permissions, following the principle of least privilege.<br></li>
+<li>Code: Use the MIT License.<br></li>
+<li>Documentation: Use the Open Government Licence (OGL).<br></li>
+<li>Copyright: The copyright is Crown Copyright. Include the notice: <em>Copyright &copy; YEAR Crown Copyright (Government Digital Service)</em>.</li>
+</ul>
+<h3 id="repository-documentation-and-management-general-repository-settings">General repository settings</h3>
+
+<ul>
+<li>Backups: Consider backing up repositories to an alternative location, such as AWS CodeCommit.<br></li>
+<li>Archiving: If an application is no longer in production, you should archive its repository. You must update the <em>README</em> to explain why and link to any new application that replaces it.<br></li>
+<li>Access: Regularly review collaborator and team access permissions, following the principle of least privilege.</li>
+</ul>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2026-06-26">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 26 September 2025.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/software/branching-strategies-policies-standards.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27Branching+Strategies%2C+Policies+and+Standards%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fsoftware%2Fbranching-strategies-policies-standards.html%29&amp;labels=bug&amp;title=Re%3A+%27Branching+Strategies%2C+Policies+and+Standards%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../javascripts/application.js"></script>
+  </body>
+</html>

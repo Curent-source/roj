@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>AWS Administration Policy - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/aws-cloud/aws-administration-min-requirements.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="AWS Administration Policy - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/aws-cloud/aws-administration-min-requirements.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="AWS Administration Policy" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/aws-cloud/aws-administration-min-requirements.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#aws-administration-policy"><span>AWS Administration Policy</span></a>
+    <ul>
+      <li>
+        <a href="#risks-of-inadequate-access-management"><span>Risks of Inadequate Access Management</span></a>
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <a href="#cybersecurity-risks"><span>Cybersecurity Risks</span></a>
+              </li>
+              <li>
+                <a href="#data-breach-risks"><span>Data Breach Risks</span></a>
+              </li>
+              <li>
+                <a href="#compliance-risks"><span>Compliance Risks</span></a>
+              </li>
+              <li>
+                <a href="#financial-risks"><span>Financial Risks</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#recommended-security-practices"><span>Recommended Security Practices</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#requirements-for-aws-administrators-cabinet-office"><span>Requirements for AWS Administrators: Cabinet Office</span></a>
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <a href="#1-technical-competence"><span>1. Technical Competence</span></a>
+              </li>
+              <li>
+                <a href="#2-security-and-compliance-knowledge"><span>2. Security and Compliance Knowledge</span></a>
+              </li>
+              <li>
+                <a href="#3-certifications-highly-recommended"><span>3. Certifications (Highly Recommended)</span></a>
+              </li>
+              <li>
+                <a href="#4-security-clearance"><span>4. Security Clearance</span></a>
+              </li>
+              <li>
+                <a href="#5-organisation-and-governance"><span>5. Organisation and Governance</span></a>
+              </li>
+              <li>
+                <a href="#6-identity-verification"><span>6. Identity Verification</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#responsibilities-of-aws-administrators"><span>Responsibilities of AWS Administrators</span></a>
+      </li>
+      <li>
+        <a href="#administrator-availability-and-service-resilience"><span>Administrator Availability and Service Resilience</span></a>
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <a href="#principle"><span>Principle</span></a>
+              </li>
+              <li>
+                <a href="#minimum-administrator-coverage-and-the-principle-of-least-privilege"><span>Minimum Administrator Coverage and the Principle of Least Privilege</span></a>
+              </li>
+              <li>
+                <a href="#management-of-administrator-cover"><span>Management of Administrator Cover</span></a>
+              </li>
+              <li>
+                <a href="#out-of-hours-and-on-call-requirements"><span>Out-of-Hours and On-Call Requirements</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="aws-administration-policy">AWS Administration Policy</h1>
+<p>AWS administrators in the Cabinet Office hold a critical responsibility for the security, compliance, and efficient operation of organisational cloud infrastructure. Granting administrative access to untrained personnel introduces significant risks across cybersecurity, data protection, compliance, and financial domains. To mitigate these risks, strict requirements and responsibilities are established.</p>
+<h2 id="risks-of-inadequate-access-management"><strong>Risks of Inadequate Access Management</strong></h2>
+<h4 id="cybersecurity-risks"><strong>Cybersecurity Risks</strong></h4>
+
+<ul>
+<li>Increased vulnerability to cyber threats due to misconfigured security settings.<br></li>
+<li>Susceptibility to unauthorised access, privilege escalation, or misuse from over-privileged permissions.<br></li>
+<li>Potential exploitation by malicious actors or accidental mishandling.</li>
+</ul>
+<h4 id="data-breach-risks"><strong>Data Breach Risks</strong></h4>
+
+<ul>
+<li>Greater chance of unintentional data exposure or deletion caused by excessive access rights.<br></li>
+<li>Risk of unauthorised data access due to improper permission controls.<br></li>
+<li>Possible data leaks or loss impacting organisational confidentiality and compliance.</li>
+</ul>
+<h4 id="compliance-risks"><strong>Compliance Risks</strong></h4>
+
+<ul>
+<li>Non-compliance with standards such as GDPR, Cyber Essentials, and other regulations due to overly broad permissions.<br></li>
+<li>Failure to maintain audit trails or proper documentation of access rights.<br></li>
+<li>Breach of organisational policies linked to least privilege principles.</li>
+</ul>
+<h4 id="financial-risks"><strong>Financial Risks</strong></h4>
+
+<ul>
+<li>Excessive resource utilisation or mismanagement leading to inflated costs.<br></li>
+<li>Risk of unauthorised resource consumption, resulting in unexpected billing increases.<br></li>
+<li>Additional costs from incident response, remediation actions, and legal penalties following security breaches.</li>
+</ul>
+<h3 id="recommended-security-practices"><strong>Recommended Security Practices</strong></h3>
+
+<ul>
+<li><strong>Principle of Least Privilege:</strong> Grant permissions only as necessary for specific tasks.<br></li>
+<li><strong>Role-Based Access Control:</strong> Use roles to define permissions aligned with job responsibilities.<br></li>
+<li><strong>Regular Review:</strong> Conduct periodic audits of permissions and access logs.<br></li>
+<li><strong>Training and Awareness:</strong> Ensure all personnel with admin rights receive appropriate organisation-specific training.<br></li>
+<li><strong>Documentation:</strong> Maintain comprehensive records of configurations, access rights, and changes.</li>
+</ul>
+<h2 id="requirements-for-aws-administrators-cabinet-office"><strong>Requirements for AWS Administrators: Cabinet Office</strong></h2>
+<h4 id="1-technical-competence"><strong>1. Technical Competence</strong></h4>
+
+<ul>
+<li>Proven experience with AWS architecture, services, and infrastructure management.<br></li>
+<li>In-depth knowledge of core AWS services (EC2, S3, IAM, RDS, VPC, etc.).</li>
+</ul>
+<h4 id="2-security-and-compliance-knowledge"><strong>2. Security and Compliance Knowledge</strong></h4>
+
+<ul>
+<li>Strong understanding of security best practices and regulatory requirements.<br></li>
+<li>Ability to implement and manage IAM policies, encryption, and security groups effectively.</li>
+</ul>
+<h4 id="3-certifications-highly-recommended"><strong>3. Certifications (Highly Recommended)</strong></h4>
+
+<ul>
+<li>AWS Certified Solutions Architect, AWS Certified SysOps Administrator, or recognised equivalent.</li>
+</ul>
+<h4 id="4-security-clearance"><strong>4. Security Clearance</strong></h4>
+
+<ul>
+<li>Must hold SC or DV clearance.</li>
+</ul>
+<h4 id="5-organisation-and-governance"><strong>5. Organisation and Governance</strong></h4>
+
+<ul>
+<li>Must follow the Cabinet Office Digital Handbook for AWS account management and adhere to governance policies.</li>
+</ul>
+<h4 id="6-identity-verification"><strong>6. Identity Verification</strong></h4>
+
+<ul>
+<li>Must have a valid Cabinet Office or organisational email address for contact and organisational correspondence.</li>
+</ul>
+<h2 id="responsibilities-of-aws-administrators"><strong>Responsibilities of AWS Administrators</strong></h2>
+
+<ul>
+<li><strong>Cloud Infrastructure Management:</strong> Develop, configure, and maintain AWS resources aligned with organisational needs.<br></li>
+<li><strong>Security and Access Control:</strong> Manage IAM policies, security groups, encryption, and security best practices.<br></li>
+<li><strong>Performance Monitoring &amp; Optimisation:</strong> Continuously evaluate resource utilisation, optimise costs, and enhance system performance.<br></li>
+<li><strong>Backup &amp; Disaster Recovery:</strong> Implement and maintain backup solutions and disaster recovery plans.<br></li>
+<li><strong>Compliance &amp; Documentation:</strong> Ensure compliance with policies and regulations; maintain detailed records of configurations and operational procedures.<br></li>
+<li><strong>Troubleshooting &amp; Incident Response:</strong> Diagnose issues swiftly and respond effectively to security incidents or outages.<br></li>
+<li><strong>Automation &amp; Change Management:</strong> Use scripting tools, CloudFormation, Terraform, or similar to automate deployment and manage organisational changes with minimal disruption.<br></li>
+<li><strong>User Account Management:</strong> Create, modify, and deactivate user accounts, ensuring adherence to least privilege principles.<br></li>
+<li><strong>Continuous Improvement:</strong> Keep abreast of new AWS features, security standards, and best practices; recommend improvements accordingly.</li>
+</ul>
+<h2 id="administrator-availability-and-service-resilience"><strong>Administrator Availability and Service Resilience</strong></h2>
+<h4 id="principle"><strong>Principle</strong></h4>
+<p>To ensure the continuous operation and security of Cabinet Office services, each team is responsible for maintaining constant availability of qualified AWS administrators. This is essential for enabling a swift and effective response to emerging threats, security incidents, or critical operational issues.</p>
+<h4 id="minimum-administrator-coverage-and-the-principle-of-least-privilege"><strong>Minimum Administrator Coverage and the Principle of Least Privilege</strong></h4>
+<p>To ensure both security and operational resilience, our approach to administrator access is founded on the <a href="https://digital-handbook.cabinetoffice.gov.uk/docs/software/principle-least-privilege.html#principle-of-least-privilege"><strong>Principle of Least Privilege</strong>.</a> This principle dictates that individuals are not granted standing permissions. Instead, they are given the ability to assume a role with elevated privileges only when required to perform a specific, time-bound task. This model allows us to reconcile the need for resilience with the Principle of Least Privilege.</p>
+
+<ul>
+<li><strong>Ensuring Redundancy:</strong> To safeguard against single points of failure (e.g., due to unexpected absence or staff attrition), it is required that <strong>more than one individual per team</strong> meets the criteria for administrator access outlined in the &lsquo;Requirements for AWS Administrators&rsquo; section. These individuals should be capable of assuming an administrative role when a need arises.<br></li>
+<li><strong>Case-by-Case Justification:</strong> While multiple team members must be eligible, they should not hold permanent or standing administrator privileges. The Team Lead or Service Owner is responsible for assessing their service&rsquo;s specific needs and formally documenting the justification for the number of personnel who are granted the ability to assume an administrative role.<br></li>
+<li><strong>Documented Escalation:</strong> For all services, a documented and understood emergency escalation path must be in place to ensure a qualified individual can assume an administrative role swiftly in response to an incident.</li>
+</ul>
+<p>The final decision on the number of eligible administrators and its justification must be recorded and reviewed periodically as part of the service&rsquo;s governance.</p>
+<h4 id="management-of-administrator-cover"><strong>Management of Administrator Cover</strong></h4>
+<p>Team Leads and/or Service Owners are responsible for proactively managing administrator availability.</p>
+
+<ul>
+<li><strong>Planned Absence:</strong> Schedules for planned leave (e.g., annual leave) must be monitored to ensure that continuous administrator coverage is maintained. Where a potential gap is identified, another team member who meets the required criteria must be assigned and made aware of their responsibilities for the duration of the absence.<br></li>
+<li><strong>Unexpected Absence:</strong> The requirement for multiple qualified administrators serves as the primary control for mitigating risks from short-notice absences, such as illness.</li>
+</ul>
+<h4 id="out-of-hours-and-on-call-requirements"><strong>Out-of-Hours and On-Call Requirements</strong></h4>
+<p>The requirement for out-of-hours administrator availability is determined by a service&rsquo;s designated criticality and its associated Service Level Agreement.</p>
+
+<ul>
+<li><strong>Critical Services:</strong> For services designated as business-critical or requiring 24/7/365 operation, an out-of-hour support contact and qualified AWS administrator must be available at all times to respond to incidents.<br></li>
+<li><strong>Standard Services:</strong> For all other services, Team Leads must assess and document the risk of an out-of-hours incident, and a clear and documented emergency escalation path to a qualified administrator must be in place.</li>
+</ul>
+<p>Adherence to these minimum requirements and responsibilities ensures the delivery of a secure, reliable, and efficient AWS environment. Regular review, training, and organisational oversight are vital to maintaining best practices within the Cabinet Office infrastructure.</p>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2026-03-09">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 9 September 2025.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/cloud/aws-cloud/aws-administration-min-requirements.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27AWS+Administration+Policy%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fcloud%2Faws-cloud%2Faws-administration-min-requirements.html%29&amp;labels=bug&amp;title=Re%3A+%27AWS+Administration+Policy%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

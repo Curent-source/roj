@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>AWS Organisational Structure (Control Tower) - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/aws-cloud/aws-org-units-in-control-tower.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="AWS Organisational Structure (Control Tower) - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/aws-cloud/aws-org-units-in-control-tower.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="AWS Organisational Structure (Control Tower)" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/aws-cloud/aws-org-units-in-control-tower.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#aws-organisational-structure-control-tower"><span>AWS Organisational Structure (Control Tower)</span></a>
+    <ul>
+      <li>
+        <a href="#background"><span>Background:</span></a>
+      </li>
+      <li>
+        <a href="#what-control-tower-provides"><span>What Control Tower Provides</span></a>
+      </li>
+      <li>
+        <a href="#organisation-units-ous"><span>Organisation Units (OUs)</span></a>
+      </li>
+      <li>
+        <a href="#service-control-policy-scps"><span>Service Control Policy (SCPs)</span></a>
+      </li>
+      <li>
+        <a href="#root-scps"><span>Root SCPs</span></a>
+      </li>
+      <li>
+        <a href="#workloads-scps"><span>Workloads SCPs</span></a>
+      </li>
+      <li>
+        <a href="#quarantine-scps"><span>Quarantine SCPs</span></a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="#organisational-aws-config-and-audit-logs-shipping"><span>Organisational AWS Config and audit logs shipping</span></a>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="aws-organisational-structure-control-tower">AWS Organisational Structure (Control Tower)</h1>
+<h2 id="background">Background:</h2>
+<p>In 2025, the CO Platform Engineering (COPE) team migrated the Cabinet Office AWS accounts from the existing AWS Organisation (shared with GDS) to a newly established AWS Organisation, set up with AWS Control Tower as a landing zone to govern a multi-account environment.</p>
+<p>Control Tower provides a governed multi-account landing zone designed to standardise account provisioning, enforce security guardrails, and centralise logging and monitoring across the organisation.</p>
+<h2 id="what-control-tower-provides">What Control Tower Provides</h2>
+
+<ul>
+<li><strong>Fast, prescriptive setup</strong>: Provides a ready-made Landing Zone with blueprints to create and manage multiple AWS accounts in a consistent way.<br></li>
+<li><strong>Centralised governance</strong>: Enforces policy and security standards across all accounts via Guardrails (preventive and detective) that rely on AWS Config and, where appropriate, SCPs.<br></li>
+<li><strong>Simplified account provisioning</strong>: The Account Factory enables rapid creation of new accounts that automatically inherit approved baselines and controls.<br></li>
+<li><strong>Centralised logging and security posture</strong>: Configured central logging (e.g., CloudTrail, Config) and standard security baselines across the organisation.<br></li>
+<li><strong>Access management integration</strong>: Works with AWS Organisations for governance and AWS SSO (or IAM Identity Centre) for centralised user access.<br></li>
+<li><strong>Ongoing compliance and visibility</strong>: Provides dashboards and audit-ready evidence to support governance, risk, and compliance activities.<br></li>
+<li><strong>Standardisation across environments</strong>: Encourages consistent controls across prod, non-prod, and other environments, regions, or business units.</li>
+</ul>
+<h2 id="organisation-units-ous">Organisation Units (OUs)</h2>
+<p>AWS Organisations use Organisational Units (OUs) to group accounts and apply governance controls centrally. Each OU has a defined purpose and associated Service Control Policies (SCPs).</p>
+<p>The OUs are:</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: left">OU Name &amp; Path</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Type</th>
+</tr><tr>
+<td style="text-align: left">Root</td>
+<td style="text-align: left">Top level layer of the organisation, where all accounts and Organisation Units (OUs) sit within. Anything applied here will be inherited by all OUs and accounts within the organisation.</td>
+<td style="text-align: left">Internal</td>
+</tr><tr>
+<td style="text-align: left">Root/Quarantine</td>
+<td style="text-align: left">Temporary holding zone for accounts where malicious activity has been suspected, and activity within these environments should be heavily restricted while forensic activity takes place.</td>
+<td style="text-align: left">External</td>
+</tr><tr>
+<td style="text-align: left">Root/Management</td>
+<td style="text-align: left">For Organisation wide management services, such as Request-An-AWS-Account</td>
+<td style="text-align: left">Internal</td>
+</tr><tr>
+<td style="text-align: left">Root/Security</td>
+<td style="text-align: left">For Organisation wide security services, such as CloudTrail, GuardDuty, Config services which have delegated admin permissions across the organisation.</td>
+<td style="text-align: left">Internal</td>
+</tr><tr>
+<td style="text-align: left">Root/Sandbox</td>
+<td style="text-align: left">For short lived development projects that do not contain live data and are to be segregated from live services.</td>
+<td style="text-align: left">Internal</td>
+</tr><tr>
+<td style="text-align: left">Root/Workloads</td>
+<td style="text-align: left">Primary location for storing any accounts related to CO:D services, whether they are development, test, production accounts. Has further sub organisation units, for production and non production to split policies as required.</td>
+<td style="text-align: left">External</td>
+</tr><tr>
+<td style="text-align: left">Root/Workloads/ Non-Production</td>
+<td style="text-align: left">Primary location for any AWS account supporting a CO:D service which does not process live data. A minimum baseline set of policies should be consistent across all accounts here.</td>
+<td style="text-align: left">External</td>
+</tr><tr>
+<td style="text-align: left">Root/Workloads/ Production</td>
+<td style="text-align: left">Primary location for any AWS account supporting a CO:D service which processes live data, whether it is a production, or testing account. A minimum baseline set of policies should be consistent across all accounts here.</td>
+<td style="text-align: left">External</td>
+</tr><tr>
+<td style="text-align: left">Root/Exception</td>
+<td style="text-align: left">Primary location for AWS accounts which have bespoke or specific policy requirements which do not align with other workload environments. Bespoke policies should be configured here, with additional detective monitoring in place to reflect the fact there are different policy needs.</td>
+<td style="text-align: left">External</td>
+</tr><tr>
+<td style="text-align: left">Root/Transition</td>
+<td style="text-align: left">Location where migrated accounts from the old AWS organisation will be transitioned to. Limited policies will apply here - only those that are required to maintain the organisation, and detective monitoring services.</td>
+<td style="text-align: left">External</td>
+</tr><tr>
+<td style="text-align: left">Root/Specific AWS Account</td>
+<td style="text-align: left">Specific AWS accounts may have additional requirements, which need a policy attached. This can be attached directly to their AWS account, rather than an OU to apply to multiple accounts</td>
+<td style="text-align: left">External</td>
+</tr>
+        </table>
+      </div><p><em>* External OUs contain AWS accounts used by service teams.</em><br>
+<em>* Internal OUs are used only by CO Digital platform or cyber security teams.</em></p>
+<p>Further OU structure may be built for specific projects based on their specific requirements.</p>
+<p>The COPE team automates the arrangement of organisational units (OUs) based on your <a href="https://request-an-aws-account.platforms.cabinetoffice.gov.uk/">account requests</a> and places your account in the correct OU. In the event of a cyber or data breach, COPE will collaborate with the Cabinet Office Cyber Security team to determine whether the breached account should be moved to the Quarantined OU to protect Cabinet Office assets.</p>
+<h2 id="service-control-policy-scps">Service Control Policy (SCPs)</h2>
+<p>SCPs are organisation level guardrails that define the maximum permissions available within an account. They do not grant permissions, they define boundaries.</p>
+<h2 id="root-scps">Root SCPs</h2>
+<p>These Service Control Policies (SCPs) are applied at the Root level of the organisation and are applied to all the accounts under Root, establishing a foundational level of security and operational consistency.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: left">Policy</th>
+<th style="text-align: left">Description</th>
+</tr><tr>
+<td style="text-align: left">Prevent Ability To Leave Organisation</td>
+<td style="text-align: left">Stops AWS member accounts from leaving the organisation by themselves.</td>
+</tr><tr>
+<td style="text-align: left">Protect Account &amp; Billing Settings</td>
+<td style="text-align: left">Prevents standard users editing organisation accounts and billing settings.</td>
+</tr><tr>
+<td style="text-align: left">Protects the Cabinet Office core security monitoring services</td>
+<td style="text-align: left">Ensures that AWS Config, GuardDuty, CloudTrail, and Security Hub cannot be disabled or changed. These services are essential for detecting anomalous activity</td>
+</tr>
+        </table>
+      </div><h2 id="workloads-scps">Workloads SCPs</h2>
+<p>These Service Control Policies (SCPs) are applied to the Workloads organisational unit (OU) nested in the organisation root. The Workloads OU contains two sub‑units: Non‑production and Production. By attaching the SCPs to the Workloads parent OU, both the Non‑production and Production OUs inherit the same control policy set. This design enables service teams to test their implementations in non‑production using the same SCPs that govern production.</p>
+<p>Segregating the AWS accounts into separate OUs offers several benefits:</p>
+
+<ul>
+<li>Enhanced isolation between environments and reduce the production blast radius<br></li>
+<li>Simplifies audit/compliance reporting while maintaining a consistent security baseline across OUs.<br></li>
+<li>Enhance proactive security monitoring to the production workloads</li>
+</ul>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: left">Policy/ Security monitoring</th>
+<th style="text-align: left">Description</th>
+</tr><tr>
+<td style="text-align: left">Region Control</td>
+<td style="text-align: left">Restricts AWS operations to approved regions only. Regional services are limited to eu-west-1 and eu-west-2, with Lambda and ACM additionally permitted in us-east-1 for edge and certificate use cases. Requests to operate outside these regions will be denied.</td>
+</tr><tr>
+<td style="text-align: left">Lambda Function URL Authentication</td>
+<td style="text-align: left">Prevents the creation or modification of Lambda Function URLs without authentication. Function URLs must use AWS_IAM authentication and cannot be configured for unauthenticated public access.</td>
+</tr><tr>
+<td style="text-align: left">Global Accelerator Governance</td>
+<td style="text-align: left">Prevents the creation or modification of AWS Global Accelerator resources to ensure edge networking patterns are centrally reviewed and governed.</td>
+</tr><tr>
+<td style="text-align: left">Glacier Archive Protection</td>
+<td style="text-align: left">Prevents deletion of Glacier archives and vaults to protect long-term retained data from accidental or unauthorised removal.</td>
+</tr><tr>
+<td style="text-align: left">Root User Restriction (Member Accounts)</td>
+<td style="text-align: left">Restricts high-risk administrative actions when using the root user within member accounts, including IAM, Organisations, billing and support modifications. Root access is intended for emergency use only.</td>
+</tr><tr>
+<td style="text-align: left">IMDSv2 Enforcement (EC2 Metadata Security)</td>
+<td style="text-align: left">Requires EC2 instances and launch configurations to enforce IMDSv2 by mandating session tokens and preventing metadata endpoint weakening. This reduces the risk of credential exposure via instance metadata exploitation.</td>
+</tr><tr>
+<td style="text-align: left">S3 Account Public Access Block Protection</td>
+<td style="text-align: left">Prevents modification of the account-level S3 Public Access Block configuration. This ensures the global safeguard against public bucket exposure cannot be weakened or disabled within member accounts, maintaining a consistent baseline for S3 data protection.</td>
+</tr>
+        </table>
+      </div><h2 id="quarantine-scps">Quarantine SCPs</h2>
+<p>These Service Control Policies (SCPs) are applied to the quarantine OU, designed to contain security controls from an Incident Response perspective that are applicable to AWS accounts within the Quarantine OU within the Cabinet Office Organisation.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: left">Policy/ Security monitoring</th>
+<th style="text-align: left">Description</th>
+</tr><tr>
+<td style="text-align: left">Deny All Actions On Every Resource</td>
+<td style="text-align: left">Denies all actions on every resource, to restrict accounts that are marked to be in a suspended state.</td>
+</tr>
+        </table>
+      </div><p>To find out specific details on the SCP implementation, please use <a href="https://digital-one-stop-shop.cabinetoffice.gov.uk/support/home">Digital One Stop Shop</a> and raise a ticket for the CO Platform Engineering team.</p>
+<h1 id="organisational-aws-config-and-audit-logs-shipping">Organisational AWS Config and audit logs shipping</h1>
+<p>The Cabinet Office AWS organisation has security monitoring set up, which ships audit logs into Splunk via Cribl to be monitored by the Cabinet Office Security Operation Centre (SOC). Further information on the security monitoring service can be found on the <a href="https://intranet.cabinetoffice.gov.uk/it-data-and-security/cyber-and-information-security-services/security-monitoring/">intranet</a>.</p>
+<p><strong>Standard Logging Services</strong></p>
+<p>The following logging services are enabled at the Organisation level for all member accounts and cannot be disabled or altered by member accounts. Log shipping is configured centrally in the Organisation by the Cabinet Office Cyber Security team.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: left">AWS Service</th>
+<th style="text-align: left">Description</th>
+</tr><tr>
+<td style="text-align: left">AWS CloudTrail</td>
+<td style="text-align: left">An Organisation wide CloudTrail audit trail is configured by default for all member accounts within the AWS Organisation. This covers all API activity from users, roles and AWS services within an account.  <em>Member accounts can set up additional logging trails in their individual accounts if required.</em>
+</td>
+</tr><tr>
+<td style="text-align: left">AWS GuardDuty</td>
+<td style="text-align: left">A threat detection service that uses threat intelligence feeds and machine learning models to identify potential malicious activity in AWS environments. GuardDuty is enabled by default for all member accounts within the AWS Organisation. <em>Additional GuardDuty Protection Plans can be enabled on request by the Cabinet Office Cyber Security team for a member account.</em>
+</td>
+</tr><tr>
+<td style="text-align: left">AWS Config</td>
+<td style="text-align: left">A configuration management service that provides both configuration history of resources in AWS environments, and identifies deviations from security best practices. AWS Config is enabled Organisation wide, with a small subset of configuration checks enabled and periodically reviewed.  <em>Member accounts can set up additional AWS Config rules in their individual account if required.</em>
+</td>
+</tr>
+        </table>
+      </div><p>Alerts are configured by the Cabinet Office SOC team, and periodically reviewed for all standard logging services. Alerts are prioritised and actioned by the SOC team, and raised with the corresponding member account contact provided. Logs are retained within the Splunk Security Information &amp; Event Management (SIEM) service for 12 months.</p>
+<p><strong>Optional Additional Logging Services</strong></p>
+<p>Member accounts within the AWS Organisation can optionally send additional logs to the Cabinet Office SOC for security monitoring, such as application level logs from services including API Gateway. This is configured within the specific AWS member account by the Cabinet Office Cyber Security team, who offer <a href="https://intranet.cabinetoffice.gov.uk/it-data-and-security/cyber-and-information-security-services/threat-modelling/">threat modelling</a> exercises to understand potential threats to a service team that require additional monitoring. The contact details for the Cyber Security team can be found on the <a href="https://intranet.cabinetoffice.gov.uk/it-data-and-security/cyber-and-information-security-services/">Intranet</a>.</p>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2027-01-06">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 6 January 2026.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/cloud/aws-cloud/aws-org-units-in-control-tower.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27AWS+Organisational+Structure+%28Control+Tower%29%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fcloud%2Faws-cloud%2Faws-org-units-in-control-tower.html%29&amp;labels=bug&amp;title=Re%3A+%27AWS+Organisational+Structure+%28Control+Tower%29%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

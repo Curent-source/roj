@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Use a web application firewall (WAF) - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/web-application-firewall.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="Use a web application firewall (WAF) - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/web-application-firewall.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="Use a web application firewall (WAF)" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/web-application-firewall.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#use-a-web-application-firewall-waf"><span>Use a web application firewall (WAF)</span></a>
+    <ul>
+      <li>
+        <a href="#why-you-should-use-a-waf"><span>Why you should use a WAF</span></a>
+      </li>
+      <li>
+        <a href="#when-and-how-to-use-a-waf"><span>When and how to use a WAF</span></a>
+      </li>
+      <li>
+        <a href="#managing-your-waf"><span>Managing your WAF</span></a>
+        <ul>
+          <li>
+            <a href="#alerts"><span>Alerts</span></a>
+          </li>
+          <li>
+            <a href="#reviews"><span>Reviews</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#contact-cyber-security"><span>Contact Cyber Security</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="use-a-web-application-firewall-waf">Use a web application firewall (WAF)</h1>
+<p>A <a href="https://owasp.org/www-community/Web_Application_Firewall">web application firewall (WAF)</a> is an application layer protection for bi-directional web-based traffic. With a WAF, you can track web traffic and use specific tools to configure access control for your web content. Doing this improves your service’s security monitoring and security position.</p>
+<h2 id="why-you-should-use-a-waf">Why you should use a WAF</h2>
+<p>Your continuous integration (CI) and continuous deployment (CD) pipelines should include security tests in their workflows to identify any common vulnerabilities in your code. Some common vulnerabilities like <a href="https://owasp.org/www-community/attacks/xss/">Cross-site Scripting (XSS)</a> and <a href="https://wiki.owasp.org/index.php/Testing_for_XML_Injection_(OTG-INPVAL-008)">XML command injection attacks</a> are still possible in your production environments due to human error.</p>
+<p>Combining a WAF with CI and CD tools reduces the risk of these attacks being successful, and provides enhanced layered security coverage for your service.</p>
+<p>The Cabinet Office mandate the use of WAF in compliance with:</p>
+
+<ul>
+<li><a href="https://intranet.cabinetoffice.gov.uk/it-data-and-security/cyber-and-information-security-services/cyber-security-policies/">Cabinet Office Cyber Security and Information Policies</a></li>
+<li>HMG Standards such as the <a href="NCSC">Cyber Assessment Framework</a> or <a href="https://www.security.gov.uk/guidance/secure-by-design/">Secure by Design Principles</a> (CDDO)</li>
+<li>[Information Security][] requirements to minimise risk</li>
+<li><a href="https://www.pcisecuritystandards.org/">Payment Card Industry Data Security Standard (PCI DSS)</a> compliance</li>
+<li>they are generally considered basic practice for protecting public web applications</li>
+</ul>
+<h2 id="when-and-how-to-use-a-waf">When and how to use a WAF</h2>
+<p>Set up a baseline of tests in your project’s alpha phase to identify any security vulnerabilities. As your service’s features grow, extend your tests to cover new vulnerabilities you identify. For example, through exercises like <a href="/standards/threat-modelling.html">application threat modelling</a></p>
+<p><a href="https://www.ncsc.gov.uk/collection/developers-collection">Good development practices</a> should detect and fix common vulnerabilities before they reach production environments. Use your WAF to track digital service vulnerabilities an attacker could exploit.</p>
+<p>You should:</p>
+
+<ul>
+<li>have an independent security audit in place</li>
+<li>use established <a href="/standards/logging.html">logging techniques</a></li>
+<li>encrypt data at rest as well as in transit</li>
+<li>subscribe to and apply security patches</li>
+<li>use query variables instead of plain text (stored procedure) to prevent <a href="https://owasp.org/www-community/attacks/SQL_Injection">SQL injections</a></li>
+</ul>
+<p>You should monitor the Open Web Application Security Project (OWASP) <a href="https://owasp.org/www-project-top-ten/">top 10 most critical web application vulnerabilities</a> to keep up to date with the latest threats.</p>
+<p>Using a WAF should align with your other security monitoring features, like <a href="https://en.wikipedia.org/wiki/Security_information_and_event_management">Security Information Event Management (SIEM)</a>. When developing use cases you should also factor in the extra time and resources needed to configure WAF rules.</p>
+<h2 id="managing-your-waf">Managing your WAF</h2>
+<p>Identify any areas in your app not covered by your WAF and define measures to protect them, such as using:</p>
+
+<ul>
+<li><a href="#alerts">alerts</a> - as part of your incident management strategy</li>
+<li><a href="/standards/threat-modelling.html">threat modelling</a> - to assess potential weaknesses in your environment</li>
+<li><a href="#reviews">reviews</a> - to manage your security controls</li>
+</ul>
+<h3 id="alerts">Alerts</h3>
+<p>It’s not always possible to block a detected attack because some services need to process transactions for any user of that service. In these situations you should <a href="/standards/alerting.html">raise events as alerts</a>.</p>
+<p>When WAF alerts are raised, make sure you already have an incident policy in place, including:</p>
+
+<ul>
+<li>who should manage an alert</li>
+<li>what their responsibilities are</li>
+<li>how to investigate an alert</li>
+<li>how to tune out false positives</li>
+</ul>
+<h3 id="reviews">Reviews</h3>
+<p>Review your WAF after each application change against the risks in the OWASP top 10 category rules.</p>
+<p>This should be similar to how you use an <a href="./software/how-to-do-penetration-tests.html">IT Health Check (ITHC)</a> to test and confirm the effectiveness of security controls in your environment.</p>
+<h2 id="contact-cyber-security">Contact Cyber Security</h2>
+<p>Contact the security architects in the <a href="https://intranet.cabinetoffice.gov.uk/it-data-and-security/cyber-and-information-security-services/threat-modelling/">Cyber Security team</a> for assistance and advice.</p>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2025-01-24">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 24 July 2024.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/guidance/unpublished/web-application-firewall.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27Use+a+web+application+firewall+%28WAF%29%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fguidance%2Funpublished%2Fweb-application-firewall.html%29&amp;labels=bug&amp;title=Re%3A+%27Use+a+web+application+firewall+%28WAF%29%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

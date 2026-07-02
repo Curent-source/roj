@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>How to manage third party software dependencies - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/tracking-dependencies.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="How to manage third party software dependencies - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/tracking-dependencies.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="How to manage third party software dependencies" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/tracking-dependencies.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#how-to-manage-third-party-software-dependencies"><span>How to manage third party software dependencies</span></a>
+    <ul>
+      <li>
+        <a href="#update-dependencies-frequently"><span>Update dependencies frequently</span></a>
+      </li>
+      <li>
+        <a href="#monitor-for-vulnerabilities"><span>Monitor for vulnerabilities</span></a>
+        <ul>
+          <li>
+            <a href="#github-security-alerts"><span>GitHub security alerts</span></a>
+          </li>
+          <li>
+            <a href="#snyk"><span>Snyk</span></a>
+          </li>
+          <li>
+            <a href="#splunk-dashboards"><span>Splunk dashboards</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#managing-docker-dependencies"><span>Managing Docker dependencies</span></a>
+        <ul>
+          <li>
+            <a href="#rebuild-docker-base-images"><span>Rebuild Docker base images</span></a>
+          </li>
+          <li>
+            <a href="#specifying-docker-image-tags"><span>Specifying Docker image tags</span></a>
+          </li>
+          <li>
+            <a href="#use-official-docker-base-images"><span>Use official Docker base images</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#minimise-what-you-need-to-monitor"><span>Minimise what you need to monitor</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="how-to-manage-third-party-software-dependencies">How to manage third party software dependencies</h1>
+<p>When you develop and operate a service, it’s important to keep any third party dependencies you use up-to-date. By doing this, you can avoid potential security vulnerabilities.</p>
+<p>Any automated tools you use to manage third party dependencies should be compatible with <a href="/standards/programming-languages.html#content">standard programming languages</a>. The chosen tools should not disclose potential security vulnerabilities to the public.</p>
+<p>You can read more about <a href="https://www.gov.uk/service-manual/technology/managing-software-dependencies">managing software dependencies in the Service Manual</a>, where you will find a list of common dependency management tools.</p>
+<h2 id="update-dependencies-frequently">Update dependencies frequently</h2>
+<p>Update your dependencies frequently rather than in ‘big bang’ batches. This works well with <a href="/standards/continuous-delivery.html">continuous delivery</a> principles and makes sure the changes introduced are small and can be automatically tested.</p>
+<p>There are tools which scan GitHub repositories and raise pull requests (PRs) when they find dependency updates. Teams at the Cabinet Office are using:</p>
+
+<ul>
+<li><p><a href="https://dependabot.com/">Dependabot</a> - The GOV.UK docs contain <a href="https://docs.publishing.service.gov.uk/manual/manage-ruby-dependencies.html">guidance on using Dependabot</a> and <a href="https://docs.publishing.service.gov.uk/manual/merge-pr.html#dependabot">how the PRs raised should be reviewed</a></p>
+
+<blockquote>
+<p>Note: this is separate from the <a href="https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/about-alerts-for-vulnerable-dependencies">security-only updates provided automatically by GitHub Dependabot</a>.</p>
+<p>Note: repos requiring at least one approving review for PRs cannot, and should not, use <a href="https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/automating-dependabot-with-github-actions">Dependabot&rsquo;s auto-approve-and-merge facility</a>.</p>
+<p>Note: we have not enabled &ldquo;Treat PR approval as a request to merge&rdquo;, as this would lead to a surprising behaviour at the point of approval.</p>
+<p>Note: GOV.UK has implemented <a href="https://github.com/alphagov/govuk-rfcs/blob/main/rfc-167-auto-patch-dependencies.md">RFC-167</a> which allows automatic patching of all dependencies in certain cases.</p>
+</blockquote></li>
+<li><p><a href="https://pyup.io/">PyUp</a> - a Python dependency checker. PyUp will monitor for updates and vulnerabilities</p></li>
+</ul>
+<p>All the above tools are free to use on public repositories.</p>
+<p>The  Cyber Security team at Cabinet Office Digital will review the repositories that do not have dependency management in use and will turn on Dependabot where required. Service teams are free to use a different tool such as <a href="https://snyk.io/">Snyk</a>, but will need to add a <code>no-dependabot</code> tag to their repository for monitoring purposes. You can <a href="email:cybersecurity@cabinetoffice.gov.uk">contact Cyber Security</a> if you have any questions or need help.</p>
+<h2 id="monitor-for-vulnerabilities">Monitor for vulnerabilities</h2>
+<p>You should monitor for potential vulnerabilities in every layer of your technology stack. This is not straightforward but tooling exists to help. The Service Manual provides <a href="https://www.gov.uk/service-manual/technology/managing-software-dependencies#managing-risks-in-third-party-code">guidance on browser technology, tooling and mailing lists you can subscribe to</a>.</p>
+<p>Most of the tooling that helps you stay on top of dependency updates will also highlight vulnerabilities. Additional tooling includes:</p>
+<h3 id="github-security-alerts"><a href="https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/about-alerts-for-vulnerable-dependencies">GitHub security alerts</a></h3>
+<p>When GitHub discovers or is informed about a vulnerability, it will email an alert to the repository owner and users with admin access. GitHub security alerts will be turned on for all Alphagov repositories. If services wish to opt out of security advisories on their repository, they can contact Cyber Security and then add the <code>no-security-advisories</code> tag to their repository.</p>
+<h3 id="snyk"><a href="https://snyk.io/">Snyk</a></h3>
+<p>Snyk is capable of detecting vulnerabilities in a variety of languages including all the <a href="/standards/programming-languages.html#content">standard programming languages</a>. You can configure Snyk to raise PRs, email regular reports and alert you when new vulnerabilities are detected.</p>
+<p>If you have an old repository that is receiving security alerts but is not being worked on or maintained, you may wish to archive your repository instead.</p>
+<h3 id="splunk-dashboards">Splunk dashboards</h3>
+<p>The Cyber Security team has created a Splunk dashboard. This gives service teams visibility of vulnerabilities in their repositories. To allow for your repositories to be categorised correctly in the Splunk dashboard, please make sure you tag your repository with the service name. If you would like to access the dashboard, <a href="email:%20cybersecurity@cabinetoffice.gov.uk">contact Cyber Security</a>.</p>
+<h2 id="managing-docker-dependencies">Managing Docker dependencies</h2>
+<h3 id="rebuild-docker-base-images">Rebuild Docker base images</h3>
+<p>Like dependencies, Docker base images are also frequently updated. If you run containers as part of your service, you should regularly rebuild your images (and base images) to include the latest updates. Automate this process where possible.</p>
+<h3 id="specifying-docker-image-tags">Specifying Docker image tags</h3>
+<p>The Dockerfile guidance contains advice on how
+to use <a href="./docs/standards/software/docker.html#using-tags-and-digests-in-from-instructions">Docker image tags</a>
+to specify the exact container image version to use.</p>
+<h3 id="use-official-docker-base-images">Use official Docker base images</h3>
+<p>Always use <a href="https://docs.docker.com/docker-hub/official_images/">official base images</a>. Docker Hub regularly scans official images and you can view the results by logging into Docker Hub. If you do not regularly update your base image, you must make sure a manual process exists to monitor and prioritise fixes for detected vulnerabilities.</p>
+<p>The Digital Marketplace team uses <a href="https://snyk.io/product/container-vulnerability-management/">Snyk container vulnerability management tooling</a> to regularly scan base images.</p>
+<h2 id="minimise-what-you-need-to-monitor">Minimise what you need to monitor</h2>
+<p>Minimise the things you need to monitor by minimising dependencies where possible. For example, if running containers, make sure you pick the smallest base images.</p>
+<p>Also consider managed solutions where possible. For example:</p>
+
+<ul>
+<li>Use <a href="https://docs.cloud.service.gov.uk/deploying_apps.html#buildpacks">GOV.UK PaaS buildpacks</a> so you do not have to monitor for Operating System (OS), runtime or programming language vulnerabilities</li>
+<li>Consider managed container orchestration technology such as <a href="https://aws.amazon.com/fargate/">AWS Fargate</a> or similar so you do not have to monitor for vulnerabilities in your OS or control plane</li>
+</ul>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2026-01-03">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 3 January 2025.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/guidance/unpublished/tracking-dependencies.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27How+to+manage+third+party+software+dependencies%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fguidance%2Funpublished%2Ftracking-dependencies.html%29&amp;labels=bug&amp;title=Re%3A+%27How+to+manage+third+party+software+dependencies%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

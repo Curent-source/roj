@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Principle of Least Privilege - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/principle-least-access.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="Principle of Least Privilege - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/principle-least-access.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="Principle of Least Privilege" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/principle-least-access.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#principle-of-least-privilege"><span>Principle of Least Privilege</span></a>
+    <ul>
+      <li>
+        <a href="#examples"><span>Examples</span></a>
+      </li>
+      <li>
+        <a href="#further-guidance"><span>Further Guidance</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="principle-of-least-privilege">Principle of Least Privilege</h1>
+<p>The <a href="https://csrc.nist.gov/Projects/risk-management/sp800-53-controls/release-search">principle of least privilege</a> involves setting up user accounts so they can only access and use the information they need for specific tasks. This can also apply to processes and individuals who might have to switch between normal access and the increased access of a superuser account as part of their work.</p>
+<p>All access provisioned for use within the Cabinet Office must be provided on a least privilege basis.</p>
+<p>Examples of privileged or higher security access are:</p>
+
+<ul>
+<li>root access</li>
+<li>updating operating systems</li>
+<li>performing “sudo” operations</li>
+<li>accessing high secret credentials</li>
+<li>committing to repositories</li>
+</ul>
+<p>You should use the principle of least privilege if you:</p>
+
+<ul>
+<li>need to grant required access rights to different users according to the nature of their job</li>
+<li>want to use different permissions for day-to-day tasks from those required for security-critical (privileged) tasks</li>
+<li>want to limit collateral damage when a normal user account gets compromised</li>
+</ul>
+<p>Your team should:</p>
+
+<ul>
+<li>make users aware of this policy and be required to confirm their understanding of their access privileges and related conditions of use</li>
+<li>have a process for them to request changes to access as needed</li>
+<li>define roles for users and grant required privileges, or access rights, for those roles</li>
+<li>create the roles or credentials with the least possible privilege, with only necessary permissions required for normal users to perform their day-to-day jobs</li>
+<li>use the role or credentials with the least possible privilege as the default option</li>
+<li>use just-in-time (JIT) access provisioning to grant users an on-demand, time-limited privileged role or security token to access the privileged resources</li>
+<li>make sure session time of the privileged access is set to no more than 12 hours, and/or terminates when the user logs out of their laptop</li>
+<li>establish an audit trail for the use of privileged access</li>
+<li>ensure approval and use of privileged accounts is kept to the absolute minimum necessary for a user to perform their job role</li>
+<li>in cases where JIT access is not implemented for users with privileged access that have critical business impact, implement a documeneted periodic review (cadence to be defined) of the need to continually have these privileged access granted to confirmed users</li>
+<li>have a Joiners, Movers and Leavers process, where line managers (or equivalent) arrange for privileged access to be removed (SLA to be defined) where it is not required. See this <a href="https://www.ncsc.gov.uk/guidance/introduction-identity-and-access-management">NCSC guide on identity management</a> for more information.</li>
+</ul>
+<p>It&rsquo;s important to recognise opportunities for privilege creep / accumulation and to design in suitable processes for preventing it.</p>
+<h2 id="examples">Examples</h2>
+<p>For human-readable secrets, such as a username and password, you should set up a separate secret or <a href="https://www.ncsc.gov.uk/collection/passwords/password-manager-buyers-guide">password manager</a>.</p>
+<p>If you’re using the gds-users account to log into your AWS accounts, you should assume a read-only role by default. You should only assume an admin role when absolutely necessary for a specific task. You should set up the admin account so that the session timeout is less than 12 hours. You should send the audit trail of admin access to the Cyber Security team. Use the Cyber Security Slack channel (<a href="https://intranet.cabinetoffice.gov.uk/it-data-and-security/cyber-and-information-security-services/">#cyber-security</a> to set up the audit trail.</p>
+<h2 id="further-guidance">Further Guidance</h2>
+
+<ul>
+<li><a href="https://www.ncsc.gov.uk/collection/10-steps">NCSC - 10 steps to cyber security</a></li>
+<li><a href="https://www.ncsc.gov.uk/guidance/introduction-identity-and-access-management#section_6">NCSC - privileged user management</a></li>
+<li><a href="https://csrc.nist.gov/Projects/risk-management/sp800-53-controls/release-search">NIST Special Publication 800-53 - AC-6 least privilege</a></li>
+</ul>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2024-12-27">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 27 June 2024.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/guidance/unpublished/principle-least-access.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27Principle+of+Least+Privilege%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fguidance%2Funpublished%2Fprinciple-least-access.html%29&amp;labels=bug&amp;title=Re%3A+%27Principle+of+Least+Privilege%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

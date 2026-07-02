@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Pair Programming - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/pair-programming.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="Pair Programming - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/pair-programming.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="Pair Programming" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/pair-programming.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#pair-programming"><span>Pair Programming</span></a>
+    <ul>
+      <li>
+        <a href="#what-is-pair-programming"><span>What is pair programming?</span></a>
+      </li>
+      <li>
+        <a href="#benefits"><span>Benefits</span></a>
+      </li>
+      <li>
+        <a href="#working-effectively-as-a-pair"><span>Working effectively as a pair</span></a>
+        <ul>
+          <li>
+            <a href="#rotate-pairs-regularly"><span>Rotate pairs regularly</span></a>
+          </li>
+          <li>
+            <a href="#discuss-how-to-pair-together"><span>Discuss how to pair together</span></a>
+          </li>
+          <li>
+            <a href="#take-breaks"><span>Take breaks</span></a>
+          </li>
+          <li>
+            <a href="#pair-where-appropriate"><span>Pair where appropriate</span></a>
+          </li>
+          <li>
+            <a href="#communicate-effectively"><span>Communicate effectively</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#reviewing-code-as-a-pair"><span>Reviewing code as a pair</span></a>
+      </li>
+      <li>
+        <a href="#further-reading"><span>Further reading</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="pair-programming">Pair Programming</h1>
+<p>GDS advocates for agile software development practices because we believe that flexibility and responsiveness-to-change are key to building software that meets the needs of our users.</p>
+<p>At the core of agile software development is the understanding that fast feedback loops enhance speed and quality, and one way for developers in the team to get quick feedback on the quality of their software design is the practice of pair programming.</p>
+<h2 id="what-is-pair-programming">What is pair programming?</h2>
+<p>Pair programming is a collaborative method of developing software where two developers work together, as opposed to two developers working in isolation. 
+There are many ways a pair might collaborate, such as driver (the person doing the implementation, thinking tactically) and navigator (the person thinking about the bigger picture, thinking strategically).</p>
+<h2 id="benefits">Benefits</h2>
+<p>Studies show that <a href="https://www.sciencedirect.com/science/article/abs/pii/S0950584909000123">the reduction in defect rates</a> for high-complexity pieces of work when pair programming outweighs the perceived decrease in capacity from having two people work on the same thing.
+The continuous discussion and review that pairing introduces, compared to a non-collaborative approach, results in better designs with fewer mistakes.
+<a href="https://collaboration.csc.ncsu.edu/laurie/Papers/XPSardinia.PDF">Another study</a> found that pair programming reduces development and staffing risk, enhances technical skills and improves team communications.</p>
+<p>Pair programming is a practical way of building collective code ownership between members of the team.
+Distributing the understanding of the service being built means that teams are more resilient to people being ill, on leave, or leaving GDS, and as such are less likely to have delivery hiccups from sudden loss of expertise.</p>
+<p>Pairing people of <a href="https://www.youtube.com/watch?v=lvs7VEsQzKY&amp;t=317s">different levels of expertise</a> is an effective way of mentoring and fostering career development.
+For example, pairing someone new to GDS with an experienced developer within the team will benefit both; upskilling the new joiner, and reinforcing the knowledge of the experienced person by teaching them.</p>
+<h2 id="working-effectively-as-a-pair">Working effectively as a pair</h2>
+<p>Pair programming is a development skill in the same way that test-driven development is a skill.
+It’s also a social and collaborative way of working and the way a pair works can vary depending on who you are pairing with.
+We provide some of the following advice to help pairs work effectively together.</p>
+<h3 id="rotate-pairs-regularly">Rotate pairs regularly</h3>
+<p>Pairs should rotate regularly at a cadence that makes sense for the team.
+This might be after a single piece of work or after a fixed period of time.
+Rotating pairs spreads knowledge, increases team resilience, and builds ownership of the codebase.</p>
+<h3 id="discuss-how-to-pair-together">Discuss how to pair together</h3>
+<p>Pairs should agree on the way that they will pair before starting the work itself.
+Your pair might favour ping-pong programming (where one person writes a test, the other person makes it pass and then writes the next test) or strong-style pair programming (your ideas need to enter the codebase through the other person’s input).
+This also includes agreeing when to take breaks.</p>
+<h3 id="take-breaks">Take breaks</h3>
+<p>Working together and staying focused for extended periods of time can be tiring.
+Pairs should make sure that they take regular breaks and where possible work in small iterative batches rather than large changes.
+You might find the Pomodoro technique useful or one of the many pair/mob programming timers available online.
+Have a debrief at the end of the day if it would be helpful, and raise any recurring issues at your team’s retrospectives or with your tech lead.</p>
+<h3 id="pair-where-appropriate">Pair where appropriate</h3>
+<p>Pairing is not suitable for every type of work, so use your discretion within the team.
+You might choose not to pair on automated refactorings or work that would be described as Clear within the <a href="https://en.wikipedia.org/wiki/Cynefin_framework">Cynefin model</a>.
+Remember that developers are people and as such might be unable to pair on any given day for their own personal reasons. Be respectful and understanding if someone is unable to pair.</p>
+<h3 id="communicate-effectively">Communicate effectively</h3>
+<p>Pair programming is both a social skill and a technological skill.
+It works most effectively in an environment where the pair respect each other&rsquo;s skills and needs, and communicate with openness, empathy, and honesty.
+People in teams that have embraced concepts like <a href="https://en.wikipedia.org/wiki/Psychological_safety">psychological safety</a> and <a href="https://www.cnvc.org/">non-violent communication</a> are likely to be well-equipped for pair programming.</p>
+<h2 id="reviewing-code-as-a-pair">Reviewing code as a pair</h2>
+<p>The standard approach to code review in GDS is that teams should use a pull-request (PR) process to ensure that all code is reviewed by another person.
+A pair can approve their own PRs on codebases where changes require an additional review, which is the vast majority of codebases at GDS.</p>
+<p>This has several benefits, such as:</p>
+
+<ul>
+<li>speeding up the flow of work.</li>
+<li>enabling the pair to move on to another task without <a href="https://blog.ninlabs.com/2013/01/programmer-interrupted/">context switching</a>.</li>
+<li>avoiding a third person having to context switch to review the code.</li>
+</ul>
+<p>However, teams should adjust their policy on this approach depending on the risk tolerance of the codebase, team, or programme.</p>
+<h2 id="further-reading">Further reading</h2>
+
+<ul>
+<li>Pairing and code review guidelines for <a href="https://manual.payments.service.gov.uk/manual/development-processes/pairing-principles.html">GOV.UK Pay</a></li>
+<li>Code review guidelines in the <a href="https://gds-way.digital.cabinet-office.gov.uk/standards/pull-requests.html#reviewing-a-request">GDS Way</a></li>
+</ul>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2024-11-01">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 1 May 2024.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/guidance/unpublished/pair-programming.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27Pair+Programming%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fguidance%2Funpublished%2Fpair-programming.html%29&amp;labels=bug&amp;title=Re%3A+%27Pair+Programming%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

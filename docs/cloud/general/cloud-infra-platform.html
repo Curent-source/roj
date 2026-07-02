@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Cloud infrastructure and platform strategy - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/general/cloud-infra-platform.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="Cloud infrastructure and platform strategy - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/general/cloud-infra-platform.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="Cloud infrastructure and platform strategy" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/general/cloud-infra-platform.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#cloud-infrastructure-and-platform-strategy"><span>Cloud infrastructure and platform strategy</span></a>
+    <ul>
+      <li>
+        <ul>
+          <li>
+            <a href="#who-this-strategy-is-for"><span>Who this strategy is for</span></a>
+          </li>
+          <li>
+            <a href="#how-to-choose-a-provider"><span>How to choose a provider</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#amazon-web-service-aws"><span>Amazon Web Service (AWS)</span></a>
+        <ul>
+          <li>
+            <a href="#why"><span>Why</span></a>
+          </li>
+          <li>
+            <a href="#how"><span>How</span></a>
+          </li>
+          <li>
+            <a href="#cloud-computing-and-architectural-design"><span>Cloud computing and architectural design</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#azure"><span>Azure</span></a>
+        <ul>
+          <li>
+            <a href="#azure-why"><span>Why</span></a>
+          </li>
+          <li>
+            <a href="#azure-how"><span>How</span></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="#other-platforms-and-considerations"><span>Other platforms and considerations</span></a>
+    <ul>
+      <li>
+        <a href="#google-cloud-gcp"><span>Google Cloud (GCP)</span></a>
+      </li>
+      <li>
+        <a href="#salesforce"><span>Salesforce</span></a>
+      </li>
+      <li>
+        <a href="#infrastructure-migration"><span>Infrastructure migration</span></a>
+      </li>
+      <li>
+        <a href="#secret-and-top-secret-classifications"><span>Secret and top secret classifications</span></a>
+      </li>
+      <li>
+        <a href="#heroku-and-netlify"><span>Heroku and Netlify</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="cloud-infrastructure-and-platform-strategy">Cloud infrastructure and platform strategy</h1>
+<p>This strategy explains how the Cabinet Office chooses hosting providers for its digital services and platforms.</p>
+<h3 id="who-this-strategy-is-for"><strong>Who this strategy is for</strong></h3>
+<p>You must use this strategy to choose a hosting platform when you build or renew a digital service, whether it is built in-house or outsourced.</p>
+<p>It also provides guidelines if you are considering migrating an existing service to the cloud. This document does not cover the detailed process of cloud migration.</p>
+<h3 id="how-to-choose-a-provider"><strong>How to choose a provider</strong></h3>
+<p>The Cabinet Office uses multiple cloud vendors.</p>
+<p>To decide which cloud provider to use, you must consider:</p>
+
+<ul>
+<li>workloads<br></li>
+<li>costs<br></li>
+<li>commercial agreements<br></li>
+<li>sustainability<br></li>
+<li>departmental capabilities</li>
+</ul>
+<h2 id="amazon-web-service-aws">Amazon Web Service (AWS)</h2>
+<p>Amazon Web Service (AWS) is the Cabinet Office strategic hosting platform. You must consider using AWS first to host your digital services and platforms at the OFFICIAL classification (including the SENSITIVE handling caveat, marked OFFICIAL-SENSITIVE).</p>
+<h3 id="why">Why</h3>
+<p>Cabinet Office (CO) Digital has invested significant effort in optimising and assuring the AWS infrastructure. This includes:</p>
+
+<ul>
+<li>Consolidating many AWS contracts into one Enterprise contract across the Cabinet Office. Collectively we get the benefits of economy of scale, discounted rate and enterprise support with AWS.  We help the Cabinet Office to cut costs by managing the contract and assuring the suppliers once only.</li>
+<li>Engineering resource to provision and maintain AWS users and accounts with infrastructure-as-code.</li>
+<li>Building in organisational-wide security policies, including access and protective monitoring and enterprise-level security configurations to give a baseline protection for our AWS accounts.  Account access logs are by default sent to the Security Operations Centre operated by CDIO to monitor irregular behaviours such as IAM / S3 policy changes out-of-hours, and undesirable configurations such as SSH/RDP ports open to the internet. Related alerts are automatically generated and sent to the account managers.</li>
+<li>Tools to manage the financial and billing across the Cabinet Office better as we have enterprise-level billing visibility across all the accounts.</li>
+<li>Focusing our in-house capabilities into a few things, AWS is one of them.</li>
+<li>We can closely monitor AWS in terms of achieving Government objectives, including <a href="https://www.gov.uk/guidance/make-your-technology-sustainable">sustainability</a>.</li>
+</ul>
+<p>The AWS Enterprise contract with AWS includes:</p>
+
+<ul>
+<li>SLA on incident response less than 15 minutes</li>
+<li>infrastructure event management</li>
+<li>a designated technical account manager</li>
+<li>AWS Shield advanced</li>
+<li><a href="https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/232745631759684">AWS Enterprise Support</a></li>
+<li>AWS training</li>
+<li>Professional services</li>
+</ul>
+<p>AWS is considered the market leader for<a href="https://aws.amazon.com/blogs/aws/read-the-2023-gartner-magic-quadrant-for-strategic-cloud-platform-services/"> cloud infrastructure and platform services in the Gartner 2023 magic quadrant</a> in terms of ability to execute and completeness of vision (see Appendix). This is important as the Cabinet Office’s invested strategic platform and supplier needs to be stable, scalable and future-proofed for the foreseeable future.</p>
+<h3 id="how">How</h3>
+
+<ul>
+<li>You must ONLY use the AWS accounts provisioned by CO Digital by using the <a href="https://request-an-aws-account.gds-reliability.engineering/">Request an AWS Account Tool</a>. Contact <a href="mailto:co-platform-engineering@cabinetoffice.gov.uk">platform engineering team</a> if you require any support or guidance with your AWS account. Your usage is rechargeable to your business unit.</li>
+<li>You must follow the <a href="?tab=t.i94zzlkrq3rz">Architecture Principles</a> and <a href="rrfthtpk2">Software Development</a> and <a href="?tab=t.nhvg71qj736">Technical Operation</a> Guidance to develop in AWS.</li>
+<li>You must use AWS accounts to separate your production and non-production environments, as well as different services and access control. This is to avoid the engineering needs to create security boundaries; and to make it easier to attribute the costs to the right services and functions.</li>
+<li>You must host your new service in AWS London (eu-west-2), or AWS Ireland (eu-west-1) as an alternative.  This rule does not apply to global services such as Cloudfront.</li>
+</ul>
+<p>You must consider the reuse of Government and CO Digital common platforms and components rather than building your own whenever appropriate; and incorporate them into your end-to-end architecture. This includes, GOV.UK Notify, GOV.UK Pay, COLA (<a href="https://docs.google.com/document/d/1CZlQfy9zQO9AFlTQXJ82Z6gXjA2jMzLshaCw_EGaOuA/edit?usp=sharing">Cabinet Office Login App</a>).</p>
+<h3 id="cloud-computing-and-architectural-design">Cloud computing and architectural design</h3>
+<p>You may use any AWS services to design your architecture according to your service’s needs. You should consider the use of AWS compute resources, and consider them regarding their technical suitability, ease of maintenance and cost effectiveness:-</p>
+
+<ol>
+<li>Serverless (Lambda)</li>
+<li>Container service (ECS, Fargate over EC2)</li>
+<li>Virtual machines (EC2)</li>
+<li>Elastic beanstalk</li>
+</ol>
+<p>You should design your architecture with AWS managed services (Cloudfront, SQS, S3, Redshift, RDS, etc.) whenever possible and appropriate.</p>
+<p>The architecture should be easily scalable; hence, we recommend using serverless (Lambda and Fargate) and autoscaling features whenever appropriate.</p>
+<p>You should:</p>
+
+<ul>
+<li>have technical and security assurance on your architectural design</li>
+<li>optimise your design with resilience, scalability, security and cost reduction in mind</li>
+<li>Forecast your costs and continuously revise your architecture to optimise your spend on infrastructure. For example, turn off development environments out of hours; use reserved instances.</li>
+<li>use the AWS Well-Architected Framework, GuardDuty and audit manager to manage and provide further assurance to your design and operation.</li>
+<li>Adhere to the <a href="https://docs.google.com/presentation/u/0/d/1NHc0TKpXAg-46TW4pHLYhlojCFE9lRkLi5-7qMvZYpU/edit">cloud cost optimisation standards</a></li>
+</ul>
+<h2 id="azure">Azure</h2>
+<p>Azure can be considered a good solution for some use cases for services at the OFFICIAL classification (including the SENSITIVE handling caveat, marked OFFICIAL-SENSITIVE), for example, developing a service to automate in Microsoft/ Azure ecosystems, when Active Directory or Sharepoint are part of the architectural design.</p>
+<p>You should always consider using AWS first to see if it meets your needs to help the Cabinet Office to achieve enterprise-level objectives. However, you can consider Azure:</p>
+
+<ul>
+<li>if you are developing a system around the Microsoft ecosystem</li>
+<li>If you would like to introduce resilience and disaster recovery with an additional cloud provider</li>
+<li>for cross-government collaborative projects, where the other department is using Azure</li>
+<li>if you have an existing system that is already on Azure (See Section 6 on guideline for migration)</li>
+</ul>
+<h3 id="azure-why">Why</h3>
+<p>We would like to introduce a second strategic public cloud provider to reduce the Cabinet Office reliance on a single vendor. Moreover, CO Digital acknowledges the need to use Azure for automation around the Microsoft ecosystem.</p>
+<h3 id="azure-how">How</h3>
+<p>If you would like to use Azure to build a new service, you should contact <a href="https://groups.google.com/a/cabinetoffice.gov.uk/g/co-eaa">CO Enterprise Architecture</a> for inquiry.  The TDA will evaluate your use case and approve or disapprove the use.</p>
+<h1 id="other-platforms-and-considerations">Other platforms and considerations</h1>
+<h2 id="google-cloud-gcp">Google Cloud (GCP)</h2>
+<p>You should <span style="text-decoration:underline;">NOT</span> build a digital service in GCP.  However, the use GCP is permitted ONLY under these conditions:</p>
+
+<ul>
+<li>for data science that requires some of the advanced GCP tools, including ML/AI and Big query.</li>
+<li>building Single Sign On integration</li>
+<li>for building resilience and disaster recovery</li>
+<li>stress testing your main service/ platform</li>
+<li>with approval of the the Cabinet Office Technical Design Authority</li>
+</ul>
+<h2 id="salesforce">Salesforce</h2>
+<p>Salesforce should <span style="text-decoration:underline;">NOT</span> be used as a platform for hosting a high-code digital service, unless you have approval from the Cabinet Office Technical Design Authority.</p>
+<p>Salesforce should be used as a customer relation management (CRM) and a case management system (CMS). Should a user facing frontend interface be required, a bespoke solution built on GOV.UK Design System hosted on the above strategic platforms should be considered first, unless you have approval from the Cabinet Office Technical Design Authority.</p>
+<p>The only exception for using the Salesforce hosting platform is if a simple, static content-page is required as the front page of the Salesforce CRM, where user interaction is minimal; or a simple form to collect information that will be fed into Salesforce.</p>
+<p>This is because:</p>
+
+<ul>
+<li>the frontend developed in Salesforce Experience does not meet the required standard set in the Public Sector Bodies Accessibility Regulations. However, you can use the Salesforce APEX codes with the GOV.UK Design Systems to meet accessibility requirements</li>
+<li>Salesforce development language, APEX (Java-like), is vendor-specific, and is not a common capability across the Cabinet Office</li>
+<li>difficult to apply automated load tests and pentests on services running on the platform</li>
+<li>Salesforce licensing model is not a good fit for citizen-facing applications</li>
+</ul>
+<h2 id="infrastructure-migration">Infrastructure migration</h2>
+<p>We understand that there are some existing services that are hosted on-prem, in virtual or private clouds that do not currently align with the Cabinet Office strategic platforms.</p>
+<p>While there is an architectural incentive to modernise and update the technology, which usually means lower operational costs, better security, future proofing for further development and improvement;  cloud migration should be considered and planned with care, and per use case. You should consider a cloud migration if any of the following are true:</p>
+
+<ul>
+<li>Your service is considered a <a href="https://www.gov.uk/government/publications/guidance-on-the-legacy-it-risk-assessment-framework/guidance-on-the-legacy-it-risk-assessment-framework">legacy IT system</a>.</li>
+<li>You have a service running on-prem, virtual or private cloud infrastructure</li>
+<li>You have a significant number of virtual machines in these facilities (&gt;20), and hence migration is likely to bring cost benefits to the service.</li>
+<li>You are at a point when you would like to refresh the whole technology, and would like to incorporate user-centric design and development</li>
+</ul>
+<p>You may be able to gain some quick benefits by migrating part of the infrastructure. For example, by using managed SaaS services instead of self-host services such as Postgres database and Tableau server.</p>
+<p>We will need investment for cloud migration; a business and impact analysis should be performed to understand the options, costs, benefits, impact and plan of migration and dual running, and return on investment. The residual risks of not migrating the service, and a plan to revisit the decision in a later day should also be considered.</p>
+<p>Please contact our <a href="https://groups.google.com/a/digital.cabinet-office.gov.uk/g/co-legacy-it">legacy IT team</a> to arrange an assessment and co-develop a mitigation plan.</p>
+<h2 id="secret-and-top-secret-classifications">Secret and top secret classifications</h2>
+<p>For services that are above OFFICIAL-SENSITIVE protective marking, a tailored infrastructure and platform solution will be required and are beyond the scope of this strategy.</p>
+<h2 id="heroku-and-netlify">Heroku and Netlify</h2>
+<p>You may prototype in the Heroku and Netlify platforms, especially in the Alpha stage of a development.</p>
+<p>However, in most cases, you shall not use Heroku or Netlify to hold any production data without the approval from the Technical Design Authority and the platform is information assured against the use case.</p>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2025-05-04">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 4 November 2024.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/cloud/general/cloud-infra-platform.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27Cloud+infrastructure+and+platform+strategy%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fcloud%2Fgeneral%2Fcloud-infra-platform.html%29&amp;labels=bug&amp;title=Re%3A+%27Cloud+infrastructure+and+platform+strategy%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

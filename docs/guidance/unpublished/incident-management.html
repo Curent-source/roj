@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>How to manage technical incidents - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/incident-management.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="How to manage technical incidents - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/incident-management.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="How to manage technical incidents" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/incident-management.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#how-to-manage-technical-incidents"><span>How to manage technical incidents</span></a>
+    <ul>
+      <li>
+        <a href="#define-incident-priority"><span>Define incident priority</span></a>
+        <ul>
+          <li>
+            <a href="#example-incident-priority-table"><span>Example incident priority table</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#develop-an-incident-workflow"><span>Develop an incident workflow</span></a>
+        <ul>
+          <li>
+            <a href="#example-workflow"><span>Example workflow</span></a>
+            <ul>
+              <li>
+                <a href="#1-establish-an-incident-lead"><span>1. Establish an incident lead</span></a>
+              </li>
+              <li>
+                <a href="#2-inform-your-team"><span>2. Inform your team</span></a>
+              </li>
+              <li>
+                <a href="#3-prioritise-the-incident"><span>3. Prioritise the incident</span></a>
+              </li>
+              <li>
+                <a href="#4-form-an-incident-response-team"><span>4. Form an incident response team</span></a>
+              </li>
+              <li>
+                <a href="#5-investigate"><span>5. Investigate</span></a>
+              </li>
+              <li>
+                <a href="#6-contain"><span>6. Contain</span></a>
+                <ul>
+                  <li>
+                    <a href="#6-1-short-term-containment"><span>6.1 Short-term containment</span></a>
+                  </li>
+                  <li>
+                    <a href="#6-2-long-term-containment"><span>6.2 Long-term containment</span></a>
+                  </li>
+                  <li>
+                    <a href="#6-3-forensic-clone"><span>6.3 Forensic clone</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#7-eradicate"><span>7. Eradicate</span></a>
+              </li>
+              <li>
+                <a href="#8-recover"><span>8. Recover</span></a>
+              </li>
+              <li>
+                <a href="#9-communicate-to-a-wider-audience"><span>9. Communicate to a wider audience</span></a>
+              </li>
+              <li>
+                <a href="#10-resolve-the-incident"><span>10. Resolve the incident</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#example-incident-management"><span>Example incident management</span></a>
+      </li>
+      <li>
+        <a href="#further-reading"><span>Further reading</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="how-to-manage-technical-incidents">How to manage technical incidents</h1>
+<p>GDS incident management focuses on restoring normal operations quickly with minimal impact on users.</p>
+<p>Technical incidents may also be cyber security or data loss incidents. You must report all suspected or actual cyber security incidents to the <a href="https://intranet.cabinetoffice.gov.uk/it-data-and-security/cyber-and-information-security-services/">CO:D Cyber Security team</a> and to the <a href="https://sites.google.com/a/digital.cabinet-office.gov.uk/gds/directorates-and-groups/cto-and-ciso-office/information-security">GDS Information Security team</a>. You must report all actual or suspected data breach incidents to the <a href="https://sites.google.com/a/digital.cabinet-office.gov.uk/gds/information-management">GDS Information Management team</a>. These requirements should be included in your service manual/guides/processes.</p>
+<h2 id="define-incident-priority">Define incident priority</h2>
+<p>Define technical incident priority levels for your service’s applications. For example potential incidents include:</p>
+
+<ul>
+<li>system access problems</li>
+<li>wider technical failures with possible reputational impact to GDS</li>
+<li>denial of service (DoS)</li>
+<li>data breach or leak</li>
+<li>defacement</li>
+<li>unauthorised use of systems</li>
+<li>suspicious activity, such as traffic from an unknown source</li>
+</ul>
+<p>Assign a priority level to incidents based on their complexity, urgency and resolution time. Incident severity also determines response times and support level.</p>
+<h3 id="example-incident-priority-table">Example incident priority table</h3>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Classification</th>
+<th>Type</th>
+<th>Example</th>
+<th>Response time</th>
+<th>Update frequency</th>
+</tr><tr>
+<th scope="row">P1</th>
+<td>Critical</td>
+<td>Complete outage, or ongoing unauthorised access</td>
+<td>20 minutes (office and out of hours)</td>
+<td>1 hour</td>
+</tr><tr>
+<th scope="row">P2</th>
+<td>Major</td>
+<td>Substantial degradation of service</td>
+<td>60 minutes (office and out of hours)</td>
+<td>2 hours</td>
+</tr><tr>
+<th scope="row">P3</th>
+<td>Significant</td>
+<td>Users experiencing intermittent or degraded service due to platform issue</td>
+<td>2 hours (office hours only)</td>
+<td>Once after 2 business days</td>
+</tr><tr>
+<th scope="row">P4</th>
+<td>Minor</td>
+<td>Component failure that does not immediately impact a service, or an unsuccessful DoS attempt</td>
+<td>1 business day (office hours only)</td>
+<td>Once after 5 business days</td>
+</tr>
+        </table>
+      </div><h2 id="develop-an-incident-workflow">Develop an incident workflow</h2>
+<p>Your team must understand what to do during an incident. Develop and document your incident workflow to reflect your service needs and team size.</p>
+<h3 id="example-workflow">Example workflow</h3>
+<p>Follow a prepared workflow to manage an incident to minimise its impact on your team and service users. Make sure that every step of the way is documented in writing using the <a href="https://docs.google.com/document/d/1YDA13RU6wicXoKgDv5VucJe3o_Z0k_Qhug9EJC_XdSE/">incident report template</a> [^1].</p>
+
+<ol>
+<li><a href="#1-establish-an-incident-lead">Establish an incident lead</a>.</li>
+<li><a href="#2-inform-your-team">Inform your team</a>.</li>
+<li><a href="#3-prioritise-the-incident">Prioritise the incident</a>.</li>
+<li><a href="#4-form-an-incident-response-team">Form an incident response team</a>.</li>
+<li><a href="#5-investigate">Investigate</a>.</li>
+<li><a href="#6-contain">Contain</a>.</li>
+<li><a href="#7-eradicate">Eradicate</a>.</li>
+<li><a href="#8-recover">Recover</a>.</li>
+<li><a href="#9-communicate-to-a-wider-audience">Communicate to a wider audience</a>.</li>
+<li><a href="#10-resolve-the-incident">Resolve the incident</a>.</li>
+</ol>
+<h4 id="1-establish-an-incident-lead">1. Establish an incident lead</h4>
+<p>Establish who your incident lead is. Find out who noticed the problem and if anyone else is investigating and fixing it. If that person is you, assume the role of incident lead.</p>
+<h4 id="2-inform-your-team">2. Inform your team</h4>
+<p>Inform your team using your chosen tool, like <a href="https://gds.slack.com">Slack</a>. If the incident involves a data or security breach, you must also notify:</p>
+
+<ul>
+<li>The <a href="https://intranet.cabinetoffice.gov.uk/it-data-and-security/cyber-and-information-security-services/">CO:D Cyber Security team</a>. You can also use the <a href="https://gds.slack.com/messages/CCMPJKFDK/">#cyber-security-help Slack channel</a> to contact CO:D Cyber within normal working hours.</li>
+<li>The <a href="https://sites.google.com/a/digital.cabinet-office.gov.uk/gds/directorates-and-groups/cto-and-ciso-office/information-security">GDS Information Security team</a>.</li>
+<li>The <a href="https://sites.google.com/a/digital.cabinet-office.gov.uk/gds/information-management">GDS Information Management team</a>.</li>
+</ul>
+<h4 id="3-prioritise-the-incident">3. Prioritise the incident</h4>
+<p>Prioritise the incident and start tracking actions, updates and communications. Teams like <a href="https://www.cloud.service.gov.uk/">GOV.UK PaaS</a> and <a href="https://www.notifications.service.gov.uk/">Notify</a> do this by creating a new incident report - copied from the <a href="https://docs.google.com/document/d/1YDA13RU6wicXoKgDv5VucJe3o_Z0k_Qhug9EJC_XdSE/">incident report template</a> - and use it to track updates and progress.</p>
+<h4 id="4-form-an-incident-response-team">4. Form an incident response team</h4>
+<p>Form a team with both an incident lead and a communications lead. The communications lead will make sure relevant parties are updated according to the incident priority table.</p>
+<h4 id="5-investigate">5. Investigate</h4>
+<p>Make sure you keep your incident report up to date. If the incident involves a data breach follow your team’s GDPR documentation.</p>
+<p>If the incident is a data or security breach you should follow steps 6, 7 and 8.
+If the incident is not cyber security-related, skip to step 9.</p>
+<h4 id="6-contain">6. Contain</h4>
+<p>You should determine the right containment procedures. In some cases, you may require a forensic clone.</p>
+<h5 id="6-1-short-term-containment">6.1 Short-term containment</h5>
+<p>You should start short-term containment measures as soon as you detect an incident. This could help minimise impact and maintain availability. Make sure that all affected systems are isolated from the non-affected systems.</p>
+<h5 id="6-2-long-term-containment">6.2 Long-term containment</h5>
+<p>You’ll need to make sure long-term containment is in place.</p>
+<p>You should take the system offline if possible. Once the system is offline, you can proceed to step 7.</p>
+<p>If the system has to remain in production, remove all malware and other artifacts from the affected systems, and harden the affected systems from further attacks. You should reimage the affected systems, or restore from the last known good backup.</p>
+<h5 id="6-3-forensic-clone">6.3 Forensic clone</h5>
+<p>As well as gathering evidence to help resolve an incident, you should collect evidence to support any potential follow-on disciplinary or legal proceedings.</p>
+<p>To maintain the forensic integrity of the environment you should:</p>
+
+<ul>
+<li>document all commands used during the investigation and keep the documentation up to date - include how the evidence has been preserved</li>
+<li>store any forensic images taken during the investigation in a secure location, to prevent accidental damage or tampering</li>
+</ul>
+<h4 id="7-eradicate">7. Eradicate</h4>
+<p>Eradication may be necessary to remove components of the incident that remain on your systems, such as traces of malware. To help with eradication you should:</p>
+
+<ul>
+<li>identify all affected hosts</li>
+<li>remove all malware and other artifacts left behind by the attackers</li>
+<li>reimage and patch the affected system</li>
+<li>check backups, code, images and the affected systems are protected against further attacks</li>
+</ul>
+<h4 id="8-recover">8. Recover</h4>
+<p>Recovery is necessary to reduce the impact on user confidence and to reduce the likelihood of further successful attacks.</p>
+<p>You should:</p>
+
+<ul>
+<li>confirm the affected systems are patched and hardened against the recent attack, and possible future attacks</li>
+<li>decide what day and time to restore the affected systems back into production (if they were taken offline)</li>
+<li>check the systems you’re restoring to production are not compromised in the same way as the original incident</li>
+<li>consider how long to <a href="/standards/monitoring.html">monitor</a> the restored systems for, and what to look out for</li>
+</ul>
+<h4 id="9-communicate-to-a-wider-audience">9. Communicate to a wider audience</h4>
+<p>If the incident is serious (P1 or P2) you’ll need to contact a wider GDS audience and potentially your service users.</p>
+<p>Your communications lead must manage:</p>
+
+<ul>
+<li>external and internal communications</li>
+<li>incident escalations</li>
+</ul>
+<p><strong>External and internal communications</strong></p>
+<p>Make sure internal and external parties, like Information Security or your service users are fully informed at every stage of your incident management process.</p>
+<p>For example, teams including <a href="https://status.cloud.service.gov.uk/">GOV.UK Platform as a Service (PaaS)</a>, <a href="https://www.notifications.service.gov.uk/">GOV.UK Notify</a> and <a href="https://www.payments.service.gov.uk/">GOV.UK Pay</a> use the <a href="https://www.atlassian.com/software/statuspage">StatusPage service</a> to trigger notifications to subscribed users.</p>
+<p>Post regular updates to the status of an incident in the <a href="https://gds.slack.com/messages/CAD6S2B9Q">#incident Slack channel</a>. This helps people across GDS without having to find and follow multiple notification mechanisms for the different programmes.</p>
+<p><strong>Incident escalations</strong></p>
+<p>Notify internal escalation contacts of all high priority incidents (P1/P2). Contact the <a href="https://sites.google.com/a/digital.cabinet-office.gov.uk/gds/directorates-and-groups/cto-and-ciso-office/information-security">GDS Information Security team</a> if you need help defining the escalation route for your service.</p>
+<p><strong>Report cyber security incidents</strong></p>
+<p>The incident lead, guided by the Information Security team, must inform the National Cyber Security Centre (NCSC) of any category 1, 2 or 3 incidents. The NCSC defines security incidents in its <a href="https://www.ncsc.gov.uk/news/new-cyber-attack-categorisation-system-improve-uk-response-incidents">categorisation system prioritisation framework</a>.</p>
+<p>Depending on the incident, the NCSC may be able to provide technical support.</p>
+<h4 id="10-resolve-the-incident">10. Resolve the incident</h4>
+<p>Hold an incident and lesson learned review following a <a href="https://codeascraft.com/2012/05/22/blameless-postmortems/">blameless post mortem culture</a> so your service can improve. Add a row to the central <a href="https://docs.google.com/spreadsheets/d/1TmKiIAUr6EH1XZa5MJquSyHGZnQBjrORUJjs6l4TwHU">GDS incidents summary spreadsheet</a> linking to your incident report document.</p>
+<h2 id="example-incident-management">Example incident management</h2>
+
+<ul>
+<li>GOV.UK PaaS <a href="https://team-manual.cloud.service.gov.uk/incident_management/incident_process/">incident management process</a></li>
+<li>GOV.UK <a href="https://docs.publishing.service.gov.uk/manual/incident-management-guidance.html">incident response guidance</a></li>
+</ul>
+<h2 id="further-reading">Further reading</h2>
+<p>Read the <a href="https://docs.google.com/document/d/1jfdS6cmxYe7AmM50BSDYU0i6MdaVlOomuacwer70_rc/edit">GDS Technical Incident Management Framework and Process</a> document for more information. For example, you can read more about:</p>
+
+<ul>
+<li>classifying incidents</li>
+<li>routes to support</li>
+<li>incident workflows - from request to resolution</li>
+<li>roles in the Incident Team for P1 and P2</li>
+</ul>
+<p>[^1]: Note that the incident report template document can only be accessed by people within GDS.</p>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2025-01-29">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 29 July 2024.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/guidance/unpublished/incident-management.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27How+to+manage+technical+incidents%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fguidance%2Funpublished%2Fincident-management.html%29&amp;labels=bug&amp;title=Re%3A+%27How+to+manage+technical+incidents%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

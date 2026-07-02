@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Disaster Recovery - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/disaster-recovery.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="Disaster Recovery - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/disaster-recovery.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="Disaster Recovery" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/disaster-recovery.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#disaster-recovery"><span>Disaster Recovery</span></a>
+    <ul>
+      <li>
+        <a href="#what-is-disaster-recovery"><span>What is disaster recovery?</span></a>
+        <ul>
+          <li>
+            <a href="#understand-risks-and-threats-to-your-service"><span>Understand risks and threats to your service</span></a>
+            <ul>
+              <li>
+                <a href="#disaster-planning-workshops"><span>Disaster planning workshops</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#back-up-your-data"><span>Back up your data</span></a>
+          </li>
+          <li>
+            <a href="#have-cold-or-offline-backups"><span>Have cold or offline backups</span></a>
+          </li>
+          <li>
+            <a href="#decide-where-to-store-your-backups"><span>Decide where to store your backups</span></a>
+          </li>
+          <li>
+            <a href="#decide-on-manual-or-automatic-recovery-in-the-event-of-a-disaster"><span>Decide on manual or automatic recovery in the event of a disaster</span></a>
+          </li>
+          <li>
+            <a href="#agree-your-rpos-and-rtos-with-risk-and-service-owners"><span>Agree your RPOs and RTOs with risk and service owners</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#test-your-disaster-recovery-plans"><span>Test your disaster recovery plans</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="disaster-recovery">Disaster Recovery</h1>
+<p>The <a href="https://www.gov.uk/service-manual">GOV.UK Service Manual</a> describes how you should <a href="https://www.gov.uk/service-manual/technology/uptime-and-availability-keeping-your-service-online">design your service to maximise uptime</a>.
+However, it is inevitable that your service will experience unscheduled downtime at some point, which could have a serious impact on users. You must plan your response for when this happens.</p>
+<h2 id="what-is-disaster-recovery">What is disaster recovery?</h2>
+<p>In digital services, a disaster is a major, unplanned event that completely prevents you from providing your service to your users.</p>
+<p>A disaster may also be an incident. However, whereas an incident will be handled as part of your <a href="/standards/incident-management.html">incident management process</a>, some events may impact your service to such an extent that they need to be planned for in advance to ensure you can continue to provide your service if they occurred.</p>
+<p>Examples might be:</p>
+
+<ul>
+<li>a cloud provider suffering a serious regional outage</li>
+<li>accidental or malicious data loss</li>
+<li>a security compromise resulting in the disclosure of sensitive information</li>
+</ul>
+<p>Disaster recovery planning is the process of identifying the kinds of events that might make your service completely unavailable, understanding the likelihood and the impact of them occurring, planning what we would do if they occurred, and testing that our recovery plans work.</p>
+<h3 id="understand-risks-and-threats-to-your-service">Understand risks and threats to your service</h3>
+<p>You should work with the <a href="https://sites.google.com/a/digital.cabinet-office.gov.uk/gds/directorates-and-groups/cto-and-ciso-office/information-security">Information Security</a> and <a href="https://intranet.cabinetoffice.gov.uk/it-data-and-security/cyber-and-information-security-services/">Cyber Security</a> teams to understand the risks to your service. This will help you build a more resilient and secure digital service.</p>
+<p>You should also work with risk and service owners to plan for the worst-case scenarios. This is particularly important for your data, as loss or theft of data is disastrous for most services.</p>
+<p>Make sure you consider how <a href="https://www.gov.uk/service-manual/technology/uptime-and-availability-keeping-your-service-online#issues-that-can-affect-uptime">disruption to or unavailability of your dependencies</a> can affect your service. These dependencies can include obvious systems, such as your hosting provider, but also less obvious systems such as your:</p>
+
+<ul>
+<li>Domain Name System (DNS) provider</li>
+<li>Content Delivery Network (CDN)</li>
+<li>any Virtual Private Networks (VPNs) your development team might use to access production systems
+build pipelines</li>
+<li>external library and container registries (for example, RubyGems, PyPI or Docker Hub)</li>
+<li>secrets management providers</li>
+</ul>
+<h4 id="disaster-planning-workshops">Disaster planning workshops</h4>
+<p>You might find it useful to run a disaster planning workshop to help identify the risks to your service. This should involve important service stakeholders, Information Security and/or Cyber Security colleagues, as well as product and technical members of your delivery team. The more involvement you have from different disciplines the more likely you will be to identify all the risks and understand them.</p>
+<p>You should use a whiteboard or an online alternative for the workshop. Start with a technical architecture diagram of your service to help visualise dependencies and important assets, such as data stores. Then, either individually or in small groups, identify as many disaster scenarios as possible, raising sticky notes on the diagram for each one.</p>
+<p>Once you have identified the risks to your service, the workshop members should go through each scenario and score each one in terms of the likelihood of them happening and the potential impact on the service if they occurred. A 0-5 scoring system is usually adequate for this. Again, the scoring will be more accurate the more disciplines are involved. An overall score can then be calculated for each scenario by multiplying likelihood and impact.</p>
+<p>When all the scenarios have been scored, you will be left with a set of disaster scenarios that can be placed in priority order. You will need to decide what to do about each risk. You may need to draw up a plan for how you would recover if the scenario occurred. Alternatively, you may decide to do some work ahead of time to reduce the likelihood or impact of the event occurring. If the likelihood and impact are very low, you may decide to accept the risk and do nothing.</p>
+<h3 id="back-up-your-data">Back up your data</h3>
+<p>You should back up your data. How often you back up will depend on your <a href="https://cloud.google.com/architecture/dr-scenarios-planning-guide#basics_of_dr_planning">Recovery Point Objective (RPO)</a>. An RPO determines what you consider an acceptable loss of data between the last backup and the point of data loss. For example, if you determine that up to 24 hours of data loss is an acceptable risk, you will only need to backup your data once daily. For lower RPOs (minutes or seconds), you should use <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/point-in-time-recovery.html">continuous backups and point-in-time recovery</a> services that most modern cloud providers offer.</p>
+<h3 id="have-cold-or-offline-backups">Have cold or offline backups</h3>
+<p>A cold or offline backup is a copy of your backup, isolated from the rest of your production system. Offline backups help protect you from some disaster scenarios. If an attacker gains access to your live database service and your backups, you could experience a ransomware attack, or risk having your entire data estate deleted. You should implement offline backups so that even users with administrative access cannot alter or delete data.</p>
+<p>Offline backups also help protect your data from accidental deletion. For example, copy your backups to a different account with limited access rights. Make sure:</p>
+
+<ul>
+<li>the backups are encrypted and versioned</li>
+<li>the account you are copying the backups from only has write permissions</li>
+</ul>
+<h3 id="decide-where-to-store-your-backups">Decide where to store your backups</h3>
+<p>Where you are storing your backups is also important for disaster recovery. Most cloud storage solutions have durability guarantees. However, an outage could occur in the region containing your live service and backups. If your service has very high availability requirements, you may need copies of your data in a different region, or with a different service provider. Your conversations with Information Security and service owners can help you determine your risk tolerance for these hopefully rare scenarios.</p>
+<p>The National Cyber Security Centre (NCSC) article <a href="https://www.ncsc.gov.uk/blog-post/offline-backups-in-an-online-world">Offline backups in an online world</a> further explains why offline backups are important and suggests some approaches to use in a cloud environment.</p>
+<h3 id="decide-on-manual-or-automatic-recovery-in-the-event-of-a-disaster">Decide on manual or automatic recovery in the event of a disaster</h3>
+<p>Setting a <a href="https://cloud.google.com/architecture/dr-scenarios-planning-guide#basics_of_dr_planning">Recovery Time Objective (RTO)</a> for your service can help you decide your approach to service recovery in the event of a disaster. For example, <a href="https://www.digitalmarketplace.service.gov.uk/">Digital Marketplace</a> is built to automatically recover in various scenarios, including an outage in an availability zone. It is not built to withstand a serious outage of <a href="https://www.cloud.service.gov.uk/">GOV.UK Platform as a Service (PaaS)</a> or the <a href="https://aws.amazon.com/about-aws/global-infrastructure/regions_az/">Amazon Web Services (AWS) region</a> the PaaS depends upon. However, Digital Marketplace can restore its service with another provider and/or in another region manually by redeploying its applications using <a href="https://www.gov.uk/service-manual/technology/manage-your-software-configuration#use-infrastructure-as-code">infrastructure as code</a> and databases from backups. Therefore, in the event of this hopefully low-risk scenario, it has set its RTO as one week.</p>
+<p>In this example, the services Digital Marketplace depends upon can probably restore service in less than one week. Therefore, the RTO is applicable in the worst-case scenario.</p>
+<p>An RTO of one week is not likely to be acceptable for services where there would be a serious user impact if they were unavailable. For very low RTOs (for example, under one hour), you will need to architect your service to support automatic disaster recovery. For example, <a href="https://www.wifi.service.gov.uk/">GovWifi</a> operates in two AWS regions - Dublin and London. In the event of a serious outage in London, essential aspects of the GovWifi service will still operate from the Dublin region.</p>
+<p>Your disaster recovery strategy will depend on your specific service requirements. You may need different strategies for different parts of your service. The more immediate and more automatic the strategy, the greater the complexity and the cost of running your service is likely to be. The <a href="https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/plan-for-disaster-recovery-dr.html">Plan for Disaster Recovery article from AWS</a> covers some common recovery patterns.</p>
+<h3 id="agree-your-rpos-and-rtos-with-risk-and-service-owners">Agree your RPOs and RTOs with risk and service owners</h3>
+<p>Make sure you discuss and agree your RPOs and RTOs with risk and service owners. Not only is their expertise key to decision making, but it&rsquo;s vital they understand what will happen and why in the event of a disaster.</p>
+<h2 id="test-your-disaster-recovery-plans">Test your disaster recovery plans</h2>
+<p>Disasters rarely happen, meaning that your disaster recovery plans are likely to become ineffective unless you test them regularly.</p>
+<p>You must regularly test that you can restore data from your live and offline backups. You must test the procedure for restoring an offline backup so team members are familiar with the procedure for accessing and using the backup. It also serves as useful reassurance that backups are functioning correctly.</p>
+<p>You must regularly test your manual or automatic recovery processes so that you are confident they will work in an emergency situation. This also helps team members build familiarity with the relevant procedures.</p>
+<p>You should <a href="https://technology.blog.gov.uk/2015/02/06/running-a-game-day-for-gov-uk/">organise game days</a> to practise <a href="/standards/incident-management.html">incident management</a> and test disaster recovery procedures. Game days enable you to play out scenarios in a safe environment so you can test and learn from how you respond. These scenarios will help build familiarity and increase confidence that your emergency procedures will work when you most need them to.</p>
+<p>You can also practice incidents or recovery from disaster scenarios in a more low-pressure way. The GOV.UK PaaS team regularly spin the <a href="https://technology.blog.gov.uk/2021/03/04/wheel-of-misfortune-incident-rehearsal-for-gov-uk-paas/">Wheel of Misfortune</a> to help new and existing team members gain experience and confidence working with the platform.</p>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2025-01-09">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 9 July 2024.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/guidance/unpublished/disaster-recovery.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27Disaster+Recovery%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fguidance%2Funpublished%2Fdisaster-recovery.html%29&amp;labels=bug&amp;title=Re%3A+%27Disaster+Recovery%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

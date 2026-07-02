@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Cabinet Office Digital Handbook</title>
+
+    <link href="../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/software/technical-incident-management-guidance.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/software/technical-incident-management-guidance.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/software/technical-incident-management-guidance.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#technical-incident-management-guidance"><span>Technical incident management guidance</span></a>
+    <ul>
+      <li>
+        <a href="#1-purpose"><span>1. Purpose</span></a>
+      </li>
+      <li>
+        <a href="#2-how-to-determine-incident-priority"><span>2. How to determine incident priority</span></a>
+        <ul>
+          <li>
+            <a href="#2-1-define-impact"><span>2.1. Define impact</span></a>
+          </li>
+          <li>
+            <a href="#2-2-define-urgency"><span>2.2. Define urgency</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#3-incident-priority-levels"><span>3. Incident priority levels</span></a>
+      </li>
+      <li>
+        <a href="#4-support-structure"><span>4. Support structure</span></a>
+        <ul>
+          <li>
+            <a href="#standard-lines-of-support"><span>Standard lines of support</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#5-incident-management-process"><span>5. Incident management process</span></a>
+        <ul>
+          <li>
+            <a href="#5-1-p1-and-p2-incident-process-high-priority"><span>5.1. P1 and P2 incident process (high priority)</span></a>
+          </li>
+          <li>
+            <a href="#5-2-p3-and-p4-incident-process-low-priority"><span>5.2. P3 and P4 incident process (low priority)</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#6-p1-and-p2-incident-roles-and-activities"><span>6. P1 and P2 incident roles and activities</span></a>
+        <ul>
+          <li>
+            <a href="#6-1-roles-in-the-p1-and-p2-incident-team"><span>6.1. Roles in the P1 and P2 incident team</span></a>
+          </li>
+          <li>
+            <a href="#6-2-p1-and-p2-incident-activities"><span>6.2. P1 and P2 incident activities</span></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="technical-incident-management-guidance">Technical incident management guidance</h1>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This guidance applies to digital platforms and services within Cabinet Office Digital.</p>
+<p>It explains how to manage technical incidents. The goal is to restore normal service quickly with minimal impact on users and the department.</p>
+<p>Technical incidents may also be cyber security or data loss incidents.</p>
+<p>This guidance is for general technical incidents. You must still follow the separate, formal processes for:</p>
+
+<ul>
+<li><strong>Cyber Security Incidents:</strong> Report immediately to the <a href="https://intranet.cabinetoffice.gov.uk/it-data-and-security/cyber-and-information-security-services/#:~:text=How%20do%20I%20report%20a%20cyber%20security%20incident">Cabinet Office Cyber Security Team</a><br></li>
+<li><strong>Data Breaches:</strong> Report immediately to the <a href="https://docs.google.com/forms/d/e/1FAIpQLSclsR0TLuhIqbgxR0vFayMo4q4BKa_1ob_oVeYSRvPytQU6xw/viewform">Cabinet Office Data Privacy &amp; Compliance Team</a></li>
+</ul>
+<p>You must include these reporting requirements in your local service manual, guides, and processes.</p>
+<h2 id="2-how-to-determine-incident-priority">2. How to determine incident priority</h2>
+<p>You must classify all incidents using two factors: <strong>impact</strong> and <strong>urgency</strong>. This ensures a consistent response.</p>
+<h3 id="2-1-define-impact"><strong>2.1. Define impact</strong></h3>
+<p>Impact is the effect of the incident on the department. When you assess impact, consider:</p>
+
+<ul>
+<li><strong>Scope:</strong> How many staff are affected?<br></li>
+<li><strong>Business Function:</strong> What business function is blocked?<br></li>
+<li><strong>Seniority:</strong> Are SCS, Ministers, or their Private Offices affected?<br></li>
+<li><strong>Data:</strong> Is sensitive business data inaccessible, incorrect, or at risk?</li>
+</ul>
+<h3 id="2-2-define-urgency"><strong>2.2. Define urgency</strong></h3>
+<p>Urgency is how quickly the incident needs to be resolved. When you assess urgency, consider:</p>
+
+<ul>
+<li><strong>Time-Sensitivity:</strong> Is there an imminent, immovable deadline?<br></li>
+<li><strong>Workaround:</strong> Is there an easy, temporary workaround for staff?<br></li>
+<li><strong>Rate of Degradation:</strong> Is the problem getting worse?</li>
+</ul>
+<p><strong>2.3. The priority matrix</strong></p>
+<p>Use the impact and urgency matrix to set a priority level (P1 to P6). This makes classification consistent.</p>
+<p><strong>Example service impact matrix</strong></p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: left"></th>
+<th style="text-align: left">High Urgency</th>
+<th style="text-align: left">Medium Urgency</th>
+<th style="text-align: left">Low Urgency</th>
+</tr><tr>
+<td style="text-align: left"><strong>High Impact</strong></td>
+<td style="text-align: left">P1</td>
+<td style="text-align: left">P1</td>
+<td style="text-align: left">P2</td>
+</tr><tr>
+<td style="text-align: left"><strong>Medium Impact</strong></td>
+<td style="text-align: left">P2</td>
+<td style="text-align: left">P3</td>
+<td style="text-align: left">P4</td>
+</tr><tr>
+<td style="text-align: left"><strong>Low Impact</strong></td>
+<td style="text-align: left">P3</td>
+<td style="text-align: left">P4</td>
+<td style="text-align: left">P5</td>
+</tr>
+        </table>
+      </div><h2 id="3-incident-priority-levels"><strong>3. Incident priority levels</strong></h2>
+<p>This table defines the priority levels (P1 to P6) for internal services (In-Hour Support).</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: left">Priority Level</th>
+<th style="text-align: left">Definition (Internal Context)</th>
+<th style="text-align: left">Expected Response</th>
+<th style="text-align: left">Expected Resolution Target</th>
+</tr><tr>
+<td style="text-align: left"><strong>P1 (Critical)</strong></td>
+<td style="text-align: left">Critical business service outage (for example, all-staff network, email, or SSO is down). Ongoing unauthorised access (Cyber incident).</td>
+<td style="text-align: left">20 minutes</td>
+<td style="text-align: left">Within 1 hour</td>
+</tr><tr>
+<td style="text-align: left"><strong>P2 (Major)</strong></td>
+<td style="text-align: left">Substantial degradation of a critical service (for example, email is unusable for everyone). Complete outage of a non-critical but important business service.</td>
+<td style="text-align: left">Within 1 hour</td>
+<td style="text-align: left">4-8 hours</td>
+</tr><tr>
+<td style="text-align: left"><strong>P3 (Significant)</strong></td>
+<td style="text-align: left">Intermittent issues with a key service. Full outage for a small group of users or a single senior staff member (SCS+).</td>
+<td style="text-align: left">Within 2 hours</td>
+<td style="text-align: left">1-2 business days</td>
+</tr><tr>
+<td style="text-align: left"><strong>P4 (Minor)</strong></td>
+<td style="text-align: left">Component failure with no immediate staff impact (for example, loss of a redundant server). A single user issue where a workaround exists.</td>
+<td style="text-align: left">Within 4 hours</td>
+<td style="text-align: left">3-5 business days</td>
+</tr><tr>
+<td style="text-align: left"><strong>P5 (Monitor)</strong></td>
+<td style="text-align: left">Issue requiring no further action beyond monitoring. A cosmetic or low-impact bug is reported.</td>
+<td style="text-align: left">Within 1 business day</td>
+<td style="text-align: left">Log in backlog</td>
+</tr><tr>
+<td style="text-align: left"><strong>P6 (Informational)</strong></td>
+<td style="text-align: left">Request for information only (for example, &ldquo;How do I connect to the printer?&rdquo;).</td>
+<td style="text-align: left">Within 2 business days</td>
+<td style="text-align: left">Log in backlog</td>
+</tr>
+        </table>
+      </div><h2 id="4-support-structure"><strong>4. Support structure</strong></h2>
+<p>Service teams must define the roles and responsibilities (RACI) for incident management.</p>
+<p>When defining these roles, you must explicitly resource a Service Delivery or Operations function. This function is responsible for the day-to-day running of the application and is distinct from the teams managing the underlying infrastructure or the product backlog.</p>
+<h3 id="standard-lines-of-support"><strong>Standard lines of support</strong></h3>
+<p>Cabinet Office incident management typically operates across 3 lines of support.</p>
+
+<ul>
+<li><strong>1st line (user support):</strong> <a href="https://digital-one-stop-shop.cabinetoffice.gov.uk/support/catalog/items/160">Digital One Stop Shop</a>. This is the single point of contact for staff. They resolve basic issues and route other tickets to the correct 2nd line team.<br></li>
+<li><strong>2nd line (technical support):</strong> Live Services / Service Teams. They receive escalations from 1st line and automated alerts. They triage incidents using the matrix and are responsible for resolving P1 and P2 incidents.<br></li>
+<li><strong>3rd line (product support):</strong> The specialist 3rd line teams. They receive complex P3 and P4 incidents from 2nd line that need developer work. These incidents are managed as part of the team&rsquo;s backlog.</li>
+</ul>
+<h2 id="5-incident-management-process"><strong>5. Incident management process</strong></h2>
+<h3 id="5-1-p1-and-p2-incident-process-high-priority"><strong>5.1. P1 and P2 incident process (high priority)</strong></h3>
+<p>The Service Delivery (2nd line) team owns P1 and P2 incidents. A formal incident team manages them to ensure immediate resolution.</p>
+<h3 id="5-2-p3-and-p4-incident-process-low-priority"><strong>5.2. P3 and P4 incident process (low priority)</strong></h3>
+<p>2nd line support triages P3 and P4 incidents and assigns them to the 3rd line product team. The product team manages them as backlog items.</p>
+<h2 id="6-p1-and-p2-incident-roles-and-activities"><strong>6. P1 and P2 incident roles and activities</strong></h2>
+<h3 id="6-1-roles-in-the-p1-and-p2-incident-team"><strong>6.1. Roles in the P1 and P2 incident team</strong></h3>
+<p>One person may perform multiple roles.</p>
+
+<ul>
+<li><strong>Incident lead (technical lead):</strong> Manages the incident and coordinates the team. They analyse the incident, organise technical support, escalate to senior management if needed, and organise the post incident review. This is typically a Service Delivery role.<br></li>
+<li><strong>Comms lead:</strong> Coordinates with the incident lead to keep stakeholders informed. They update status pages and send communications.<br></li>
+<li><strong>Technical support (service team):</strong> Performs detailed analysis, diagnosis, and resolution. They engage 3rd line specialists if needed.<br></li>
+<li><strong>Documenter:</strong> Records all actions, decisions, and communications in the incident report with a clear timeline.<br></li>
+</ul>
+<h3 id="6-2-p1-and-p2-incident-activities"><strong>6.2. P1 and P2 incident activities</strong></h3>
+<p><strong>1. Create incident report and ticket</strong> An incident is logged by a 2nd line team member (from an alert) or escalated from 1st line. They must create an Incident Report and log a <a href="https://digital-one-stop-shop.cabinetoffice.gov.uk/support/catalog/items/160">ticket in OneStop Shop</a>. The <a href="https://docs.google.com/document/d/1Kb6-It-LMbj7UiO9bl2QCC5sCm0TW_3-dYfS10ov2ow/edit?tab=t.0#heading=h.p99426yo0rbv">Incident report template can be found here</a></p>
+<p><strong>2. Prioritise the incident</strong> Service Delivery must use the impact and urgency matrix (see section 2) to assign a priority (P1 to P4).</p>
+<p><strong>3. Notify the incident lead</strong> Service Delivery notifies the on-call incident lead for the affected service. On smaller teams, the Service Delivery engineer may act as the incident lead.</p>
+<p><strong>4. Assemble the incident team</strong> The incident lead assembles the team (comms, technical support, documenter).</p>
+<p><strong>5. Investigate the incident</strong> The incident lead performs the initial analysis. Technical support carries out a detailed investigation to find the cause, workarounds, and resolution options.</p>
+<p><strong>6. Document all actions</strong> The documenter must keep a time-stamped log of all actions, discussions, and decisions in the incident report. This is essential for the post-incident review.</p>
+<p><strong>7. Communicate updates</strong> The comms lead must provide regular updates as defined in the priority table (see section 3). You must:</p>
+
+<ul>
+<li>send all-staff communications via email (if the incident affects the whole department)<br></li>
+<li>notify specific stakeholders</li>
+</ul>
+<p><strong>8. Resolve the incident</strong> The incident is resolved when the incident lead agrees the service is restored. The incident lead updates the ticket with the root cause (if known) and details of the fix.</p>
+<p><strong>9. Close the incident (post incident review)</strong> All P1 and P2 incidents must have a post incident review (PIR). You must use the review&rsquo;s output to complete the incident report and track actions to prevent the incident from happening again.</p>
+
+
+            
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/software/technical-incident-management-guidance.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fsoftware%2Ftechnical-incident-management-guidance.html%29&amp;labels=bug&amp;title=Re%3A+%27%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../javascripts/application.js"></script>
+  </body>
+</html>

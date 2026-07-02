@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Github Administration Access Policy - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/general/github-admin-access-policy.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="Github Administration Access Policy - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/general/github-admin-access-policy.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="Github Administration Access Policy" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/general/github-admin-access-policy.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#github-administration-access-policy"><span>Github Administration Access Policy</span></a>
+    <ul>
+      <li>
+        <a href="#your-responsibilities"><span>Your responsibilities</span></a>
+        <ul>
+          <li>
+            <a href="#access-and-permission-management"><span>Access and permission management</span></a>
+          </li>
+          <li>
+            <a href="#repository-configuration-and-lifecycle"><span>Repository configuration and lifecycle</span></a>
+          </li>
+          <li>
+            <a href="#ci-cd-workflows-and-automation"><span>CI/CD, workflows, and automation</span></a>
+          </li>
+          <li>
+            <a href="#code-review-and-quality-control"><span>Code review and quality control</span></a>
+          </li>
+          <li>
+            <a href="#release-and-version-management"><span>Release and version management</span></a>
+          </li>
+          <li>
+            <a href="#security-and-compliance"><span>Security and compliance</span></a>
+          </li>
+          <li>
+            <a href="#incident-response"><span>Incident response</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#requirements"><span>Requirements</span></a>
+        <ul>
+          <li>
+            <a href="#technical-skills"><span>Technical skills</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#use-the-repository-39-maintainer-39-role-instead"><span>Use the repository ‘maintainer’ role instead</span></a>
+      </li>
+      <li>
+        <a href="#use-the-team-maintainer-role-instead"><span>Use the team maintainer role instead</span></a>
+        <ul>
+          <li>
+            <a href="#team-naming-and-structure"><span>Team naming and structure</span></a>
+          </li>
+          <li>
+            <a href="#standard-parent-teams-for-a-project-or-repository"><span>Standard parent teams for a project or repository</span></a>
+          </li>
+          <li>
+            <a href="#team-maintainer-and-sub-teams"><span>Team maintainer and sub-teams</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#use-time-bound-admin-access"><span>Use time-bound admin access</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="github-administration-access-policy">Github Administration Access Policy</h1>
+<p>A repository administrator is responsible for the health, security, access control, quality, and operational continuity of a repository. They combine technical Git and GitHub skills, process ownership (such as CI/CD, releases, and branch policies), and community or project coordination.</p>
+<p>If you are a repository administrator, you must have the necessary technical skills. A lack of these skills creates risks, from immediate security exposures to long-term operational and reputational damage.</p>
+<p>Having too many administrators increases the risk of accidental or malicious changes, misconfigurations, and secret exposure. It also:</p>
+
+<ul>
+<li>Complicates credential management<br></li>
+<li>Makes audit trails and accountability unclear<br></li>
+<li>Leads to inconsistent enforcement of policies and branch protections<br></li>
+<li>Increases supply-chain risk from unreviewed workflow or dependency changes<br></li>
+<li>Hinders incident response and compliance</li>
+</ul>
+<p>You must limit admin privileges to a small, vetted group. Use team-based roles, require time-bound elevations, use multi-party approvals, and carry out continuous monitoring.</p>
+<h2 id="your-responsibilities"><strong>Your responsibilities</strong></h2>
+<p>If you are a GitHub administrator, you are responsible for the following for your repositories:</p>
+<h3 id="access-and-permission-management"><strong>Access and permission management</strong></h3>
+
+<ul>
+<li>Grant and revoke collaborator access and team permissions.<br></li>
+<li>Maintain <a href="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/software/principle-least-privilege.html">least-privilege access</a> and limit the number of full admin rights. We recommend 2 to 3 repo admins, or an automation GitHub App for the role.</li>
+</ul>
+<h3 id="repository-configuration-and-lifecycle"><strong>Repository configuration and lifecycle</strong></h3>
+
+<ul>
+<li>Set the default branch, repository visibility (public or private), topics, and descriptions.<br></li>
+<li>Create, update, and enforce branch protection rules. This includes required reviews, status checks, required linear history, signed commits, and restricting who can push.<br></li>
+<li>Archive, transfer, or delete repositories when appropriate.</li>
+</ul>
+<h3 id="ci-cd-workflows-and-automation"><strong>CI/CD, workflows, and automation</strong></h3>
+
+<ul>
+<li>Configure GitHub Actions or workflows, secrets, and runners.<br></li>
+<li>Maintain integration with CI/CD pipelines and deployment systems.<br></li>
+<li>Manage deploy keys and service accounts used by CI/CD tools.</li>
+</ul>
+<h3 id="code-review-and-quality-control"><strong>Code review and quality control</strong></h3>
+
+<ul>
+<li>Enforce code-review rules (such as required reviewers and CODEOWNERS).<br></li>
+<li>Maintain <code>contributing.md</code>, pull request templates, and issue templates.<br></li>
+<li>Ensure test coverage checks and automated linting run on pull requests (PRs).</li>
+</ul>
+<h3 id="release-and-version-management"><strong>Release and version management</strong></h3>
+
+<ul>
+<li>Create and manage releases (including tags and changelogs).<br></li>
+<li>Coordinate release workflows and release notes.</li>
+</ul>
+<h3 id="security-and-compliance"><strong>Security and compliance</strong></h3>
+
+<ul>
+<li>Monitor and respond to security alerts, such as from Dependabot, secret scanning, and vulnerability alerts.<br></li>
+<li>Manage the security policy (<code>SECURITY.md</code>), maintain contact info for maintainers, and respond to vulnerability reports.<br></li>
+<li>Manage repository secrets (for example, for Actions and Codespaces) and rotate credentials when needed.</li>
+</ul>
+<h3 id="incident-response"><strong>Incident response</strong></h3>
+
+<ul>
+<li>Lead or coordinate responses to security incidents, accidental secrets exposure, or production regressions caused by repository changes.</li>
+</ul>
+<h2 id="requirements"><strong>Requirements</strong></h2>
+<p>The GitHub administrator role is a technical one, usually filled by a technical lead or technical architect. You must work closely with the repositories you are responsible for.</p>
+<p>To be a GitHub administrator, you must meet these technical skill requirements:</p>
+<h3 id="technical-skills"><strong>Technical skills</strong></h3>
+
+<ul>
+<li>Strong Git skills (branching, rebasing, merging, resolving conflicts)<br></li>
+<li>Familiarity with GitHub (PRs, issue templates, branch protection, Actions)<br></li>
+<li>CI/CD and release automation knowledge (GitHub Actions or other CI)<br></li>
+<li>Security basics: secret management, dependency scanning, CVE triage<br></li>
+<li>Scripting or automation (shell, Python, or GitHub API usage)<br></li>
+<li>Understanding of the codebase and runtime or deployment environment</li>
+</ul>
+<h2 id="use-the-repository-39-maintainer-39-role-instead"><strong>Use the repository &lsquo;maintainer&rsquo; role instead</strong></h2>
+<p>GitHub also has the &lsquo;maintain&rsquo; role. This is a default role you can select for an individual or a team.</p>
+<p>For most day-to-day work, this role gives enough access to cover tasks like managing issues, PRs, branches, and workflows. It does not give permission to delete, transfer, change visibility, or manage sensitive repository settings.</p>
+<h2 id="use-the-team-maintainer-role-instead"><strong>Use the team maintainer role instead</strong></h2>
+<p>If a project or delivery manager needs to manage GitHub repository access for contractors, use the team maintainer role to administer access through teams. This centralises control, simplifies audits, and reduces the number of direct permissions granted to individuals.</p>
+<h3 id="team-naming-and-structure"><strong>Team naming and structure</strong></h3>
+
+<ul>
+<li>Name teams after the project. A team may cover several repositories within that project.<br></li>
+<li>Use one team per access right. All team members, including the maintainer, inherit the rights granted to that team across its repositories.<br></li>
+<li>If a member belongs to multiple teams, their effective permissions are the total of those rights. The highest privilege granted by any team applies.</li>
+</ul>
+<h3 id="standard-parent-teams-for-a-project-or-repository"><strong>Standard parent teams for a project or repository</strong></h3>
+<p>You should maintain a clear separation of team access with these standard parent teams:</p>
+
+<ul>
+<li><code>[project-name]-read</code> (read-only access)<br></li>
+<li><code>[project-name]-write</code> (read/write access)</li>
+</ul>
+<p>Create sub-teams under the parent teams to grant more specific access as required (for example, to contractors, vendor groups, or specific repository sets). This retains centralised control at the parent level.</p>
+<h3 id="team-maintainer-and-sub-teams"><strong>Team maintainer and sub-teams</strong></h3>
+<p>Assign managers who need to administer team memberships as the &lsquo;maintainer&rsquo; of the relevant teams. Maintainers inherit the team’s access rights and can add or remove members. Maintainers must exercise least privilege and review access regularly.</p>
+<h2 id="use-time-bound-admin-access"><strong>Use time-bound admin access</strong></h2>
+<p>To reduce risk, administrative access must only be granted on a time-limited basis. Requesters must provide a clear justification, a specific scope of access, and a defined expiry date. Approvals must come from a designated owner (for example, a team lead or security approver).</p>
+<p>You must implement administrator access using time-bound mechanisms where possible. This includes ephemeral credentials, short-lived Personal Access Tokens (PATs), or automated role expirations. This will limit exposure to the risks stated in this policy.</p>
+<p>Access must be automatically revoked at expiry. It can be manually revoked earlier if it is unused or misused. This must be followed by a brief post-access review to confirm changes and rotate any credentials that were used. Any extension requires a new justification and re-approval.</p>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2026-05-04">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 4 November 2025.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/cloud/general/github-admin-access-policy.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27Github+Administration+Access+Policy%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fcloud%2Fgeneral%2Fgithub-admin-access-policy.html%29&amp;labels=bug&amp;title=Re%3A+%27Github+Administration+Access+Policy%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

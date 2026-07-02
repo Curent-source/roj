@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>How to manage access to your third-party service accounts - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/accounts-with-third-parties.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="How to manage access to your third-party service accounts - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/accounts-with-third-parties.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="How to manage access to your third-party service accounts" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/accounts-with-third-parties.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#how-to-manage-access-to-your-third-party-service-accounts"><span>How to manage access to your third-party service accounts</span></a>
+    <ul>
+      <li>
+        <a href="#securely-managing-account-credentials"><span>Securely managing account credentials</span></a>
+        <ul>
+          <li>
+            <a href="#managing-accounts-with-organisation-level-access"><span>Managing accounts with organisation-level access</span></a>
+          </li>
+          <li>
+            <a href="#managing-accounts-with-individual-level-access"><span>Managing accounts with individual-level access</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#managing-github-accounts"><span>Managing GitHub accounts</span></a>
+      </li>
+      <li>
+        <a href="#managing-logit-accounts"><span>Managing Logit accounts</span></a>
+      </li>
+      <li>
+        <a href="#managing-amazon-web-services-aws-accounts"><span>Managing Amazon Web Services (AWS) accounts</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="how-to-manage-access-to-your-third-party-service-accounts">How to manage access to your third-party service accounts</h1>
+<p>Your GDS team probably uses third-party tools to develop a service, such as <a href="#managing-github-accounts">GitHub</a> and <a href="#managing-logit-accounts">logit</a>. Follow this guidance to manage access to any associated accounts.</p>
+<p>When managing third-party service accounts ensure:</p>
+
+<ul>
+<li>only the correct people in your team have access</li>
+<li>team members have account access revoked when they leave</li>
+<li>you identify who in your team is doing what and when (this is more important for some tools, like <a href="https://aws.amazon.com/cloudtrail/">Amazon CloudTrail</a>, than others like <a href="https://www.browserstack.com/">BrowserStack</a>).</li>
+</ul>
+<h2 id="securely-managing-account-credentials">Securely managing account credentials</h2>
+<p>You’re likely to need a set of credentials to gain access to your third-party user account, for example passwords or secret access keys.</p>
+<p>When managing these credentials, you must:</p>
+
+<ul>
+<li>keep the number of secrets you have to a minimum - this reduces the number of credentials to revoke when someone leaves GDS (passwords are particularly problematic secrets, other secrets such as secret access keys or OAuth tokens are more easily rotated)</li>
+<li>never use credentials associated with another individual</li>
+<li>encourage the rest of your team to avoid sharing credentials unnecessarily (technical limitations may mean this is sometimes unavoidable)</li>
+</ul>
+<h3 id="managing-accounts-with-organisation-level-access">Managing accounts with organisation-level access</h3>
+<p>Often third-party services natively support organisation or team level access, for example the use of <a href="https://github.com/alphagov">alphagov on GitHub</a>. In these cases you should make sure only the appropriate individuals on your team have access.</p>
+<p>With team or organisation-level accounts, where possible you should:</p>
+
+<ul>
+<li>create separate accounts for each individual, rather than share credentials</li>
+<li>use a single-sign-on provider rather than create an account with a separate username and password - preferably use Google Workspace as it’s a core part of the GDS leaver process, which means that access to linked third-party services will be revoked automatically when someone leaves</li>
+<li>make sure that you have a documented process for removing individuals’s access when they leave GDS</li>
+</ul>
+<h3 id="managing-accounts-with-individual-level-access">Managing accounts with individual-level access</h3>
+<p>When services do not support organisation-level access, you may have to share individuals’ sign-on credentials.</p>
+<p>Sharing individuals’ sign-on credentials can create risks as:</p>
+
+<ul>
+<li>you do not always know who can access a service (particularly if users only access a service rarely because you can forget who has access)</li>
+<li>the last person with account credentials may leave GDS, making it impossible for others to access a service in future</li>
+</ul>
+<p>To reduce these risks, you should:</p>
+
+<ul>
+<li>create an account using a Google Group email address rather than an individual’s email address</li>
+<li>set posting permissions to ‘public’ so your group can receive emails from outside GDS</li>
+<li>set viewing topic permissions to ‘all members of the group’ so only users with access to a service are able to view posts</li>
+<li><a href="/standards/storing-credentials.html">store passwords in your team’s shared credential store</a></li>
+<li>use two-factor authentication</li>
+<li>make sure you have a documented process for removing an individual’s access to the Google Group,  credential store and for rotating credentials including any API keys</li>
+</ul>
+<h2 id="managing-github-accounts">Managing GitHub accounts</h2>
+<p>When you join GDS, you will need a GitHub account. You can either use your personal account or create a new account. Either way, please <a href="https://github.com/settings/emails">add your @digital.cabinet-office.gov.uk email address to your GitHub account</a>. You do not need to make it the primary address or public.</p>
+<p>Each GDS team should have someone (usually a technical lead) who is an owner and can grant/revoke access to their repositories.</p>
+<h2 id="managing-logit-accounts">Managing Logit accounts</h2>
+<p>Use Google Apps Marketplace when you sign into Logit (this is the only available option).</p>
+<h2 id="managing-amazon-web-services-aws-accounts">Managing Amazon Web Services (AWS) accounts</h2>
+<p>The GDS Way provides <a href="/manuals/working-with-aws-accounts.html">guidance on how to access an AWS account, create a new account and account management</a>.</p>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2025-01-23">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 23 July 2024.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/guidance/unpublished/accounts-with-third-parties.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27How+to+manage+access+to+your+third-party+service+accounts%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fguidance%2Funpublished%2Faccounts-with-third-parties.html%29&amp;labels=bug&amp;title=Re%3A+%27How+to+manage+access+to+your+third-party+service+accounts%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

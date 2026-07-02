@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Cloud shared responsibility model - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/general/cloud-shared-responsibility-model.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="Cloud shared responsibility model - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/general/cloud-shared-responsibility-model.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="Cloud shared responsibility model" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/general/cloud-shared-responsibility-model.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#cloud-shared-responsibility-model"><span>Cloud shared responsibility model</span></a>
+    <ul>
+      <li>
+        <a href="#shared-responsibility-model"><span>Shared Responsibility Model</span></a>
+      </li>
+      <li>
+        <a href="#aws-supplier-enterprise-support"><span>AWS Supplier Enterprise Support</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="cloud-shared-responsibility-model">Cloud shared responsibility model</h1>
+<p>Cabinet Office Digital Cloud provides these added-values activities and services, in addition to the <a href="https://docs.aws.amazon.com/whitepapers/latest/aws-overview/amazon-web-services-cloud-platform.html">standard services</a> offered by AWS.</p>
+
+<ul>
+<li>Operation and support of the organisational management account, enterprise subscription and support, and security control policies<br></li>
+<li>Centralised contract, billing and recharge management<br></li>
+<li>Creating and managing approval for the AWS and platform operation business case.<br></li>
+<li>Predefined and enhanced organisational security control settings<br></li>
+<li>User management for employee and suppliers<br></li>
+<li>Account provisioning and management<br></li>
+<li>Organisational Cost &amp; Usage Report (CUR), Cost Intelligence and KPI dashboards<br></li>
+<li>Organisation level audit logs ingested into our Security Operation Centre (SOC), which has 24/7 protective monitoring from the Cyber operations team<br></li>
+<li>Advise on FinOps, security and compliance report of the services running on AWS</li>
+</ul>
+<h2 id="shared-responsibility-model">Shared Responsibility Model</h2>
+<p>The management of a workload or service running on Cabinet Office AWS Cloud is a shared responsibility between</p>
+
+<ul>
+<li><p><strong>The Service team (Tenant)</strong>: The service team owns the AWS accounts and is accountable for the lifecycle of workloads hosted on AWS Cloud, whether delivered in-house or via outsourcing. They are responsible for incident response, security, day-to-day operations and vulnerability management of the services.</p></li>
+<li><p><strong>CO:D Platform Engineering (COPE) team:</strong> The COPE team in Cabinet Office Digital owns the Cabinet Office AWS organisation and management accounts; responsible for all activities related to the organisational platform, customisation of the AWS organisation and automation required to maintain a central platform. This includes the billing dashboard, integration with cyber security, account and user management, and platform optimisation. The COPE team also manages the AWS business case and contractual arrangements.</p></li>
+<li><p><strong>CO:D Finance team</strong>: The finance team is responsible for paying AWS invoices, monitoring spend against budgets, and recharging AWS consumption back to the relevant business units. Access to AWS billing portal is provided</p></li>
+<li><p><strong>CO:D Cyber Security</strong>: Provides proactive organisation-wide security monitoring and cyber incident response; defines the Security Control Policies; owns and operates the Splunk cyber monitoring tool, and leads platform security improvement work.</p></li>
+<li><p><strong>AWS (Supplier)</strong>: Delivers the underlying AWS infrastructure and services to the general market; responsible for cloud security, availability and compliance of AWS platform components, and for coordinating security incidents affecting the cloud environment.</p></li>
+</ul>
+<p>Our shared responsibility model is an extension to the <a href="https://aws.amazon.com/compliance/shared-responsibility-model/">AWS Shared Responsibility Model</a>. The following table defines the Cabinet Office responsibilities as a “customer” and the responsibilities divided into the Service, platform and cyber security team.</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th style="text-align: left"></th>
+<th style="text-align: center">Service team (Tenant) &amp; their suppliers</th>
+<th style="text-align: center">Platform engineering</th>
+<th style="text-align: center">Cyber Security</th>
+</tr><tr>
+<td style="text-align: left"><strong>Digital Service (hosted on AWS)</strong></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left">Application development lifecycle</td>
+<td style="text-align: center">✅</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left">Application operations and support <sup>(2)</sup>
+</td>
+<td style="text-align: center">✅</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left">AWS accounts and role-based access control</td>
+<td style="text-align: center">✅</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left">Infrastructure of the digital service</td>
+<td style="text-align: center">✅</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left">Security and vulnerability management</td>
+<td style="text-align: center">✅</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left">Service and account level Finops</td>
+<td style="text-align: center">✅</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left"><strong>AWS Organisation</strong></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left">AWS Account provisioning and lifecycle management</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">✅</td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left">AWS organisation management</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">✅</td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left">Organisation billing dashboard</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">✅</td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left">AWS user provisioning and lifecycle management</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">✅</td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left">Organisationation-wide FinOps</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">✅</td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left"><strong>Incident response and support</strong></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left">Service stakeholder coordination and communication</td>
+<td style="text-align: center">✅</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left">Cyber security related incident</td>
+<td style="text-align: center">✅</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">✅</td>
+</tr><tr>
+<td style="text-align: left">Non-cyber related incident (e.g. bugs)</td>
+<td style="text-align: center">✅</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr><tr>
+<td style="text-align: left">Emergency access to the AWS accounts <sup>(1)</sup>
+</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">✅</td>
+<td style="text-align: center">✅</td>
+</tr>
+        </table>
+      </div><p>(1) <em>In an emergency situation such as a major cyber security incident, the Platform Engineering (COPE) Team may invoke temporary emergency access to the AWS accounts owned by the service teams to safeguard Cabinet Office assets. This should not be treated as routine operation, as it introduces security risk and must be governed by established approvals and audit trails.</em></p>
+<p>(2) <em>It is essential that the service team maintains continuous technical capability to support both the applications and the infrastructure of the services they own, irrespective of whether provision is in‑house or via outsourced providers. AWS administrators must comply with the <a href="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/aws-administration-min-requirements.html#aws-administration-policyl">AWS Administration Policy</a>, and <a href="https://docs.google.com/document/d/1Kb6-It-LMbj7UiO9bl2QCC5sCm0TW_3-dYfS10ov2ow/edit?tab=t.0#heading=h.p99426yo0rbv">incident response</a> management should be followed and tested.</em></p>
+<h2 id="aws-supplier-enterprise-support">AWS Supplier Enterprise Support</h2>
+<p>The Cabinet Office has an AWS Enterprise Support contract. See the <a href="https://aws.amazon.com/premiumsupport/plans/">AWS Enterprise Support plan</a> for the SLA and included services. Accounts created under the Cabinet Office organisation or the Cabinet Digital Enterprise Service organisation are eligible for Enterprise support.</p>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2027-03-25">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 25 March 2026.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/cloud/general/cloud-shared-responsibility-model.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27Cloud+shared+responsibility+model%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fcloud%2Fgeneral%2Fcloud-shared-responsibility-model.html%29&amp;labels=bug&amp;title=Re%3A+%27Cloud+shared+responsibility+model%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

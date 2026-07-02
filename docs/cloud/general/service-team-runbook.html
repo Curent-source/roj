@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Stage 3 Migration – Service Team Runbook - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/general/service-team-runbook.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="Stage 3 Migration – Service Team Runbook - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/general/service-team-runbook.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="Stage 3 Migration – Service Team Runbook" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/general/service-team-runbook.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#stage-3-migration-service-team-runbook"><span>Stage 3 Migration – Service Team Runbook</span></a>
+    <ul>
+      <li>
+        <a href="#purpose"><span>Purpose</span></a>
+      </li>
+      <li>
+        <a href="#scope"><span>Scope</span></a>
+      </li>
+      <li>
+        <a href="#migration-process"><span>Migration Process</span></a>
+        <ul>
+          <li>
+            <a href="#1-before-migration"><span>1. Before Migration</span></a>
+          </li>
+          <li>
+            <a href="#2-at-the-start-of-the-migration-window"><span>2. At the Start of the Migration Window</span></a>
+          </li>
+          <li>
+            <a href="#3-immediately-after-migration-first-60-minutes"><span>3. Immediately After Migration (First 60 Minutes)</span></a>
+          </li>
+          <li>
+            <a href="#4-if-issues-occur"><span>4. If Issues Occur</span></a>
+          </li>
+          <li>
+            <a href="#5-after-migration"><span>5. After Migration</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#roles-and-responsibilities"><span>Roles and Responsibilities</span></a>
+      </li>
+      <li>
+        <a href="#what-this-migration-does-not-require"><span>What This Migration Does Not Require</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="stage-3-migration-service-team-runbook">Stage 3 Migration – Service Team Runbook</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This runbook outlines the actions expected from service teams during <strong>Stage 3 migration of AWS accounts to the hardened Workloads organisational unit (OU)</strong> within the Cabinet Office AWS Control Tower environment.</p>
+<p>Stage 3 introduces additional <strong>Service Control Policy (SCP)</strong> enforcement aligned with organisational platform guardrails. These guardrails strengthen security, governance, and operational consistency across service accounts.</p>
+<p>The objective of this migration stage is to move service workloads into a governed organisational unit while minimising disruption to running services.</p>
+<p>A summary of the SCP guardrails applied within the Workloads OU is available in the Digital Handbook:</p>
+<p><a href="https://digital-handbook.cabinetoffice.gov.uk/docs/cloud/aws-org-units-in-control-tower.html#workloads-scps">Workloads SCP Guardrails – Digital Handbook</a></p>
+<h2 id="scope">Scope</h2>
+<p>This runbook applies to all <strong>service teams whose AWS accounts are being migrated from the Transition OU to the Workloads OU</strong> as part of the AWS organisation migration programme.</p>
+<p>It applies to:</p>
+
+<ul>
+<li>Development</li>
+<li>Non-production</li>
+<li>Staging</li>
+<li>Production</li>
+</ul>
+<p>accounts being migrated during Stage 3.</p>
+<p>For most services, no architectural changes are required. Where potential issues are identified during the <strong>pre-migration AWS Config assessment</strong>, these will be reviewed collaboratively with service teams before migration.</p>
+<h2 id="migration-process">Migration Process</h2>
+<h3 id="1-before-migration">1. Before Migration</h3>
+<p>Prior to the agreed migration window, service teams must:</p>
+
+<ul>
+<li>Review the AWS Config pre-migration assessment provided by the Platform Engineering team</li>
+<li>Review the Workloads OU SCP guardrails documented in the Digital Handbook</li>
+<li>Confirm availability from the service team during the migration window</li>
+<li>Ensure no major releases are scheduled during the migration window</li>
+<li>Be prepared to pause CI/CD pipelines if requested</li>
+</ul>
+<p>No further action is required unless specific risks have been identified during the pre-migration assessment.</p>
+<h3 id="2-at-the-start-of-the-migration-window">2. At the Start of the Migration Window</h3>
+<p>At the beginning of the agreed migration window:</p>
+
+<ul>
+<li>Service teams will be added to a <strong>temporary migration contact group</strong></li>
+<li>The group will include a member of the <strong>Platform Engineering team (COPE)</strong> and a member of the <strong>Cyber Security team</strong></li>
+</ul>
+<p>Service teams will be asked to:</p>
+
+<ul>
+<li>Pause CI/CD pipelines</li>
+<li>Confirm no active deployments are in progress</li>
+<li>Confirm no live production incidents are ongoing</li>
+</ul>
+<p>Once these checks are complete, the Platform Engineering team will proceed with the <strong>OU migration</strong>.</p>
+<p>The OU move itself typically completes within a few minutes.</p>
+<h3 id="3-immediately-after-migration-first-60-minutes">3. Immediately After Migration (First 60 Minutes)</h3>
+<p>Following the OU move, service teams should validate:</p>
+
+<ul>
+<li>Application health</li>
+<li>Deployment capability</li>
+<li>Cross-account access (if applicable)</li>
+<li>End-user access</li>
+</ul>
+<p>If everything functions as expected, no further action is required.</p>
+<p>If any of the following issues are observed:</p>
+
+<ul>
+<li><code>AccessDenied</code> errors</li>
+<li>Failed deployments</li>
+<li>Region-related errors</li>
+<li>Unexpected permission issues</li>
+</ul>
+<p>These should be raised immediately in the migration contact group.</p>
+<p>The Platform Engineering team will assess the issue and determine the appropriate next steps.</p>
+<h3 id="4-if-issues-occur">4. If Issues Occur</h3>
+<p>If a <strong>critical service impact</strong> is identified during the migration window:</p>
+
+<ul>
+<li>The Platform Engineering team may initiate a <strong>rollback to the Transition OU</strong></li>
+<li>Findings will be reviewed collaboratively with the service team</li>
+<li>A revised migration plan will be agreed if required</li>
+</ul>
+<p>Service teams are <strong>not expected to modify SCPs or implement policy changes directly</strong>.</p>
+<h3 id="5-after-migration">5. After Migration</h3>
+<p>Within 24 hours of the migration:</p>
+
+<ul>
+<li>Confirm continued service stability</li>
+<li>Resume normal deployment activity</li>
+</ul>
+<p>No further action is required unless contacted by the Platform Engineering team.</p>
+<h2 id="roles-and-responsibilities">Roles and Responsibilities</h2>
+<p><strong>Service Teams</strong> are responsible for:</p>
+
+<ul>
+<li>Reviewing the pre-migration assessment</li>
+<li>Ensuring availability during the migration window</li>
+<li>Pausing deployments when requested</li>
+<li>Validating service health following migration</li>
+<li>Reporting any issues during the migration window</li>
+</ul>
+<p>The <strong>Platform Engineering Team (COPE)</strong> is responsible for:</p>
+
+<ul>
+<li>Coordinating the migration window</li>
+<li>Performing the OU move</li>
+<li>Assessing issues raised during the migration</li>
+<li>Initiating rollback if required</li>
+</ul>
+<p>The <strong>Cyber Security Team</strong> is responsible for:</p>
+
+<ul>
+<li>Supporting migration monitoring</li>
+<li>Providing security oversight during the migration process</li>
+</ul>
+<h2 id="what-this-migration-does-not-require">What This Migration Does Not Require</h2>
+<p>Service teams are <strong>not required to</strong>:</p>
+
+<ul>
+<li>Redesign their architecture</li>
+<li>Refactor CI/CD pipelines</li>
+<li>Remove IAM users</li>
+<li>Make proactive changes unless specifically discussed during the assessment</li>
+</ul>
+<p>Most accounts migrate to the Workloads OU without impact.</p>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2026-09-09">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 9 March 2026.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/cloud/general/service-team-runbook.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27Stage+3+Migration+%E2%80%93+Service+Team+Runbook%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fcloud%2Fgeneral%2Fservice-team-runbook.html%29&amp;labels=bug&amp;title=Re%3A+%27Stage+3+Migration+%E2%80%93+Service+Team+Runbook%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

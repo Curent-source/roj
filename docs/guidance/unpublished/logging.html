@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>How to store and query logs - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/logging.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="How to store and query logs - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/logging.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="How to store and query logs" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/logging.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#how-to-store-and-query-logs"><span>How to store and query logs</span></a>
+    <ul>
+      <li>
+        <ul>
+          <li>
+            <a href="#logit-deprecation-notice"><span>Logit deprecation notice</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#short-term-storage"><span>Short-term storage</span></a>
+      </li>
+      <li>
+        <a href="#long-term-storage"><span>Long-term storage</span></a>
+      </li>
+      <li>
+        <a href="#log-shipping"><span>Log shipping</span></a>
+      </li>
+      <li>
+        <a href="#filtering-out-sensitive-information"><span>Filtering out sensitive information</span></a>
+      </li>
+      <li>
+        <a href="#structured-logging"><span>Structured logging</span></a>
+      </li>
+      <li>
+        <a href="#access-to-splunk"><span>Access to Splunk</span></a>
+      </li>
+      <li>
+        <a href="#advice-for-particular-frameworks-or-platforms"><span>Advice for particular frameworks or platforms</span></a>
+        <ul>
+          <li>
+            <a href="#dropwizard"><span>Dropwizard</span></a>
+          </li>
+          <li>
+            <a href="#gov-uk-paas-cloud-foundry"><span>GOV.UK PaaS (Cloud Foundry)</span></a>
+          </li>
+          <li>
+            <a href="#contact"><span>Contact</span></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="how-to-store-and-query-logs">How to store and query logs</h1>
+<p>You should store logs to detect any potential errors within infrastructure and
+to respond to security incidents.</p>
+<p>Use <a href="https://gds.splunkcloud.com">Splunk</a> to store and query infrastructure, application and audit logs.</p>
+<p>Splunk is a cloud-based SaaS tool for short and long-term storage,
+visualisation, alerting, and reporting of cyber security log information.</p>
+<p>Your product should have a proportionate design for short and long term storage of logs and ensuring the Confidentiality, Integrity, and Availability of logs.</p>
+<p>The NCSC Cyber Assessment Framework, which GDS must comply with, has an entire category dedicated to <a href="https://www.ncsc.gov.uk/collection/caf/cyber-assessment-framework/caf-objective-c-detecting-cyber-security-events">Security Monitoring</a>.</p>
+<h3 id="logit-deprecation-notice">Logit deprecation notice</h3>
+<p>The shared GDS <a href="https://logit.io/">Logit</a> account can still be used for existing environments;
+however, you should use Splunk for new logging requirements.</p>
+<p>Logit offers cloud-based on-demand, shared
+<a href="https://www.elastic.co/what-is/elk-stack">ELK (Elasticsearch, Logstash and Kibana)</a> stacks as a service. They are
+suitable for short-term storage of logs, and are accessible and queryable.</p>
+<h2 id="short-term-storage">Short-term storage</h2>
+<p>You should not need to store logs spanning long periods in your short-term
+queryable store. Practical retention periods for short-term queryable logs are:</p>
+
+<ul>
+<li>no more than 7 days for non-production environments</li>
+<li>no more than 30 days production environments</li>
+</ul>
+<p>You should consider storing security and audit events for up to a year, this is
+because the average MTTD (Mean Time to Detect) is 204 days (over 6 months) to
+identify a breach, according to a <a href="https://www.ibm.com/account/reg/us-en/signup?formid=urx-52258">2023 IBM data breach study</a>.</p>
+<p>Your product may have legal or other requirements determining how long you
+should store logs. For example, the
+<a href="https://www.pcisecuritystandards.org/pci_security/">Payment Card Industry Data Security Standard (PCI-DSS)</a> requires 3 months of
+easily accessible logs and 12 months of archived logs.</p>
+<h2 id="long-term-storage">Long-term storage</h2>
+<p>When storing logs, you should focus on long-term durability for compliance
+reasons or to identify long-term performance trends.</p>
+<p>Splunk is appropriate for up to a year of storage. If you require more,
+Splunk can be configured to <a href="https://docs.splunk.com/Documentation/SplunkCloud/latest/Admin/DataSelfStorage?ref=hk#Configure_self_storage_locations">archive data to your own S3 bucket</a> - this saves
+files in a proprietary format so consider archiving to S3 in human-readable
+files using your own process.</p>
+<h2 id="log-shipping">Log shipping</h2>
+<p>If you have set up log shipping, you should consider:</p>
+
+<ul>
+<li>how your logs will get to short and long-term stores - we recommend using
+<a href="https://aws.amazon.com/cloudwatch/">Amazon CloudWatch</a> to collect logs and subscribing to the Cyber Security
+team&rsquo;s <a href="https://github.com/alphagov/centralised-security-logging-service">Centralised Security Logging Service (CSLS)</a>.</li>
+<li>what happens if one of these stores is unavailable</li>
+<li>whether the store will be overloaded when it comes back online</li>
+</ul>
+<p>You could have one process to ship logs to your long-term archive, and a second
+process to fill a short-term query tool from the long-term archive, for example
+you could combine Splunk with Amazon Cloudwatch and also archive to S3.</p>
+<p>CSLS utilises Amazon Kinesis and can persist logs in the event that Splunk is
+unavailable and will resume sending data when Splunk is available again.</p>
+<p>Splunk Cloud&rsquo;s recommended input is the HTTP Event Collector (HEC) - CSLS uses
+this.</p>
+<p>Note: Splunk Cloud does not support syslog, you may need a forwarder if syslog
+is your only output option:</p>
+
+<ul>
+<li><a href="https://www.elastic.co/guide/en/logstash/current/plugins-outputs-http.html">Logstash HTTP output</a> and <a href="https://docs.splunk.com/Documentation/Splunk/latest/Data/HECExamples">HEC</a></li>
+<li><a href="https://github.com/splunk/fluent-plugin-splunk-hec">Fluentd to HEC</a></li>
+</ul>
+<h2 id="filtering-out-sensitive-information">Filtering out sensitive information</h2>
+<p>You should ensure that sensitive information, such as query parameters containing <a href="https://en.wikipedia.org/wiki/Personal_data">personally identifiable information (PII)</a>, is filtered out before logs are shipped. Make use of log filtering mechanisms which may be present in the application framework you are using, <a href="https://guides.rubyonrails.org/action_controller_overview.html#log-filtering">such as in Ruby on Rails</a>.</p>
+<h2 id="structured-logging">Structured logging</h2>
+<p>In order to allow for rich querying of log data you should ensure that your logs
+are in a structured format.</p>
+<p><a href="https://gds.splunkcloud.com">Splunk</a> can automatically parse many common types of structured data such as CSV, JSON, and XML. 
+A range of add-ons can be found on <a href="https://splunkbase.splunk.com/">Splunkbase</a> to parse data from commonly used technologies such as AWS, Azure, Palo Alto Firewalls, and more. 
+Other formats may need <a href="https://docs.splunk.com/Documentation/Splunk/latest/Data/Extractfieldsfromfileswithstructureddata">field extractions</a> to be configured in Splunk.</p>
+<p>For interoperability with pre-built apps and alerting, it is beneficial to align
+your logs to the <a href="https://docs.splunk.com/Documentation/CIM/latest/User/Overview">Splunk CIM (Common Information Model)</a>.</p>
+<p>The <a href="https://docs.splunk.com/Documentation/CIM/latest/User/Web"><code>Web</code> CIM</a> is most commonly used at GDS - it specifies particular field
+names for data, for example:</p>
+
+<ul>
+<li><code>http_user_agent</code> for the client&rsquo;s user agent</li>
+<li><code>src</code> for the source IP address</li>
+<li><code>dest</code> for the origin server IP address</li>
+</ul>
+<h2 id="access-to-splunk">Access to Splunk</h2>
+<p>Access control for GDS users is managed by the IT Service Desk, use the
+<a href="https://gdshelpdesk.digital.cabinet-office.gov.uk">helpdesk</a> to request access. If you&rsquo;re unsure what role you should be
+requesting, ask in the <code>#splunk</code> Slack channel.</p>
+<h2 id="advice-for-particular-frameworks-or-platforms">Advice for particular frameworks or platforms</h2>
+<h3 id="dropwizard">Dropwizard</h3>
+<p>The <a href="https://github.com/alphagov/dropwizard-logstash">dropwizard-logstash</a> library will set things up for you using the
+standard names. Splunk will be able to ingest this format.</p>
+<h3 id="gov-uk-paas-cloud-foundry">GOV.UK PaaS (Cloud Foundry)</h3>
+<p>There is <a href="https://github.com/alphagov/tech-ops/blob/master/cyber-security/components/csls-splunk-broker/docs/user-guide.md">broker documentation</a> describing how drain logs to Splunk via
+<a href="https://github.com/alphagov/centralised-security-logging-service">Centralised Security Logging Service (CSLS)</a>.</p>
+<p>The <a href="https://docs.cloud.service.gov.uk/monitoring_apps.html#set-up-the-logit-log-management-service">GOV.UK PaaS Logging</a> documentation will help you configure Logit and
+drain logs into it from your app.</p>
+<h3 id="contact">Contact</h3>
+<p>Any questions regarding storing and querying logs should be directed to 
+the <code>#splunk</code> Slack channel in the first instance.</p>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2025-04-21">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 21 October 2024.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/guidance/unpublished/logging.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27How+to+store+and+query+logs%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fguidance%2Funpublished%2Flogging.html%29&amp;labels=bug&amp;title=Re%3A+%27How+to+store+and+query+logs%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

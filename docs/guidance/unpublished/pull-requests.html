@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Pull requests - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/pull-requests.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="Pull requests - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/pull-requests.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="Pull requests" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/pull-requests.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#pull-requests"><span>Pull requests</span></a>
+    <ul>
+      <li>
+        <a href="#why-should-you-use-pull-requests"><span>Why should you use pull requests?</span></a>
+      </li>
+      <li>
+        <a href="#cautionary-notes"><span>Cautionary notes</span></a>
+      </li>
+      <li>
+        <a href="#guidance-for-each-step"><span>Guidance for each step</span></a>
+        <ul>
+          <li>
+            <a href="#opening-a-pull-request"><span>Opening a pull request</span></a>
+          </li>
+          <li>
+            <a href="#reviewing-a-request"><span>Reviewing a request</span></a>
+            <ul>
+              <li>
+                <a href="#guidelines-for-review"><span>Guidelines for review</span></a>
+              </li>
+              <li>
+                <a href="#communicate-with-others-who-may-consider-reviewing-the-pr"><span>Communicate with others who may consider reviewing the PR</span></a>
+              </li>
+              <li>
+                <a href="#helpful-things-to-consider-while-reviewing"><span>Helpful things to consider while reviewing</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#addressing-comments"><span>Addressing comments</span></a>
+          </li>
+          <li>
+            <a href="#reviewing-prs-from-members-of-the-public"><span>Reviewing PRs from members of the public</span></a>
+            <ul>
+              <li>
+                <a href="#tone"><span>Tone</span></a>
+              </li>
+              <li>
+                <a href="#handling-the-pr"><span>Handling the PR</span></a>
+              </li>
+              <li>
+                <a href="#practical-advice"><span>Practical advice</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#further-reading"><span>Further reading</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="pull-requests">Pull requests</h1>
+<p>Pull requests (PRs) let you tell others about changes you&rsquo;ve pushed to a branch in a repository on GitHub.</p>
+<h2 id="why-should-you-use-pull-requests">Why should you use pull requests?</h2>
+<p>We use <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">PRs</a> at GDS to:</p>
+
+<ul>
+<li>enable <a href="/manuals/code-review-guidelines.html">code review</a> from colleagues</li>
+<li>provide a lightweight change management process</li>
+<li>share responsibility for the code going live</li>
+<li>spread knowledge and make others aware of changes</li>
+<li>notify people outside the immediate group of reviewers</li>
+</ul>
+<h2 id="cautionary-notes">Cautionary notes</h2>
+<p>You should not use PRs for architectural review, as you should do the architectural review before raising the PR.</p>
+<p>It is your responsibility to make sure you get reviews for your PRs and merge them. You should not rely on someone else noticing, reviewing, and merging your PR for you.</p>
+<p>You do not need to merge all changes for a piece of work in a single PR. You should break down the changes into several PRs to get feedback earlier.</p>
+<h2 id="guidance-for-each-step">Guidance for each step</h2>
+<p>Feel free to ask for help on Slack (for example, <a href="https://gds.slack.com/archives/CACV4GHCL">#tech-community</a>) if you are unsure how to do any of these things.</p>
+<h3 id="opening-a-pull-request">Opening a pull request</h3>
+<p>You should make sure that:</p>
+
+<ul>
+<li>your local repository has the most recent changes on the target branch</li>
+<li>the title and description of the PR are clear and accurately represent your changes</li>
+<li>the title and description reference the source of the change, which could be a Zendesk ticket or a Jira card</li>
+<li>the description contains links to any related PRs</li>
+<li>any screenshots have text descriptions for accessibility</li>
+<li>any contentious changes or side effects have clear descriptions of the pros and cons</li>
+</ul>
+<p>PRs are an implementation of change review and depend on the continued support of a repository hosting provider such as GitHub. This means that we would lose data contained in PRs if we switched providers.</p>
+<p>As such, the canonical description of changes should be in the commit messages. You can refer to the <a href="/standards/source-code/working-with-git.html">commit message style guide</a>.</p>
+<h3 id="reviewing-a-request">Reviewing a request</h3>
+<p>Taking time to properly review a PR is as important as making the change itself, and it is crucial that we show compassion when critiquing someone else&rsquo;s work.</p>
+<p>April Wensel has a talk about <a href="https://www.slideshare.net/AprilWensel/compassionate-yet-candid-code-reviews">Compassionate-Yet-Candid Code Reviews</a>.</p>
+<p>It suggests 3 key questions to ask ourselves when reviewing or commenting on someone else&rsquo;s work:</p>
+
+<ul>
+<li>Is it true?</li>
+<li>Is it necessary?</li>
+<li>Is it kind?</li>
+</ul>
+<h4 id="guidelines-for-review">Guidelines for review</h4>
+<p>Ask the PR raiser if you do not know how they want their change reviewed; they may prefer you to deliver feedback in person or while pairing.</p>
+<p>Call out and celebrate good code, content, and design choices. This will also highlight good practice for others.</p>
+<p>State explicitly if there are blocking issues.</p>
+<h4 id="communicate-with-others-who-may-consider-reviewing-the-pr">Communicate with others who may consider reviewing the PR</h4>
+<p>Comment in the PR when discussions about the change are happening &ldquo;offline&rdquo; (outside the PR itself). Summarise any &ldquo;offline&rdquo; conversations as a comment in the PR for the benefit of others.</p>
+<p>Comment in the PR if you have not finished reviewing the change. You might want to directly inform the PR raiser if they are expecting you to finish your review by a specific point.</p>
+<h4 id="helpful-things-to-consider-while-reviewing">Helpful things to consider while reviewing</h4>
+<p>Pull the branch to your local repository and try running the code; even if the tests pass, it might have bugs or unexpected side effects.</p>
+<p>Consider the security and privacy implications of the change, paying special attention to where there is unsanitised user input or logging.</p>
+<p>Make sure that documentation, including the README, is consistent with the code changes.</p>
+<h3 id="addressing-comments">Addressing comments</h3>
+<p>You should address any comments flagged as blocking.
+This includes spelling and grammar mistakes in documentation.</p>
+<p>You should amend minor changes into a previous commit, such as renaming a variable or adding a missing test.
+You should address major changes in a separate commit.</p>
+<p>Make sure you follow existing commit guidelines when addressing changes. &ldquo;Addressed feedback&rdquo; is not a helpful commit message for future contributors.</p>
+<p>Add a comment to show you have addressed all relevant comments.</p>
+<p>A request for refactoring, while encouraged, should not block a merge.</p>
+<h3 id="reviewing-prs-from-members-of-the-public">Reviewing PRs from members of the public</h3>
+<p>We sometimes receive pull requests from members of the public, and we should treat them with the same compassion we would a colleague.</p>
+<p>It is important that we also follow specific guidelines when dealing with people we do not know, some of whom will be doing this work in their own time.</p>
+<h4 id="tone">Tone</h4>
+<p>Be positive; thank them for contributing in your first comment, even if you are going to reject their contribution.</p>
+<p>Call out and celebrate good code, content, and design choices. A list of things to change can be dispiriting and discourage them from further contributions.</p>
+<p>Make requests for improvement rather than telling them what to do. For example, &ldquo;We think it might be better the other way round, what do you think?&rdquo; rather than &ldquo;Swap the order of the logic&rdquo;.</p>
+<p>Be explicit and take care with what you write. People do not always understand your intentions online and cannot get in touch using Slack as a colleague might.</p>
+<h4 id="handling-the-pr">Handling the PR</h4>
+<p>You should communicate in your first comment whether we are able to merge the change.</p>
+<p>If we do not want to merge it because it does not fit with our plans, thank them and close the PR.</p>
+<p>If it fits, but we cannot merge it due to quality or style issues, then tell them that we are able to merge the PR if they make some changes.</p>
+<p>We can tell the requester what improvements we&rsquo;d like to see, but we should not require the contributor to make them all. For example, we might add missing tests ourselves or collaborate with them to add tests.</p>
+<p>We should close PRs due to lack of activity but invite people to reopen them if they pick things up again.</p>
+<h4 id="practical-advice">Practical advice</h4>
+<p>Try to comment on changed files rather than by commit, as the notifications are easier to follow.</p>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    Do not comment on PRs outside working hours, even to acknowledge them.
+  </strong>
+</div>
+<p>We do not want to set an expectation that we support making changes at night or during the weekend.</p>
+<p>If the codebase has a changelog and the contributor has not added a line describing their change, raise a PR for this yourself after they have merged their PR.
+Regardless of who has written the changelog entry, add a &ldquo;Thank you <code>@githubusername</code>&rdquo;.</p>
+<p>You should add a documentation credit thanking the contributor if you do not add documentation changes to the changelog.</p>
+<h2 id="further-reading">Further reading</h2>
+
+<ul>
+<li><a href="https://github.com/annashipman">Anna Shipman</a> has written a useful blog post about <a href="https://www.annashipman.co.uk/jfdi/good-pull-requests.html">how to raise a good pull request</a>.</li>
+<li>A great example of <a href="https://github.com/alphagov/frontend/pull/784">a good pull request</a> raised by <a href="https://github.com/alicebartlett">Alice Bartlett</a>.</li>
+<li>A useful post about <a href="https://technology.blog.gov.uk/2016/09/30/easing-the-process-of-pull-request-reviews/">using automatic style enforcement to make pull request review more effective</a> by <a href="https://mastodon.me.uk/@boffbowsh">Paul Bowsher</a>.</li>
+</ul>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2024-07-21">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 21 July 2023.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/guidance/unpublished/pull-requests.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27Pull+requests%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fguidance%2Funpublished%2Fpull-requests.html%29&amp;labels=bug&amp;title=Re%3A+%27Pull+requests%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

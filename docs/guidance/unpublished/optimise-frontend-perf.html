@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>How to optimise frontend performance - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/optimise-frontend-perf.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="How to optimise frontend performance - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/optimise-frontend-perf.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="How to optimise frontend performance" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/optimise-frontend-perf.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#how-to-optimise-frontend-performance"><span>How to optimise frontend performance</span></a>
+    <ul>
+      <li>
+        <a href="#prioritise-performance-tasks"><span>Prioritise performance tasks</span></a>
+      </li>
+      <li>
+        <a href="#automate-optimisation"><span>Automate optimisation</span></a>
+      </li>
+      <li>
+        <a href="#automate-testing"><span>Automate testing</span></a>
+      </li>
+      <li>
+        <a href="#using-speedcurve-to-automate-frontend-performance-testing"><span>Using Speedcurve to automate frontend performance testing</span></a>
+      </li>
+      <li>
+        <a href="#performance-budget"><span>Performance budget</span></a>
+      </li>
+      <li>
+        <a href="#code-splitting"><span>Code splitting</span></a>
+      </li>
+      <li>
+        <a href="#use-http-2-or-above"><span>Use HTTP/2 or above</span></a>
+      </li>
+      <li>
+        <a href="#further-reading"><span>Further reading</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="how-to-optimise-frontend-performance">How to optimise frontend performance</h1>
+<p>You should focus on <a href="https://www.gov.uk/service-manual/technology/how-to-test-frontend-performance">frontend performance</a> when developing your service’s website. This will improve the user experience of your service by making your website respond faster and work better on all devices.</p>
+<h2 id="prioritise-performance-tasks">Prioritise performance tasks</h2>
+<p>You can optimise your site’s frontend performance by prioritising tasks that will improve your site speed. Prioritise things you must do (high) over nice to have (medium or low priority) tasks.</p>
+<p>For example:</p>
+<div class="table-container">
+        <table>
+          <tr>
+<th>Priority</th>
+<th>Example</th>
+<th>Action</th>
+</tr><tr>
+<th scope="row">High</th>
+<td>Position assets correctly</td>
+<td>
+<a href="https://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/#section:styles-at-the-top-scripts-at-the-bottom">Set styles at the top of the page</a> and <a href="https://calendar.perfplanet.com/2016/prefer-defer-over-async/"><code>defer</code> scripts</a>.</td>
+</tr><tr>
+<td></td>
+<td>Compress static resources</td>
+<td>
+<a href="https://web.dev/reduce-network-payloads-using-text-compression/">Minify</a> CSS and JavaScript and use a compression algorithm like <a href="https://web.dev/optimizing-content-efficiency-optimize-encoding-and-transfer/#text_compression_with_gzip">Gzip</a> and <a href="https://github.com/google/brotli">Brotli</a> on assets.</td>
+</tr><tr>
+<td></td>
+<td>Set correct Headers</td>
+<td>Set correct <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">Cache-Control</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag">ETag</a> headers on assets for optimal caching.</td>
+</tr><tr>
+<td></td>
+<td>Minimise unused code</td>
+<td>Avoid including CSS and JavaScript that is not used on your site.</td>
+</tr><tr>
+<th scope="row">Medium</th>
+<td>Include <code>width</code> and <code>height</code> attributes on images to minimise layout thrashing</td>
+<td>Make sure to include these attributes to improve visual stability and the <a href="https://web.dev/cls/">Cumulative Layout Shift (CLS)</a> metric.</td>
+</tr><tr>
+<td></td>
+<td>Minimise TCP connections</td>
+<td>Use fewer third-party domains to reduce the number of DNS + TCP + SSL negotiations per page.</td>
+</tr><tr>
+<td></td>
+<td>Investigate <a href="https://web.dev/fast/#lazy-load-images-and-video">lazy loading</a>
+</td>
+<td>For pages with many images, only load images in the immediate browser viewport.</td>
+</tr><tr>
+<td></td>
+<td>Investigate the impact of loading <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</a> assets on perceived performance</td>
+<td>Use the CSS <code>font-display</code> property or other <a href="https://www.zachleat.com/web/comprehensive-webfonts/">font-loading strategies</a> to manage common issues like <a href="https://css-tricks.com/fout-foit-foft/">FOUT, FOIT and FOFT</a>.</td>
+</tr><tr>
+<td></td>
+<td>Minimise HTTP requests</td>
+<td>Minimise the number of CSS and JavaScript files to reduce the number of round-trips to the server. See ‘Code splitting’ below.</td>
+</tr><tr>
+<th scope="row">Low</th>
+<td>Reduce cookie size</td>
+<td>Because every cookie is sent with each HTTP request, enable HTTP/2 to enable HPACK header compression or HTTP/3 for QPACK.</td>
+</tr><tr>
+<td></td>
+<td>Investigate using a Content Delivery Network (CDN)</td>
+<td>A CDN will improve site performance by using a network of servers to deliver resources to users. The user will get delivered resources from the server that is located nearest to the user. A CDN is well-suited to handling heavy traffic and traffic spikes.</td>
+</tr><tr>
+<td></td>
+<td>Keep JSON payloads small</td>
+<td>Avoid adding too much data to JSON objects, as parsing them can be slow.</td>
+</tr><tr>
+<td></td>
+<td>Investigate using <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSockets</a>
+</td>
+<td>Consider using WebSockets rather than <a href="https://xhr.spec.whatwg.org/">XMLHttpRequest</a>for tasks involving streaming from the server - an HTTP request packet has 1,684 bytes of overhead, compared to 8 bytes for a WebSocket packet.</td>
+</tr><tr>
+<td></td>
+<td>Investigate using a service worker</td>
+<td>Consider <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">using a service worker</a> for fine grain cache control of critical assets on users’ machines instead of transferring them over the network.</td>
+</tr>
+        </table>
+      </div><h2 id="automate-optimisation">Automate optimisation</h2>
+<p>You can automate performance optimisation using tools such as:</p>
+
+<ul>
+<li><a href="https://webpack.js.org/">Webpack</a></li>
+<li><a href="https://parceljs.org/">Parcel</a></li>
+<li><a href="https://rollupjs.org/guide/en/">Rollup</a></li>
+<li><a href="https://gulpjs.com/">Gulp</a></li>
+</ul>
+<p>You should integrate these tools into your <a href="https://www.gov.uk/service-manual/technology/deploying-software-regularly">Continuous Delivery (CD) and Continuous Integration (CI) workflow</a> so they automatically run before deployment.</p>
+<p>Consider automating common tasks like:</p>
+
+<ul>
+<li>CSS and JavaScript linting and optimisation</li>
+<li>CSS and JavaScript minification</li>
+<li>image optimisation</li>
+<li>sprite and icon generation</li>
+<li>SVG optimisation</li>
+</ul>
+<h2 id="automate-testing">Automate testing</h2>
+<p>You can automate frontend performance testing using third-party services such as:</p>
+
+<ul>
+<li><a href="https://www.webpagetest.org/">WebPageTest</a></li>
+<li><a href="https://pagespeed.web.dev/">Google PageSpeed Insights</a></li>
+<li><a href="https://www.speedcurve.com/">SpeedCurve</a></li>
+<li><a href="https://www.sitespeed.io/">Sitespeed.io</a></li>
+<li><a href="https://calibreapp.com/">Calibre</a></li>
+</ul>
+<h2 id="using-speedcurve-to-automate-frontend-performance-testing">Using Speedcurve to automate frontend performance testing</h2>
+<p>You can use <a href="https://www.speedcurve.com/">Speedcurve</a> to test the performance of your service.</p>
+<p>Speedcurve provides an extensive set of tools to test your service such as the following:</p>
+
+<ul>
+<li>Test from different locations and different browsers.</li>
+<li>Schedule regular tests using tools like Google Lighthouse and Webpage Test.</li>
+<li><a href="https://insidegovuk.blog.gov.uk/2021/06/16/how-real-user-monitoring-will-improve-gov-uk-for-everyone/">Real user monitoring</a>, which allows you to collect data that shows you how your real users experience the speed of your site.</li>
+</ul>
+<p>Contact a Lead Frontend Developer to request an account.</p>
+<h2 id="performance-budget">Performance budget</h2>
+<p>You should <a href="https://www.gov.uk/service-manual/technology/how-to-test-frontend-performance#set-a-performance-budget">set a performance budget</a> for your website’s pages. Once you’ve set a performance budget, test to check your website’s pages stay within your budget. There are many tools available to do this, such as:</p>
+
+<ul>
+<li><a href="https://webpack.js.org/configuration/performance/">Webpack Performance</a></li>
+<li><a href="https://www.npmjs.com/package/performance-budget">performance-budget</a></li>
+<li><a href="https://github.com/GoogleChromeLabs/psi">psi (PageSpeed Insights Reporting for Node)</a></li>
+<li><a href="https://github.com/GoogleChrome/lighthouse">Google Lighthouse</a></li>
+</ul>
+<h2 id="code-splitting">Code splitting</h2>
+<p>You should <a href="https://csswizardry.com/2023/10/the-three-c-concatenate-compress-cache/">concatenate your Javascript and CSS files</a> by default, as this minimises the number of requests and makes compression more effective. However, you may benefit from splitting your code into multiple bundles in some cases:</p>
+
+<ul>
+<li>if a specific feature is only used sporadically, it may make sense to split it out and only load it on pages where it is needed.</li>
+<li>if some of your code is updated more regularly than others, it may make sense to split it out so that less frequently updated code is still cached.</li>
+</ul>
+<h2 id="use-http-2-or-above">Use HTTP/2 or above</h2>
+<p>HTTP/2 is supported in all of the <a href="https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices">Service Manual’s browsers to test in</a>. It improves speed for most users by allowing browsers to:</p>
+
+<ul>
+<li>Download multiple resources at once</li>
+<li>Compress cookies in request headers</li>
+<li>Prioritise specific assets for download.</li>
+</ul>
+<p>You should also consider enabling HTTP/3. While this isn’t supported as widely as HTTP/2, it is supported by most of the Service Manual browsers and it solves an issue with HTTP/2 that affects users with slow connections.</p>
+<h2 id="further-reading">Further reading</h2>
+<p>You can find out more about improving your website’s frontend performance by reading:</p>
+
+<ul>
+<li><a href="https://web.dev/fast/">web.dev - Fast load times</a></li>
+<li><a href="https://timkadlec.com/2013/01/setting-a-performance-budget/">Setting a performance budget</a></li>
+<li><a href="https://aerotwist.com/blog/my-performance-audit-workflow/">My performance audit workflow</a></li>
+<li><a href="https://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/">Front-end performance for web designers and front-end developers</a></li>
+<li><a href="https://addyosmani.com/blog/performance-optimisation-with-timeline-profiles/">Improving web app performance with the Chrome DevTools Timeline and Profiles</a></li>
+<li><a href="https://web.dev/performance-optimizing-content-efficiency/">Google Web Fundamentals: Optimizing Content Efficiency</a></li>
+</ul>
+<p>The Service Manual has more suggestions about <a href="https://www.gov.uk/service-manual/technology/how-to-test-frontend-performance">how you can test frontend performance</a>.</p>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2024-11-10">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 10 May 2024.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/guidance/unpublished/optimise-frontend-perf.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27How+to+optimise+frontend+performance%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fguidance%2Funpublished%2Foptimise-frontend-perf.html%29&amp;labels=bug&amp;title=Re%3A+%27How+to+optimise+frontend+performance%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>

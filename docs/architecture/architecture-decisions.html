@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Architecture decisions - Cabinet Office Digital Handbook</title>
+
+    <link href="../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/architecture/architecture-decisions.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="Architecture decisions - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/architecture/architecture-decisions.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="Architecture decisions" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/architecture/architecture-decisions.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#architecture-decisions"><span>Architecture decisions</span></a>
+    <ul>
+      <li>
+        <a href="#how-to-document-decisions"><span>How to document decisions</span></a>
+      </li>
+      <li>
+        <a href="#lifecycle-of-an-adr"><span>Lifecycle of an ADR</span></a>
+        <ul>
+          <li>
+            <a href="#quot-proposed-quot-status"><span>“Proposed” status</span></a>
+          </li>
+          <li>
+            <a href="#quot-accepted-quot-status"><span>“Accepted” status</span></a>
+          </li>
+          <li>
+            <a href="#implementation"><span>Implementation</span></a>
+          </li>
+          <li>
+            <a href="#quot-superseded-quot-status"><span>“Superseded” status</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#what-an-adr-is-not"><span>What an ADR is not</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="architecture-decisions">Architecture decisions</h1>
+<p>You should record decisions that affect the architecture of your service, in
+order to preserve the context of your choices.</p>
+<p>As agile projects age, it is sometimes hard to keep track of the reasoning
+behind the decisions made. This is especially true as new people join
+the projects when those involved in the early stages are no longer around.</p>
+<p>It is important to preserve the reasoning so the current team can
+include it as context when making their own decisions about changes they need to
+make. For example, understanding whether a particular choice was made for the
+sake of expediency and can therefore be changed with little impact, or whether
+there were external reasons behind that decision that need to be factored in.</p>
+<h2 id="how-to-document-decisions">How to document decisions</h2>
+<p>Architecture decisions should be stored in version control so there is a
+record of what was changed, who by, and when. Decisions that affect a specific
+application should be in that application&rsquo;s code repository. You may also want
+to store larger-scale decisions in a central documentation repository.</p>
+<p>A suggested format is the Architecture Decision Record (ADR), proposed by Michael
+Nygard in <a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions">a blog post</a>
+and since adopted widely. That post describes the format in full, but as a
+summary it consists of the following sections:</p>
+
+<ul>
+<li><strong>Title</strong>: a description of the decision (not the problem)</li>
+<li><strong>Status</strong>: see <a href="#lifecycle-of-an-adr">lifecycle</a></li>
+<li><strong>Context</strong>: the facts behind the need to make the decision</li>
+<li><strong>Decision</strong>: what the team has decided to do</li>
+<li><strong>Consequences</strong>: both positive and negative consequences of the decision</li>
+</ul>
+<p>Amazon Web Services (AWS) also provide
+<a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/welcome.html">useful advice</a>
+about how and why the ADR process should be adopted.</p>
+<h2 id="lifecycle-of-an-adr">Lifecycle of an ADR</h2>
+<p>In a new project or one with a lot of decisions to be made, consider setting up
+regular ADR discussion and review meetings. This will give the team time to work
+through these decisions.</p>
+<p>Each decision goes through the following phases.</p>
+<h3 id="quot-proposed-quot-status">&ldquo;Proposed&rdquo; status</h3>
+<p>Assuming you&rsquo;re using GitHub for version control, there is no need to record a &lsquo;status&rsquo; for
+an ADR when it is first proposed.
+The status of your ADR&rsquo;s pull request (PR) reflects the status of the decision until it has been
+accepted.</p>
+<p>Consider using GitHub&rsquo;s &ldquo;draft PR&rdquo; feature especially if you have lots of decisions at varying
+levels of readiness.</p>
+<p>It&rsquo;s important to find the right group of reviewers for your ADR.
+Ensure that you have input from all relevant technical disciplines (such as site reliability
+engineers, developers, security architects, etc) and from any teams that might be affected.</p>
+<p>Some programmes use technical writers to ensure their ADRs meet our quality standards
+and are as accessible to the widest audience possible.
+Future team members that lack the full context you have for a decision will appreciate your
+efforts!</p>
+<h3 id="quot-accepted-quot-status">&ldquo;Accepted&rdquo; status</h3>
+<p>Once an ADR has been accepted then teams may need to know about its existence long into the
+future.
+Think about how to make your ADRs discoverable, especially if they require more than just a
+one-off set of code or infrastructure changes.</p>
+<p>Again, the &ldquo;accepted&rdquo; status doesn&rsquo;t need to be explicit in your document - it can be assumed that an
+ADR in the <code>main</code> branch of your GitHub repository is accepted.
+Otherwise, teams can get confused about the real status of a decision, as the ADR goes through
+the pull request process!</p>
+<h3 id="implementation">Implementation</h3>
+<p>In some cases there will be an implementation phase during which you may discover that the
+decision was wrong, or needs to be amended.</p>
+<p>If there are clarifications, then updating your existing ADR may be appropriate.</p>
+<p>You might find additional consequences to your decision, so consider updating the Consequences section
+to reflect your evolving understanding of the problem space.</p>
+<p>If a decision was never implemented at all, then as long as your reviewers and other stakeholders
+agree then it may be appropriate to update your existing ADR with a new decision.</p>
+<p>However, if some implementation of the original decision has occurred, you should write a new ADR
+to explain the new decision.</p>
+<p>Any ADRs that have not been fully implemented across all the relevant teams should be a topic for
+your regular discussion and review meeting.</p>
+<p>Consider using your issue tracker to make sure that decisions you&rsquo;ve made are followed through
+and put into effect.
+The work isn&rsquo;t done until the decision is implemented!</p>
+<h3 id="quot-superseded-quot-status">&ldquo;Superseded&rdquo; status</h3>
+<p>If a decision has been superseded by another decision, the old ADR must be clearly marked as &ldquo;superseded&rdquo;.</p>
+<p>A &ldquo;Status: superseded&rdquo; line should appear directly under the heading. Add a link to the new ADR as soon as
+it&rsquo;s been accepted.</p>
+<h2 id="what-an-adr-is-not">What an ADR is not</h2>
+<p>An ADR isn&rsquo;t a complete description of a software system or architecture.</p>
+<p>Some teams use requests for comment (RFCs), wikis, team manuals, or other collaboration tools to document
+their architecture, and these should be updated whenever a new ADR is accepted.</p>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2025-05-10">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 10 May 2024.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/architecture/architecture-decisions.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27Architecture+decisions%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Farchitecture%2Farchitecture-decisions.html%29&amp;labels=bug&amp;title=Re%3A+%27Architecture+decisions%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../javascripts/application.js"></script>
+  </body>
+</html>

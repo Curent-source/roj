@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Cabinet Office Development and Operation Policies - Cabinet Office Digital Handbook</title>
+
+    <link href="../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/dev-and-ops-policies.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="Cabinet Office Development and Operation Policies - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/dev-and-ops-policies.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="Cabinet Office Development and Operation Policies" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/dev-and-ops-policies.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#cabinet-office-development-and-operation-policies"><span>Cabinet Office Development and Operation Policies</span></a>
+    <ul>
+      <li>
+        <a href="#1-incorporate-security-measures"><span>1. Incorporate security measures</span></a>
+      </li>
+      <li>
+        <a href="#2-use-test-driven-development-and-automate-tests"><span>2. Use test-driven development and automate tests</span></a>
+      </li>
+      <li>
+        <a href="#3-use-cabinet-office-github-for-repository-management"><span>3. Use Cabinet Office Github for repository management</span></a>
+      </li>
+      <li>
+        <a href="#4-use-continuous-code-integration-and-continuous-deployment-when-appropriate"><span>4. Use continuous code integration, and continuous deployment when appropriate</span></a>
+      </li>
+      <li>
+        <a href="#5-use-test-environments"><span>5. Use test environments</span></a>
+      </li>
+      <li>
+        <a href="#6-use-infrastructure-as-code"><span>6. Use infrastructure as code</span></a>
+      </li>
+      <li>
+        <a href="#7-conduct-at-least-annual-it-health-check"><span>7. Conduct at least annual IT Health Check</span></a>
+      </li>
+      <li>
+        <a href="#8-adopt-co-vulnerabilities-corrective-action-targets"><span>8. Adopt CO vulnerabilities corrective action targets</span></a>
+      </li>
+      <li>
+        <a href="#9-develop-an-incident-management-process"><span>9. Develop an incident management process</span></a>
+      </li>
+      <li>
+        <a href="#10-plan-for-disaster"><span>10. Plan for disaster</span></a>
+      </li>
+      <li>
+        <a href="#11-document-architectural-decisions-and-technical-debts"><span>11. Document architectural decisions and technical debts</span></a>
+      </li>
+      <li>
+        <a href="#12-monitor-your-service"><span>12. Monitor your service</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="cabinet-office-development-and-operation-policies">Cabinet Office Development and Operation Policies</h1>
+<p>The Cabinet Office (CO) Development and Operations Policies promotes development and operation best practice for digital services or platforms within the Cabinet Office.</p>
+<p>We cover the following elements in the development and operations chain:</p>
+
+<ul>
+<li>Coding – code development and review, source code management tools, code merging.</li>
+<li>Building – continuous integration tools, build status.</li>
+<li>Testing – continuous testing tools that provide quick and timely feedback on business risks.</li>
+<li>Packaging – artefact repository, application pre-deployment staging.</li>
+<li>Releasing – change management, release approvals, release automation.</li>
+<li>Configuring – infrastructure configuration and management, infrastructure as code tools.</li>
+<li>Monitoring – applications performance monitoring, end-user experience.</li>
+<li>Security measures - security measures and Tools incorporated in the Devops cycle</li>
+</ul>
+<p>You should use the CO Development and Operations Policies if you intend to build and operate a digital service or platform, in-house or outsourced. Following the CO Development and Operations Strategies will help you introduce or update technology so that it:</p>
+
+<ul>
+<li>aligns with CO technical strategies</li>
+<li>is sustainable</li>
+<li>is less dependent on single third-party suppliers</li>
+<li>is resilient and scalable for future use</li>
+</ul>
+<p>We also recommend the <a href="https://docs.google.com/presentation/d/1e9F5m1Yu_Btlw9kKbGkY9lAmLzUpkYX0/edit#slide=id.p1">toolings in this Strategy</a>, which are in alignment with the toolings used in the CO. This is to ensure a capability match when the services change ownership.</p>
+<p>The CO Development and Operations Strategies is in alignment with the <a href="https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice">Technology Code of Practice</a>, <a href="https://www.gov.uk/guidance/government-design-principles">Government Design Principles</a>, , NCSC <a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles">Cloud Security Principle</a>, <a href="https://www.gov.uk/service-manual/technology/deciding-how-to-host-your-service">GOV.UK Service Manual</a> and <a href="https://www.gov.uk/guidance/government-cloud-first-policy">Cloud First Policy</a>.</p>
+<p>You should contact:</p>
+
+<ul>
+<li>the <a href="mailto:cyber.security@digital.cabinet-office.gov.uk">Cabinet Office Cyber Security Team</a> regarding cyber security policies and internal services</li>
+<li>the <a href="mailto:co-eaa@cabinetoffice.gov.uk">Enterprise Architecture Team</a> regarding central toolings available for security and operational monitoring, and the assurance services</li>
+<li>the <a href="mailto:co-tda@cabinetoffice.gov.uk">Technical Design Authority</a> to make sure your architecture designs are in compliance with the technical strategy, policies and assurance requirements.</li>
+</ul>
+<h2 id="1-incorporate-security-measures">1. Incorporate security measures</h2>
+<p>We should embrace secured by design policy. You should automate the process of security updates and alerts to the delivery of the security patches as appropriate. You should by default.</p>
+<p>You should have security measures and monitoring for the application and infrastructure, including,</p>
+
+<ul>
+<li>use a <a href="https://gds-way.digital.cabinet-office.gov.uk/standards/web-application-firewall.html">Web Application Firewall</a></a></li>
+<li>automate the monitoring of <a href="https://gds-way.cloudapps.digital/standards/tracking-dependencies.html#how-to-manage-third-party-software-dependencies">third party software dependencies</a></a></li>
+<li>use vulnerability scanning</li>
+<li>Automate <a href="https://gds-way.cloudapps.digital/standards/secrets-acl.html#content">access control tracking and corresponding alerting</a></a></li>
+<li>set up access and security related configuration change monitoring when appropriate</li></li>
+<li>apply <a href="https://gds-way.cloudapps.digital/standards/principle-least-access.html">principle of least privilege</a></a></li>
+<li>perform <a href="https://gds-way.cloudapps.digital/standards/threat-modelling.htm">threat modelling to anticipate security issues</a></a></li>
+<li>take extra precautions in <a href="https://gds-way.cloudapps.digital/standards/storing-credentials.html">storing credentials</a></a></li>
+<li>manage <a href="https://gds-way.cloudapps.digital/standards/tracking-dependencies.html">third party software dependencies</a></a></li>
+</ul>
+<h2 id="2-use-test-driven-development-and-automate-tests">2. Use test-driven development and automate tests</h2>
+<p>You should use test-driven development for all application and infrastructure code. You should write the corresponding test scripts when a new feature is introduced.</p>
+
+<ul>
+<li>You should use automated tests to compare the actual outcomes with the predicted outcomes of your service. You should include</li>
+<li>unit tests to test individual functionality. You should ensure there is enough test coverage throughout the codebase using a code coverage tool.</li>
+<li>integration tests to test the integration between microservices, and between your codes and external components</li>
+<li>functional tests to test a particular function of your service end-to-end</li>
+<li>performance and stress tests to test the limit and behaviour of your service under normal and stressed conditions</li>
+<li><a href="&quot;https://www.gov.uk/service-manual/technology/deploying-software-regularly#using-smoke-tests-after-you-deploy&quot;">Smoke tests</a></li>
+</ul>
+<p>You should integrate the tests in your integration and deployment pipelines, and use appropriate environments to run the tests.</p>
+<p>You can also consider other specialised test tools and concepts, including linting, front end performance, vulnerability scanning and model based testing to further assure the quality of your software.</p>
+<p>The test strategy shall be included in your architecture design, to be approved by the Cabinet Office architects or <a href="mailto:co-tda@cabinetoffice.gov.uk">Technical Design Authority</a>.</p>
+<h2 id="3-use-cabinet-office-github-for-repository-management">3. Use Cabinet Office Github for repository management</h2>
+<p>You should ask for a Cabinet Office managed Github repository as your code repository (<a href="mailto:github-requests@cabinetoffice.gov.uk">email</a>). This is to ensure visibility, searchability and reusability of your code.</p>
+<p>You should consider <a href="https://www.gov.uk/service-manual/technology/making-source-code-open-and-reusable">making your code open from the start</a> as recommended in the <a href="https://www.gov.uk/service-manual">service manual</a>.</p>
+<p>You can reference the guidelines on <a href="https://gds-way.digital.cabinet-office.gov.uk/standards/source-code/">how to store source code</a>.</p>
+<p>Deviation from using CO Github and open source strategy needs to be approved by the Technical Design Authority</p>
+<h2 id="4-use-continuous-code-integration-and-continuous-deployment-when-appropriate">4. Use continuous code integration, and continuous deployment when appropriate</h2>
+<p>We should use continuous integration to support the testing and deployment of software development.</p>
+<p>This minimises manual error and oversight, improves code quality, productivity and enhances security and assurance in software development.</p>
+<p>You should introduce <a href="https://github.com/features/code-review/">code-review</a> in your integration process and mandate that at least one approved review is required to merge a pull request. We recommend that a technical leader or architect is included in the review and approved process.</p>
+<p>If appropriate, you can consider using continuous deployment to push codes from merging to production once you are confident that your deployment pipeline and tests are robust.</p>
+<p>Architect your deployment pipeline, codes and infrastructure to allow for fixing forward when we need to reverse the change of a deployment.</p>
+<p>The code review, integration and deployment strategy shall be included in your architecture design, to be approved by the Technical Design Authority.</p>
+<h2 id="5-use-test-environments">5. Use test environments</h2>
+<p>We should create separate non-production cloud environments to meet the different testing needs of the service/ platform. A set of tests are usually run in each of these environments to ensure the codes work as expected before going to live. You should include:</p>
+
+<ul>
+<li>development environment: unit, lint, integration and functional tests are usually run to ensure the new code works as expected and can be integrated into the pre-existing code and software. Other tests such as security checks and database migration may also be run.</li>
+<li>staging environment: This environment is usually created to mirror the production environment to check the reliability of the application in a production-like environment. It should not have production data and differences in scale and traffic patterns should be noted.</li>
+<li>production environment: once the application has passed all the required tests, it is promoted to be live.</li>
+</ul>
+<p>Other (ephemeral) environments may be created and used for isolated feature development, running security penetration, load/stress tests, etc.</p>
+<p>The separation of environments should be included in your architecture design, to be approved by the Technical Design Authority.</p>
+<h2 id="6-use-infrastructure-as-code">6. Use infrastructure as code</h2>
+<p>You should use infrastructure as code (IaC) language to create all the infrastructure in your development, staging and production environments. Our strategic IaC framework is Terraform and CloudFormation for AWS infrastructure.  This includes hosting resources, networking, security boundaries, identity and access control, storage, container and machine configuration and integration.</p>
+<p>Infrastructure as code can help ensure the repeatability, auditability, visibility, portability and security of the created infrastructure.</p>
+<p>You should use available tools and libraries to abstract the infrastructure, building artefacts and <a href="https://gds-way.cloudapps.digital/standards/configuration-management.html#content">machine configurations</a> in code.</p>
+<p>Deviation from the IaC approach and strategic framework, needs to be approved by the Technical Design Authority.</p>
+<h2 id="7-conduct-at-least-annual-it-health-check">7. Conduct at least annual IT Health Check</h2>
+<p>An IT Health Check (ITHC) should be conducted at least annually, and appropriately scoped with an Information Assurance (IA) officer. Some high risk services may require more frequent test schedules with a smaller scope than the mandated annual one. Penetration tests (pentests)  should form a part of the ITHC.</p>
+<p>The ITHC should be done by a CREST and/or the <a href="https://www.ncsc.gov.uk/information/using-check-provider">National Cyber Security Centre (NCSC) CHECK</a>  accredited party which can be external or internal.  GDS way has <a href="https://gds-way.cloudapps.digital/standards/how-to-do-penetration-tests.html#how-to-do-penetration-tests">guidance</a> on penetration tests.</p>
+<h2 id="8-adopt-co-vulnerabilities-corrective-action-targets">8. Adopt CO vulnerabilities corrective action targets</h2>
+<p>You should integrate vulnerability and security patching into your delivery process, and categorise the severity of vulnerabilities for COTS Software, with reference to the <a href="https://nvd.nist.gov/">National Vulnerability Database severity ratings</a> and relevance to your codes.  You should subscribe to the relevant <a href="https://nvd.nist.gov/vuln/data-feeds">NVD data feeds</a>, and use <a href="https://www.ncsc.gov.uk/information/web-check">NCSC web check</a> to identify and fix common security issues for citizen-facing websites.</p>
+<p>You should aim to do security patches:
+* 7 days after the public release of patches for those vulnerabilities categorised as “Critical”;
+* 30 days after the public release of patches for those vulnerabilities categorised as “High”;
+* 60 days after the public release of patches for those vulnerabilities categorised as “Medium”.</p>
+<p>The vulnerability tracking and patching strategy should be included in the architectural design, to be approved by the Technical Design Authority.</p>
+<h2 id="9-develop-an-incident-management-process">9. Develop an incident management process</h2>
+<p>You should design an incident management process to handle communications and resolving incidents.</p>
+<p>Please refer to “<a href="https://gds-way.cloudapps.digital/standards/incident-management.html#how-to-manage-technical-incidents">How to manage technical incidents</a>” in GDS-way to set up your incident management process. You should use a tool such as <a href="https://status.io/">Statuspage</a> to communicate the incident with your users.</p>
+<h2 id="10-plan-for-disaster">10. Plan for disaster</h2>
+<p>You should develop high availability architecture taking advantage of multiple availability zones in the public cloud.  However, you should still plan for rare incidents or disasters, and develop a set of scenarios, policies, tools and procedures to handle the situations.  This can either be communications, or recovering the data and a subset of services to a recovery site depending on the business needs.</p>
+<p>You should develop a disaster handling plan, and document and exercise them once a year as “game days”.</p>
+<p>Some examples of disaster scenarios:-
+A complete regional unavailability of a cloud provider
+A serious data security breach that means shutting down your systems to fix the problem.
+A ransomware attack that has made your data unavailable</p>
+<p>Please refer to the “<a href="https://gds-way.cloudapps.digital/standards/disaster-recovery.html">Disaster Recovery</a>” session in GDS-way on how to plan for disaster recovery for your service and platform.</p>
+<h2 id="11-document-architectural-decisions-and-technical-debts">11. Document architectural decisions and technical debts</h2>
+<p>You should record decisions that affect the architecture of your service in a decision log, in order to preserve the context of your choices as suggested in the <a href="https://gds-way.cloudapps.digital/standards/architecture-decisions.html#documenting-architecture-decisions">gds-way</a>.</p>
+<p>Architectural decision records (ADRs) can be a part of the decision records of the service, or be documented separately. An example of using github to document ADRs can be found <a href="https://github.com/alphagov/gsp/tree/master/docs/architecture/adr">here</a>; an <a href="https://docs.google.com/document/d/1v0MeR0sNjf-ySkaUvBepoIysMI0B-aYjb-OH2rp98bY/edit?usp=sharing">ADR template</a> is available for you to get started.</p>
+<p>You should <a href="https://gds-way.cloudapps.digital/standards/technical-debt.html">track your technical debt</a> throughout the software development lifecycle.</p>
+<h2 id="12-monitor-your-service">12. Monitor your service</h2>
+<p>You should <a href="https://gds-way.cloudapps.digital/standards/monitoring.html">monitor your service</a> to understand the capability and performance of your service. This will also help you diagnose your service in the event of incidents. This includes:</p>
+<p>logs - applications error and infrastructure messages
+performance metrics
+service availability (e.g use <a href="https://www.pingdom.com/">Pingdom</a>)</p>
+<p>You should set up <a href="https://gds-way.cloudapps.digital/standards/alerting.html#how-to-manage-alerts">automated alerts</a> on important issues.</p>
+<p>You can use <a href="https://gds-way.cloudapps.digital/standards/slis.html">Service Level Indicator (SLI)</a> and <a href="https://gds-way.cloudapps.digital/standards/slo.html">Service Level Objectives (SLO)</a> to monitor the important journeys of your service, and to obtain data for prioritisation of maintenance tasks and issues.</p>
+<p>Your should include the monitoring strategy in the architecture, to be approved by the Technical Design Authority</p>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2025-05-04">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 4 November 2024.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/guidance/dev-and-ops-policies.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27Cabinet+Office+Development+and+Operation+Policies%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fguidance%2Fdev-and-ops-policies.html%29&amp;labels=bug&amp;title=Re%3A+%27Cabinet+Office+Development+and+Operation+Policies%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../javascripts/application.js"></script>
+  </body>
+</html>

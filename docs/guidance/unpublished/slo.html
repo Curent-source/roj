@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Make data-driven decisions with service level objectives - Cabinet Office Digital Handbook</title>
+
+    <link href="../../../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/slo.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:domain" content="digital-handbook.cabinetoffice.gov.uk" />
+      <meta name="twitter:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta name="twitter:title" content="Make data-driven decisions with service level objectives - Cabinet Office Digital Handbook" />
+      <meta name="twitter:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/slo.html" />
+
+      <meta property="og:image" content="https://digital-handbook.cabinetoffice.gov.uk/images/opengraph-image.png" />
+      <meta property="og:site_name" content="Cabinet Office Digital Handbook" />
+      <meta property="og:title" content="Make data-driven decisions with service level objectives" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://digital-handbook.cabinetoffice.gov.uk/docs/guidance/unpublished/slo.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <header class="govuk-template__header app-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__homepage-link">
+        <span class="govuk-header__product-name">
+          Cabinet Office Digital Handbook
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </header>
+      <div class="govuk-service-navigation app-pane__navigation" data-module="govuk-service-navigation">
+         <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+      <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+          Menu
+        </button>
+        <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item ">
+              <a class="govuk-service-navigation__link" href="https://github.com/cabinetoffice/digital-handbook">
+                GitHub
+              </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+      </div>
+
+
+      
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              <div class="search" data-module="search" data-path-to-site-root="/">
+  <form action="https://www.google.co.uk/search" method="get" role="search" class="search__form govuk-!-margin-bottom-4">
+    <input type="hidden" name="as_sitesearch" value="https://digital-handbook.cabinetoffice.gov.uk"/>
+    <label class="govuk-label search__label" for="search">
+      Search (via Google)
+    </label>
+    <input
+      type="search"
+      id="search" name="q"
+      class="govuk-input govuk-!-margin-bottom-0 search__input"
+      aria-controls="search-results"
+      placeholder="Search">
+    <button type="submit" class="search__button">Search</button>
+  </form>
+</div>
+
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#make-data-driven-decisions-with-service-level-objectives"><span>Make data-driven decisions with service level objectives</span></a>
+    <ul>
+      <li>
+        <a href="#what-you-ll-need-to-know-before-setting-your-slos"><span>What you’ll need to know before setting your SLOs</span></a>
+        <ul>
+          <li>
+            <a href="#current-sli-levels"><span>Current SLI levels</span></a>
+          </li>
+          <li>
+            <a href="#your-dependencies"><span>Your dependencies</span></a>
+          </li>
+          <li>
+            <a href="#user-satisfaction"><span>User satisfaction</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#setting-your-first-slos"><span>Setting your first SLOs</span></a>
+        <ul>
+          <li>
+            <a href="#use-the-slis-as-a-reference"><span>Use the SLIs as a reference</span></a>
+          </li>
+          <li>
+            <a href="#choose-a-time-window"><span>Choose a time window</span></a>
+          </li>
+          <li>
+            <a href="#choose-a-slo-target"><span>Choose a SLO Target</span></a>
+          </li>
+          <li>
+            <a href="#create-error-budgets"><span>Create error budgets</span></a>
+          </li>
+          <li>
+            <a href="#slo-burn-rate-and-alerts"><span>SLO burn rate and alerts</span></a>
+          </li>
+          <li>
+            <a href="#using-error-budgets-to-create-policy"><span>Using error budgets to create policy</span></a>
+          </li>
+          <li>
+            <a href="#continuous-improvement-of-slos"><span>Continuous improvement of SLOs</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#further-reading"><span>Further reading</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="govuk-main-wrapper technical-documentation" data-module="anchored-headings">
+              <div class="page-banner">
+  <p><strong>This is how Cabinet Office do Digital.    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxxDDgkqc5tPg1NMsO9LYVNQE8IR47M-u47JnsPFL8PBXpVA/viewform">Feedback form. </a></strong></p>
+</div>
+
+
+  <h1 id="make-data-driven-decisions-with-service-level-objectives">Make data-driven decisions with service level objectives</h1>
+<p>Service level objectives (SLOs) set out a target level for your service’s reliability. Using SLOs helps you make data-driven decisions about the <a href="https://www.investopedia.com/terms/o/opportunitycost.asp">opportunity cost</a> of reliability work.</p>
+<p>You can use SLOs and error budgets alongside <a href="/standards/slis.html">service level indicators</a> (SLIs) to help you make better decisions.</p>
+<p>SLOs help you decide how to prioritise reliability work, such as bug fixes and architectural improvements, by stating the problem in a user-centric way. For example, ‘this bug affects 10% of users’ or ‘this will provide a faster experience for the users by 500ms’.</p>
+<h2 id="what-you-ll-need-to-know-before-setting-your-slos">What you’ll need to know before setting your SLOs</h2>
+<h3 id="current-sli-levels">Current SLI levels</h3>
+<p>Current performance based on SLIs is usually a good place to start, especially if you do not have any other information. It also helps to set a baseline that you can improve to reflect service objectives.</p>
+<h3 id="your-dependencies">Your dependencies</h3>
+<p>You’ll need to know the SLOs for services your service relies on. For example, your <a href="/standards/hosting.html">hosting provider</a> or any other components that are important to your users’ experience.</p>
+<h3 id="user-satisfaction">User satisfaction</h3>
+<p>You’ll need to be aware of current user satisfaction levels. SLOs give users an expectation about the level of reliability they can expect from your service. Users are more likely to complain or stop using the service if it drops below the target level.</p>
+<p>If your users are happy with the availability and latency of your service you can set your SLOs based on your current SLIs.</p>
+<p>In other cases, your user expectations will lead to a set of SLOs the service’s current architecture may not achieve. You can reduce the gap between expectations and your SLOs by using techniques like <a href="https://martinfowler.com/articles/useOfMetrics.html#MetricsAsARatchet">ratcheting</a>.</p>
+<h2 id="setting-your-first-slos">Setting your first SLOs</h2>
+<h3 id="use-the-slis-as-a-reference">Use the SLIs as a reference</h3>
+<p>Your SLIs will give you a good idea of how your current platform is doing and give you a baseline reference.</p>
+<h3 id="choose-a-time-window">Choose a time window</h3>
+<p>You should report SLOs over a set period of time. For most purposes, a 4-week rolling window works well.</p>
+<p>A shorter time window lets you make decisions and iterate development more quickly, such as prioritising bug fixes. You could also set your time window over a longer period of time. This can be better for more strategic decisions and can align with your business calendar.</p>
+<h3 id="choose-a-slo-target">Choose a SLO Target</h3>
+<p>You should consider setting an SLO target with technical, product and business implications.</p>
+<p>Although your current performance (SLIs) should be taken into account, you should not set an SLO target based on the current performance to lock you into supporting the system with overachieving goals. Balance the SLO target with your product and business objectives.</p>
+<h3 id="create-error-budgets">Create error budgets</h3>
+<p>Error budgets help you know when to prioritise reliability work and when to prioritise new features. They provide an absolute value to a process and help determine when you need to take action.</p>
+<p>You can work out the error budgets from your SLOs. For example, if your SLO on availability is 99.9%, your error budget is 0.1% of the request volume. For example, if your service had 1 million requests, your error budget will be 1,000. This works out at 40 minutes of outage in your 4-week rolling window.</p>
+<p>An error budget is usually expressed as a percentage rather than an absolute value. This can help you to focus on what the error means to your users. For example, if your service has 435 errors during the SLO period, it would have used up:</p>
+<p>435/1000x100% = 43.5%</p>
+<p>of its error budget.</p>
+<p>If your error rate, which is the number of bad requests in this case, is less than 1,000 you’ve met your error budget.</p>
+<h3 id="slo-burn-rate-and-alerts">SLO burn rate and alerts</h3>
+<p>SLO burn rate is how fast, relative to the SLO, the service consumes the error budget.  An alerting window is defined to capture errors accumulated within this period before alerting.</p>
+<p>Team should capture both sudden, fast SLO burn, which may be caused by an incident or bug; and gradual, slow SLO burn, which may be caused by system degradation and scalability issues.</p>
+<h3 id="using-error-budgets-to-create-policy">Using error budgets to create policy</h3>
+<p>You can use error budgets to create policies, which are the actions you need to take when your service has used up, or nearly used up, its error budget for the period.</p>
+<p>For example, your policy could state that you:</p>
+
+<ul>
+<li>  stop launching features until the SLO is met again</li>
+<li>  devote 80% of developer time to reliability-related bug fixing</li>
+</ul>
+<p>SLO and error budgets can also help data-driven decision making.</p>
+<p>This table is an example of how you can use a combination of your SLO and user satisfaction to decide what action to take.</p>
+
+<table>
+  <tr>
+   <td>SLOs
+   </td>
+   <td>Toil
+   </td>
+   <td>Customer satisfaction
+   </td>
+   <td>Action
+   </td>
+  </tr>
+  <tr>
+   <td>Met
+   </td>
+   <td>Low
+   </td>
+   <td>High
+   </td>
+   <td>Choose to (a) relax release and deployment processes and increase velocity, or (b) step back from the engagement and focus engineering time on services that need more reliability
+   </td>
+  </tr>
+  <tr>
+   <td>Met
+   </td>
+   <td>Low
+   </td>
+   <td>Low
+   </td>
+   <td>Tighten SLO
+   </td>
+  </tr>
+  <tr>
+   <td>Met
+   </td>
+   <td>High
+   </td>
+   <td>High
+   </td>
+   <td>If alerting is generating false positives, reduce sensitivity. Otherwise, temporarily loosen the SLOs (or offload toil) and fix product and/or improve automated fault mitigation
+   </td>
+  </tr>
+  <tr>
+   <td>Met
+   </td>
+   <td>High
+   </td>
+   <td>Low
+   </td>
+   <td>Tighten SLO
+   </td>
+  </tr>
+  <tr>
+   <td>Missed
+   </td>
+   <td>Low
+   </td>
+   <td>High
+   </td>
+   <td>Loosen SLO
+   </td>
+  </tr>
+  <tr>
+   <td>Missed
+   </td>
+   <td>Low
+   </td>
+   <td>Low
+   </td>
+   <td>Increase alerting sensitivity
+   </td>
+  </tr>
+  <tr>
+   <td>Missed
+   </td>
+   <td>High
+   </td>
+   <td>High
+   </td>
+   <td>Loosen SLO
+   </td>
+  </tr>
+  <tr>
+   <td>Missed
+   </td>
+   <td>High
+   </td>
+   <td>Low
+   </td>
+   <td>Offload toil and fix product and/or improve automated fault mitigation
+   </td>
+  </tr>
+</table>
+<p>Table credit: <a href="https://sre.google/books/">https://sre.google/books/</a></p>
+<p>Your team should agree on the SLOs and error budget policies. It’s useful to get agreement from the:</p>
+
+<ul>
+<li>product manager</li>
+<li>delivery manager</li>
+<li>technical architect</li>
+<li>developers</li>
+<li>site reliability engineers</li>
+</ul>
+<h3 id="continuous-improvement-of-slos">Continuous improvement of SLOs</h3>
+<p>You can use your user research and outage records to improve your SLOs. Eventually you’ll be able to set your SLOs by user experience. For example, if your users are happy with the service’s performance, you can experiment with relaxing your SLOs and measure the resulting user satisfaction.</p>
+<h2 id="further-reading">Further reading</h2>
+
+<ul>
+<li><a href="https://sre.google/sre-book/service-level-objectives/">Service Level Objectives</a> - chapter 4 of the <a href="https://sre.google/books/">Google SRE handbook</a></li>
+<li><a href="https://sre.google/workbook/alerting-on-slos/">Alerting on SLOs</a> - chapter 5 of the <a href="https://sre.google/books/">Google SRE handbook</a></li>
+<li><a href="https://www.youtube.com/watch?v=7VeU6LnOUms">Liz Fong-Jones - Adopting SRE and Error Budgets</a></li>
+</ul>
+
+
+              <div data-module='page-expiry' data-last-reviewed-on="2023-01-26">
+    <div class='page-expiry--default'>
+      This page was last reviewed on 26 July 2022.
+
+    </div>
+
+  </div>
+
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/blob/main/source/docs/guidance/unpublished/slo.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook/issues/new?body=Problem+with+%27Make+data-driven+decisions+with+service+level+objectives%27+%28https%3A%2F%2Fdigital-handbook.cabinetoffice.gov.uk%2Fdocs%2Fguidance%2Funpublished%2Fslo.html%29&amp;labels=bug&amp;title=Re%3A+%27Make+data-driven+decisions+with+service+level+objectives%27">Report problem</a></li>
+                <li><a href="https://github.com/cabinetoffice/digital-handbook">GitHub Repo</a></li>
+              </ul>
+          </aside>
+        </div>
+      </div>
+
+
+    <footer class="govuk-template__footer">
+      <div class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/accessibility.html">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    
+    <script src="../../../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../../../javascripts/application.js"></script>
+  </body>
+</html>
